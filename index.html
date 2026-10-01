@@ -228,6 +228,7 @@
 <input aria-label="Buscar na copy" id="copySearch" placeholder="Buscar na copy..." type="search"/>
 <button class="ghost-action small" id="expandAllCopy" type="button">Expandir tudo</button>
 <button class="ghost-action small" id="collapseAllCopy" type="button">Recolher</button>
+<button class="ghost-action small" id="exportCopyMarkdown" type="button">Exportar copy .md ↓</button>
 </div>
 <div class="copy-list" id="copyList">
 <details class="copy-section" data-copy-section="" open="">
@@ -977,6 +978,142 @@
 </main>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
 <script defer="" src="assets/js/app.js"></script>
+
+
+<script id="copy-markdown-export-script">
+window.addEventListener('DOMContentLoaded', () => {
+  const exportBtn = document.getElementById('exportCopyMarkdown');
+  const copyRoot = document.getElementById('copyList');
+  if (!exportBtn || !copyRoot) return;
+
+  const clean = (value = '') => value.replace(/\u00a0/g, ' ').replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+
+  const textWithBreaks = (element) => {
+    if (!element) return '';
+    const clone = element.cloneNode(true);
+    clone.querySelectorAll('br').forEach(br => br.replaceWith('\n'));
+    clone.querySelectorAll('button').forEach(btn => btn.remove());
+    return clean(clone.textContent || '');
+  };
+
+  const pushRow = (row, out) => {
+    const label = clean(row.querySelector(':scope > small')?.textContent || '');
+    const body = textWithBreaks(row.querySelector(':scope > p'));
+    if (label) out.push(`**${label}**`);
+    if (body) out.push(body);
+    out.push('');
+  };
+
+  const pushMini = (mini, out) => {
+    const number = clean(mini.querySelector(':scope > span')?.textContent || '');
+    const title = clean(mini.querySelector(':scope > b')?.textContent || '');
+    const body = textWithBreaks(mini.querySelector(':scope > p'));
+    if (title) out.push(`### ${number ? number + ' · ' : ''}${title}`);
+    if (body) out.push(body);
+    out.push('');
+  };
+
+  const pushSpecGrid = (grid, out) => {
+    const items = [...grid.children].map(item => ({
+      label: clean(item.querySelector('span')?.textContent || ''),
+      value: clean(item.querySelector('b')?.textContent || '')
+    })).filter(item => item.label || item.value);
+    if (!items.length) return;
+    out.push('| Campo | Valor |');
+    out.push('|---|---|');
+    items.forEach(item => out.push(`| ${item.label.replace(/\|/g,'\\|')} | ${item.value.replace(/\|/g,'\\|')} |`));
+    out.push('');
+  };
+
+  const pushFormCopy = (form, out) => {
+    [...form.children].forEach(step => {
+      const heading = clean(step.querySelector(':scope > span')?.textContent || '');
+      if (heading) out.push(`### ${heading}`);
+      [...step.children].forEach(child => {
+        if (child.tagName === 'SPAN') return;
+        const value = textWithBreaks(child);
+        if (!value) return;
+        if (child.tagName === 'B') out.push(`**${value}**`);
+        else if (child.tagName === 'STRONG') out.push(`**${value}**`);
+        else out.push(value);
+        out.push('');
+      });
+    });
+  };
+
+  const pushFaq = (faq, out) => {
+    const q = clean(faq.querySelector(':scope > b')?.textContent || '');
+    const answer = textWithBreaks(faq.querySelector(':scope > p'));
+    if (q) out.push(`### ${q}`);
+    if (answer) out.push(answer);
+    const note = faq.querySelector(':scope > .dev-note');
+    if (note) {
+      const noteText = textWithBreaks(note);
+      if (noteText) out.push(`> ${note.classList.contains('warning') ? '⚠️ ' : ''}${noteText}`);
+    }
+    out.push('');
+  };
+
+  const walk = (node, out) => {
+    if (!(node instanceof Element)) return;
+    if (node.classList.contains('copy-row')) return pushRow(node, out);
+    if (node.classList.contains('copy-mini')) return pushMini(node, out);
+    if (node.classList.contains('spec-grid')) return pushSpecGrid(node, out);
+    if (node.classList.contains('form-copy')) return pushFormCopy(node, out);
+    if (node.classList.contains('faq-item')) return pushFaq(node, out);
+    if (node.classList.contains('dev-note')) {
+      const value = textWithBreaks(node);
+      if (value) out.push(`> ${node.classList.contains('warning') ? '⚠️ ' : ''}${value}`, '');
+      return;
+    }
+    [...node.children].forEach(child => {
+      if (child.matches('button.copy-btn')) return;
+      walk(child, out);
+    });
+  };
+
+  const buildMarkdown = () => {
+    const out = [
+      '# Elotech Central de Negócios — Copy completa',
+      '',
+      '> Exportado do Playbook de Desenvolvimento. A copy abaixo deve ser tratada como fonte da verdade textual. Notas de implementação e pendências aparecem em blocos de citação.',
+      ''
+    ];
+
+    copyRoot.querySelectorAll(':scope > details.copy-section').forEach(section => {
+      const number = clean(section.querySelector(':scope > summary > span')?.textContent || '');
+      const title = clean(section.querySelector(':scope > summary > strong')?.textContent || '');
+      const meta = clean(section.querySelector(':scope > summary > b')?.textContent || '');
+      out.push(`## ${number ? number + ' · ' : ''}${title}`);
+      if (meta) out.push(`*${meta}*`, '');
+      const content = section.querySelector(':scope > .copy-content');
+      if (content) [...content.children].forEach(child => walk(child, out));
+    });
+
+    return clean(out.join('\n')) + '\n';
+  };
+
+  exportBtn.addEventListener('click', () => {
+    const markdown = buildMarkdown();
+    const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'COPY-ELOTECH-CENTRAL-DE-NEGOCIOS.md';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    const toast = document.getElementById('toast');
+    if (toast) {
+      toast.textContent = 'Copy completa exportada em .md';
+      toast.classList.add('is-visible');
+      setTimeout(() => toast.classList.remove('is-visible'), 2200);
+    }
+  });
+});
+</script>
 
 <script id="wireframe-fullscreen-script">
 window.addEventListener('DOMContentLoaded', () => {
