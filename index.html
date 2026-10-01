@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E50914">
+  <meta name="description" content="Playbook visual de implementação da landing page Elotech Central de Negócios.">
+  <title>Playbook LP · Elotech Central de Negócios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="topbar">
+    <a href="#" class="brand" aria-label="Voltar ao overview" data-tab-link="overview">
+      <span class="brand-mark">V4</span>
+      <span class="brand-copy"><strong>PLAYBOOK</strong><small>Elotech · LP Development</small></span>
+    </a>
+    <div class="header-progress">
+      <div class="progress-copy"><span id="progressLabel">0% concluído</span><span id="xpLabel">0 XP</span></div>
+      <div class="progress-track"><span id="globalProgress"></span></div>
+    </div>
+    <button class="command-btn" type="button" data-tab-link="checklist"><span>Checklist</span><b>→</b></button>
+  </header>
+
+  <aside class="sidebar" aria-label="Navegação do playbook">
+    <div class="sidebar-label">PLAYBOOK / 01</div>
+    <nav class="tab-nav" role="tablist" aria-label="Categorias">
+      <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-overview" data-tab="overview"><span>01</span> Overview</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-copy" data-tab="copy"><span>02</span> Copy</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-visual" data-tab="visual"><span>03</span> Referências</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-wireframes" data-tab="wireframes"><span>04</span> Wireframes</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-tech" data-tab="tech"><span>05</span> Técnico</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-execution" data-tab="execution"><span>06</span> Execução</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-checklist" data-tab="checklist"><span>07</span> Checklist</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="tab-links" data-tab="links"><span>08</span> Links</button>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="level-pill"><span>Nível</span><strong id="levelNumber">1</strong></div>
+      <p>Marque as etapas concluídas. O progresso fica salvo neste navegador.</p>
+    </div>
+  </aside>
+
+  <main class="shell">
+    <section class="tab-panel is-active" id="tab-overview" role="tabpanel" data-panel="overview">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">PLAYBOOK DE IMPLEMENTAÇÃO · ELOTECH CENTRAL DE NEGÓCIOS</p>
+          <h1>Menos ruído.<br><em>Mais execução.</em></h1>
+          <p class="hero-lead">Um painel único para decidir a direção visual, consultar a copy, montar a stack, executar o front e validar a publicação sem voltar para um briefing gigante.</p>
+          <div class="hero-actions">
+            <button class="primary-action" type="button" data-tab-link="execution">Começar implementação <span>→</span></button>
+            <button class="ghost-action" type="button" data-tab-link="copy">Abrir copy</button>
+          </div>
+        </div>
+        <div class="score-card glass-card">
+          <div class="score-head"><span>STATUS DO PROJETO</span><b id="statusBadge">PRÉ-PRODUÇÃO</b></div>
+          <div class="score-number"><strong id="progressBig">0</strong><span>%</span></div>
+          <div class="score-meta">
+            <div><small>Direção escolhida</small><strong id="chosenDirectionLabel">Híbrido recomendado</strong></div>
+            <div><small>Próximo foco</small><strong id="nextFocus">Escolher direção visual</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <div><p class="eyebrow">DECISÃO 01</p><h2>Escolha a direção antes de abrir o Figma.</h2></div>
+          <p>Esta decisão muda o nível de motion, a stack e a quantidade de tempo investida no refinamento.</p>
+        </div>
+
+        <div class="direction-grid" id="directionGrid">
+          <label class="direction-card">
+            <input type="radio" name="direction" value="loam">
+            <span class="direction-number">01</span>
+            <strong>Loam House</strong>
+            <p>Capítulos fullscreen, narrativa por imóvel, parallax controlado.</p>
+            <div class="mini-stats"><span>Complexidade <b>5/10</b></span><span>Tempo <b>Médio</b></span><span>Qualidade <b>Alta</b></span></div>
+          </label>
+          <label class="direction-card">
+            <input type="radio" name="direction" value="era">
+            <span class="direction-number">02</span>
+            <strong>ERA Residence</strong>
+            <p>Motion cinematográfico, image scale, horizontal scroll e tipografia animada.</p>
+            <div class="mini-stats"><span>Complexidade <b>7/10</b></span><span>Tempo <b>Médio/alto</b></span><span>Qualidade <b>Muito alta</b></span></div>
+          </label>
+          <label class="direction-card">
+            <input type="radio" name="direction" value="sobha">
+            <span class="direction-number">03</span>
+            <strong>Sobha Privy</strong>
+            <p>Experiência premium com linguagem 3D/WebGL e transições imersivas.</p>
+            <div class="mini-stats"><span>Complexidade <b>10/10</b></span><span>Tempo <b>Alto</b></span><span>Risco mobile <b>Alto</b></span></div>
+          </label>
+          <label class="direction-card recommended is-selected">
+            <input type="radio" name="direction" value="hybrid" checked>
+            <span class="recommend-badge">RECOMENDADO</span>
+            <span class="direction-number">04</span>
+            <strong>Híbrido 60 / 30 / 10</strong>
+            <p>60% Loam + 30% ERA + 10% atmosfera Sobha. Melhor equilíbrio entre qualidade, prazo e performance.</p>
+            <div class="mini-stats"><span>Complexidade <b>6/10</b></span><span>Tempo <b>Médio</b></span><span>Custo-benefício <b>Máximo</b></span></div>
+          </label>
+        </div>
+
+        <div class="recommendation-box" id="directionSummary">
+          <div class="reco-icon">★</div>
+          <div>
+            <span>MINHA INDICAÇÃO</span>
+            <h3>Loam na estrutura. ERA no acabamento. Sobha só na atmosfera.</h3>
+            <p>Você preserva a narrativa premium dos três imóveis, consegue motion sofisticado com GSAP e evita o peso de uma implementação 3D que contraria a prioridade mobile.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading compact">
+          <div><p class="eyebrow">MAPA DO PROJETO</p><h2>O que precisa existir no final.</h2></div>
+        </div>
+        <div class="deliverables-grid">
+          <article class="deliverable"><span>01</span><h3>Landing page</h3><p>Hero + institucional + 3 capítulos + região + compra + formulário + FAQ + footer.</p></article>
+          <article class="deliverable"><span>02</span><h3>/obrigado</h3><p>Página pós-conversão com confirmação, próximos passos e retorno à home.</p></article>
+          <article class="deliverable"><span>03</span><h3>Formulário 3 etapas</h3><p>Interesse → planejamento → contato, com pré-seleção por CTA e qualificação MQL.</p></article>
+          <article class="deliverable"><span>04</span><h3>Tracking</h3><p>PageView, ViewContent por imóvel e Lead apenas após confirmação do Kommo.</p></article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading compact">
+          <div><p class="eyebrow">REGRAS INEGOCIÁVEIS</p><h2>Não quebrar isso.</h2></div>
+        </div>
+        <div class="guardrails">
+          <div class="guardrail danger"><span>×</span><div><strong>Não citar elevadores</strong><p>Exceto na razão social legal do rodapé.</p></div></div>
+          <div class="guardrail"><span>!</span><div><strong>Copy é fonte da verdade</strong><p>Não reescrever, completar ou “melhorar” textos sem aprovação.</p></div></div>
+          <div class="guardrail"><span>!</span><div><strong>Não usar protótipo antigo</strong><p>Foi descartado e não deve orientar o novo layout.</p></div></div>
+          <div class="guardrail"><span>!</span><div><strong>Performance mobile primeiro</strong><p>Evitar WebGL/3D pesado e vídeos enormes no carregamento.</p></div></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="tab-panel" id="tab-copy" role="tabpanel" data-panel="copy" hidden>
+      <div class="page-intro">
+        <div><p class="eyebrow">COPY / FONTE DA VERDADE</p><h1>Texto final, por seção.</h1></div>
+        <div class="source-rule"><b>REGRA</b><span>Texto em blocos brancos entra na LP. Blocos amarelos são notas de implementação ou dados a confirmar.</span></div>
+      </div>
+
+      <div class="copy-toolbar">
+        <input id="copySearch" type="search" placeholder="Buscar na copy..." aria-label="Buscar na copy">
+        <button class="ghost-action small" type="button" id="expandAllCopy">Expandir tudo</button>
+        <button class="ghost-action small" type="button" id="collapseAllCopy">Recolher</button>
+      </div>
+
+      <div class="copy-list" id="copyList">
+        <details class="copy-section" open data-copy-section>
+          <summary><span>SEO</span><strong>SEO e compartilhamento</strong><b>4 itens</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>TÍTULO DA ABA</small><p>Elotech Central de Negócios | Apartamentos em Itapema e Porto Belo</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>META DESCRIPTION</small><p>Apartamentos na planta em Itapema e Porto Belo, à venda direto pela Elotech. Negociação sem intermediário e atendimento da nossa curadoria.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>OPEN GRAPH · TÍTULO</small><p>Imóveis selecionados no litoral catarinense</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>OPEN GRAPH · DESCRIÇÃO</small><p>Tenet, Lorenzo Gabriel e Algarve. Três apartamentos na planta, à venda direto pela Elotech.</p><button class="copy-btn" data-copy>Copiar</button></div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>00</span><strong>Barra fixa</strong><b>Header</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>LOGO</small><p>elotech · Central de Negócios</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>MENU DESKTOP</small><p>Imóveis · Região · Como funciona · Dúvidas</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>BOTÃO</small><p>Fale com a curadoria</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note">No mobile: somente logo + botão. O botão rola até o formulário.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>01</span><strong>Hero</strong><b>Primeira dobra</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— CURADORIA DE IMÓVEIS · LITORAL DE SANTA CATARINA</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H1</small><p>Imóveis selecionados no litoral catarinense,<br><strong>à venda direto por quem conhece.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>SUBTÍTULO</small><p>Três apartamentos na planta em Itapema e Porto Belo, da carteira da própria Elotech. Negociação direta, sem intermediário, com uma curadoria que acompanha você do primeiro contato à proposta.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="two-col-copy">
+              <div class="copy-row"><small>CTA PRINCIPAL</small><p>Fale com a curadoria</p><button class="copy-btn" data-copy>Copiar</button></div>
+              <div class="copy-row"><small>CTA SECUNDÁRIO</small><p>Conheça os imóveis ↓</p><button class="copy-btn" data-copy>Copiar</button></div>
+            </div>
+            <div class="copy-row"><small>CHIPS DO SLIDER</small><p>Algarve Residence · Porto Belo · 3 suítes<br>Lorenzo Gabriel Residence · Itapema · 1 km do mar<br>Tenet, Torre Opera · Itapema · 40 m² para investir</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>RODAPÉ DA IMAGEM</small><p>Imagens ilustrativas</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note"><b>Alternativas de H1 para aprovação:</b> B. Seu apartamento no litoral catarinense, sem intermediário. · C. Itapema e Porto Belo, com a curadoria da Elotech. A versão A acima é a recomendada no documento.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>02</span><strong>Por que comprar com a gente</strong><b>Institucional</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— POR QUE COMPRAR COM A GENTE</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>Uma marca que o litoral já conhece,<br><strong>agora cuidando do seu imóvel.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>INTRO</small><p>A Elotech está há anos no dia a dia das construtoras de Santa Catarina. Os apartamentos desta página fazem parte da nossa carteira, e quem negocia com você é o nosso próprio time.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-grid-4">
+              <div class="copy-mini"><b>Marca conhecida no litoral</b><p>Quem é da região já conhece a Elotech. Você compra de uma empresa com CNPJ, endereço e história em Santa Catarina.</p></div>
+              <div class="copy-mini"><b>Direto do proprietário</b><p>Os imóveis são da própria Elotech. Sem intermediário na negociação, e com mais espaço para ajustar as condições ao seu planejamento.</p></div>
+              <div class="copy-mini"><b>Atendimento consultivo</b><p>Um consultor acompanha você na apresentação, na visita e na proposta. Se preferir, a gente vai até você.</p></div>
+              <div class="copy-mini"><b>Quem conhece a região</b><p>Conhecemos as construtoras, os bairros e o perfil de cada empreendimento. A gente ajuda você a escolher o imóvel certo para o seu objetivo.</p></div>
+            </div>
+            <div class="dev-note">Se usar números nos cards, o documento sugere: “3 empreendimentos selecionados” · “0 intermediários” · “1 consultor do começo ao fim” · “2 cidades do litoral”. Evitar anos de mercado ou total de imóveis vendidos sem confirmação.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>03</span><strong>Abertura dos imóveis</strong><b>Capítulos</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— OS IMÓVEIS</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>Três perfis, <strong>três endereços.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>TEXTO</small><p>Um para cada momento: a segunda casa da família, o apartamento de praia que equilibra tudo e o investimento compacto para gerar renda.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note">Ordem obrigatória: Algarve → Lorenzo Gabriel → Tenet. Cada capítulo dispara ViewContent com o nome do imóvel. CTA leva ao formulário com o imóvel pré-selecionado.</div>
+          </div>
+        </details>
+
+        <details class="copy-section property-copy" data-copy-section>
+          <summary><span>03.1</span><strong>Algarve Residence</strong><b>Porto Belo · Alto padrão</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SELO</small><p>01 · PORTO BELO / SC · ALTO PADRÃO</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>A elegância do Mediterrâneo,<br><strong>no litoral catarinense.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>TEXTO</small><p>Arquitetura de inspiração mediterrânea, um apartamento por andar e 91 m² para viver e receber com calma. O Algarve foi pensado para a família que quer uma segunda casa em Porto Belo com privacidade de casa e estrutura de condomínio.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="spec-grid">
+              <div><span>Área privativa</span><b>91,38 m²</b></div><div><span>Planta</span><b>3 suítes · 2 vagas · lavabo</b></div><div><span>Unidade</span><b>Apto 901</b></div><div><span>Entrega</span><b>Junho de 2028</b></div><div><span>Valor</span><b>R$ 1.730.000</b></div><div><span>Incorporadora</span><b>Tramonto</b></div>
+            </div>
+            <div class="copy-row"><small>DIFERENCIAIS</small><p>Um apartamento por andar. Privacidade de casa, sem vizinho de porta.<br>Sacada integrada com churrasqueira a carvão. O living se abre para a varanda para receber a família.<br>Rooftop com hidromassagem e vista para os morros.<br>Lazer para todas as idades: piscina, academia e brinquedoteca.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>GALERIA</small><p>Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>PARA QUEM É</small><p>Famílias que querem uma segunda moradia de alto padrão no litoral.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>CTA</small><p>Quero saber mais sobre o Algarve</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>NOTA</small><p>Imagens ilustrativas. Valores e condições sujeitos a alteração.</p><button class="copy-btn" data-copy>Copiar</button></div>
+          </div>
+        </details>
+
+        <details class="copy-section property-copy" data-copy-section>
+          <summary><span>03.2</span><strong>Lorenzo Gabriel Residence</strong><b>Itapema · Morretes</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SELO</small><p>02 · ITAPEMA / SC · BAIRRO MORRETES</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>Espaço, localização e preço<br><strong>em equilíbrio.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>TEXTO</small><p>Dois dormitórios a 1 km do mar, em uma torre residencial sobre térreo comercial. O Lorenzo Gabriel é para quem quer um apartamento de praia em Itapema para morar, passar a temporada ou alugar, sem abrir mão de espaço.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="spec-grid">
+              <div><span>Área privativa</span><b>62,9 m²</b></div><div><span>Planta</span><b>1 suíte + 1 dormitório · 1 vaga</b></div><div><span>Unidades</span><b>Apto 1203 · Apto 1902</b></div><div><span>Entrega</span><b>Novembro de 2029</b></div><div><span>Valor</span><b>a partir de R$ 845.000</b></div><div><span>Incorporadora</span><b>Meia Praia Empreendimentos</b></div>
+            </div>
+            <div class="copy-row"><small>DIFERENCIAIS</small><p>1 km do mar, no bairro Morretes, em Itapema.<br>A cidade na porta: torre residencial sobre térreo comercial.<br>Sacada com churrasqueira e living integrado à cozinha.<br>Duas unidades à escolha, no 12º e no 19º andar.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>GALERIA</small><p>Fachada · Térreo comercial · Localização · Planta · Sacada</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>PARA QUEM É</small><p>Para morar ou investir. O equilíbrio entre preço, espaço e localização.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>CTA</small><p>Quero saber mais sobre o Lorenzo Gabriel</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>NOTA</small><p>Imagens ilustrativas. Valores e condições sujeitos a alteração.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note">Se houver espaço no design: Apto 1203 · R$ 845.000 · Apto 1902 · R$ 901.000.</div>
+          </div>
+        </details>
+
+        <details class="copy-section property-copy" data-copy-section>
+          <summary><span>03.3</span><strong>Tenet · Torre Opera</strong><b>Itapema · Investimento</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SELO</small><p>03 · ITAPEMA / SC · TENET ART HOME DISTRICT</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>40 m² pensados<br><strong>para investir.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>TEXTO</small><p>Uma unidade compacta na Torre Opera, dentro de um complexo com 4.700 m² de lazer integrados ao parque. O Tenet é para quem quer renda de locação e valorização de longo prazo em Itapema, a 10 minutos da Praia Central.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="spec-grid">
+              <div><span>Área privativa</span><b>40 m²</b></div><div><span>Planta</span><b>1 dormitório · 1 vaga · varanda</b></div><div><span>Unidade</span><b>Apto 3404</b></div><div><span>Entrega</span><b>2031</b></div><div><span>Valor</span><b>R$ 1.053.800</b></div><div><span>Incorporadora</span><b>ZAH Empreendimentos</b></div>
+            </div>
+            <div class="copy-row"><small>DIFERENCIAIS</small><p>4.700 m² de lazer integrados ao parque.<br>Piscinas, academia, skybar, coworking e lounge. Estrutura que valoriza a locação de temporada.<br>Planta compacta e funcional: sala e cozinha integradas, com varanda.<br>10 minutos da Praia Central de Itapema.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>GALERIA</small><p>Torre Opera · Lounge · Piscina · Coworking · Vista</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>PARA QUEM É</small><p>Investidores que buscam renda com locação e valorização.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>CTA</small><p>Quero saber mais sobre o Tenet</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>NOTA</small><p>Imagens ilustrativas. Valores e condições sujeitos a alteração.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note warning"><b>CONFIRMAR:</b> “34º andar” foi deduzido do número do apto 3404. Não publicar até confirmação.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>04</span><strong>Qual combina com você?</strong><b>3 perfis</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— ESCOLHA PELO SEU OBJETIVO</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>Qual imóvel<br><strong>combina com você?</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>TEXTO</small><p>Cada apartamento foi escolhido para um perfil. Comece pelo seu objetivo.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-grid-3">
+              <div class="copy-mini"><small>INVESTIR</small><b>Quero renda e valorização</b><p>Compacto, em um complexo com lazer completo, com perfil para locação de temporada.</p><span>Tenet · 40 m² · Itapema · Ver o Tenet →</span></div>
+              <div class="copy-mini"><small>MORAR</small><b>Quero morar perto do mar</b><p>Dois dormitórios a 1 km do mar, com comércio no térreo e a cidade por perto.</p><span>Lorenzo Gabriel · 62,9 m² · Itapema · Ver o Lorenzo Gabriel →</span></div>
+              <div class="copy-mini"><small>VERANEIO</small><b>Quero a casa da família no litoral</b><p>Três suítes, um apartamento por andar e rooftop para receber todo mundo.</p><span>Algarve · 91 m² · Porto Belo · Ver o Algarve →</span></div>
+            </div>
+            <div class="copy-row"><small>LINHA ABAIXO</small><p>Ainda em dúvida? <strong>A curadoria ajuda você a escolher.</strong> →</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note">Os cards rolam até o capítulo do imóvel. A linha “Ainda em dúvida?” vai para o formulário com “Ainda não sei” pré-selecionado.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>05</span><strong>A região</strong><b>Itapema e Porto Belo</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— ITAPEMA E PORTO BELO</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2 CONDICIONADO</small><p>O trecho do litoral<br><strong>que mais valoriza em Santa Catarina.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note warning"><b>PRECISA DE FONTE.</b> Sem fonte, usar: “O litoral catarinense que o Brasil escolheu para morar.”</div>
+            <div class="copy-row"><small>TEXTO</small><p>Entre Balneário Camboriú e Bombinhas, Itapema e Porto Belo reúnem mar calmo, infraestrutura de cidade e um mercado imobiliário aquecido. É para onde vêm famílias do Sul do país em busca de qualidade de vida, e investidores atrás de renda com temporada.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-grid-3">
+              <div class="copy-mini"><b>Itapema</b><p>Meia Praia e Praia Central, orla urbanizada e uma das cidades que mais cresce no litoral. Casa do Tenet e do Lorenzo Gabriel.</p></div>
+              <div class="copy-mini"><b>Porto Belo</b><p>Baía de águas calmas, clima de cidade tranquila e acesso rápido às praias de Bombinhas. Casa do Algarve.</p></div>
+              <div class="copy-mini"><b>Perto de tudo</b><p>Pela BR-101, poucos minutos de Balneário Camboriú e cerca de 1h30 do aeroporto de Florianópolis.</p></div>
+            </div>
+            <div class="copy-row"><small>MAPA · LEGENDA</small><p>Tenet · Tabuleiro das Oliveiras, Itapema · 10 min da Praia Central<br>Lorenzo Gabriel · Morretes, Itapema · 1 km do mar<br>Algarve · Porto Belo</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note warning">Confirmar tempos de deslocamento antes de publicar. Mapa estático ou embed leve; não carregar Google Maps interativo antes do usuário tocar.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>06</span><strong>Como funciona a compra</strong><b>4 passos</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— COMO FUNCIONA</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>Do primeiro contato à proposta,<br><strong>com a gente do seu lado.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-grid-4">
+              <div class="copy-mini"><span>01</span><b>Conte o que você procura</b><p>Preencha o formulário em menos de 1 minuto. As perguntas ajudam a indicar o imóvel certo.</p></div>
+              <div class="copy-mini"><span>02</span><b>A curadoria entra em contato</b><p>Um consultor da Elotech fala com você pelo WhatsApp ou telefone para entender seu objetivo.</p></div>
+              <div class="copy-mini"><span>03</span><b>Apresentação ou visita</b><p>Você conhece o imóvel por uma apresentação completa, online ou presencial, ou visita a região com a gente.</p></div>
+              <div class="copy-mini"><span>04</span><b>Proposta direta</b><p>Você negocia direto com a Elotech, proprietária do imóvel, e fecha condições que cabem no seu planejamento.</p></div>
+            </div>
+            <div class="copy-row"><small>CTA</small><p>Quero começar</p><button class="copy-btn" data-copy>Copiar</button></div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>07</span><strong>Prova social</strong><b class="pending-label">PENDENTE</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— QUEM JÁ COMPROU</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>Quem comprou com a Elotech <strong>recomenda.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note warning">Fica fora até existirem depoimentos reais. Estrutura prevista: foto, nome, cidade de origem, imóvel comprado e frase de até 2 linhas. Não publicar depoimento inventado ou genérico.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>08</span><strong>Formulário</strong><b>3 etapas</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— FALE COM A CURADORIA</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H2</small><p>Conte o que você procura.<br><strong>A gente indica o imóvel certo.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>TEXTO</small><p>Leva menos de 1 minuto. Um consultor da Elotech retorna em até 1 dia útil.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note warning">Confirmar prazo “até 1 dia útil” antes de publicar.</div>
+            <div class="form-copy">
+              <div><span>ETAPA 1 · SEU INTERESSE</span><b>Qual imóvel te interessa?</b><p>Algarve · Porto Belo / Lorenzo Gabriel · Itapema / Tenet · Itapema / Ainda não sei</p><b>Qual seu objetivo com o imóvel?</b><p>Investir (aluguel e valorização) / Morar / Casa de veraneio</p><strong>Botão: Continuar</strong></div>
+              <div><span>ETAPA 2 · SEU PLANEJAMENTO</span><b>Quanto você tem disponível para entrada?</b><p>Até R$ 70 mil / R$ 70 a 100 mil / Acima de R$ 100 mil</p><b>Qual parcela mensal cabe no seu planejamento?</b><p>Até R$ 5 mil / R$ 5 a 10 mil / Acima de R$ 10 mil</p><b>Você conhece a região de Itapema e Porto Belo?</b><p>Visito com frequência / Conheço pouco / Não conheço</p><strong>Botões: Voltar · Continuar</strong></div>
+              <div><span>ETAPA 3 · SEU CONTATO</span><p>Nome completo · WhatsApp · E-mail · Cidade · Estado</p><b>Aceite LGPD</b><p>Concordo em receber o contato da Elotech sobre este imóvel e li a Política de Privacidade.</p><strong>Botão: Quero falar com a curadoria</strong><p>Loading: Enviando…<br>Erro: Não foi possível enviar agora. Tente novamente.<br>Segurança: Seus dados ficam só com a Elotech. Sem spam.</p></div>
+            </div>
+            <div class="dev-note">CTA de capítulo → Etapa 1 abre com o imóvel marcado. Regra MQL roda por trás e não aparece ao visitante.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>09</span><strong>Perguntas frequentes</strong><b>8 FAQs</b></summary>
+          <div class="copy-content faq-copy">
+            <div class="copy-row"><small>H2</small><p>Perguntas <strong>frequentes</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="faq-item"><b>Por que a Elotech está vendendo esses apartamentos?</b><p>Os imóveis fazem parte da carteira da Elotech, que tem uma relação de longa data com as construtoras do litoral catarinense. Por isso a venda é direta: você negocia com o proprietário, sem intermediário.</p></div>
+            <div class="faq-item"><b>Como funciona a compra de um imóvel na planta?</b><p>Você garante a unidade agora, com uma entrada e parcelas ao longo da obra, e recebe o apartamento pronto na data de entrega. Comprar na planta costuma sair mais barato do que comprar o imóvel pronto, e o valor tende a subir até a entrega.</p></div>
+            <div class="faq-item"><b>Quais são as condições de pagamento?</b><p>As condições são combinadas direto com a Elotech, com entrada e parcelas mensais. Como somos os proprietários, conseguimos ajustar a proposta ao seu planejamento. O consultor apresenta os detalhes no primeiro contato.</p><div class="dev-note warning">Validar: financiamento bancário na entrega? Aceita imóvel ou veículo como parte do pagamento?</div></div>
+            <div class="faq-item"><b>Quando os imóveis ficam prontos?</b><p>Algarve: junho de 2028. Lorenzo Gabriel: novembro de 2029. Tenet: 2031. As datas são das incorporadoras responsáveis por cada obra.</p></div>
+            <div class="faq-item"><b>Quem constrói os empreendimentos?</b><p>Cada um tem sua incorporadora: Tramonto (Algarve), Meia Praia Empreendimentos (Lorenzo Gabriel) e ZAH Empreendimentos (Tenet). A Elotech é a proprietária das unidades e cuida da venda.</p></div>
+            <div class="faq-item"><b>Posso visitar antes de decidir?</b><p>Pode. O consultor agenda a visita à região e ao local da obra, e apresenta o projeto completo, com plantas, memorial e imagens. Se você mora longe, a apresentação também pode ser online.</p></div>
+            <div class="faq-item"><b>Não moro em Santa Catarina. Consigo comprar?</b><p>Consegue. Boa parte de quem compra no litoral catarinense vem de outras cidades do Sul. O atendimento, a apresentação e a negociação podem ser feitos a distância, e a gente acompanha você em cada etapa.</p></div>
+            <div class="faq-item"><b>Os valores da página são definitivos?</b><p>Os valores e condições podem mudar sem aviso, conforme a disponibilidade. O consultor confirma o valor atualizado no primeiro contato.</p></div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>10</span><strong>CTA final</strong><b>Antes do rodapé</b></summary>
+          <div class="copy-content">
+            <div class="copy-row impact"><small>H2</small><p>Seu imóvel no litoral catarinense<br><strong>começa com uma conversa.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>TEXTO</small><p>Conte o que você procura e receba a indicação da curadoria da Elotech.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>CTA</small><p>Fale com a curadoria</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note">Faixa escura com foto de fundo. Se o formulário vier imediatamente acima, esta faixa pode ser cortada.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>11</span><strong>Rodapé</strong><b>Legal</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>LOGO</small><p>elotech · Central de Negócios</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>RAZÃO SOCIAL</small><p>Elotech Central de Negócios é uma marca da Elo Indústria de Elevadores LTDA · CNPJ 35.237.879/0001-74</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>DISCLAIMER</small><p>Imagens ilustrativas. Valores e condições sujeitos a alteração sem aviso prévio. Os empreendimentos são de responsabilidade de suas incorporadoras: Tramonto, Meia Praia Empreendimentos e ZAH Empreendimentos.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>COPYRIGHT</small><p>© 2026 Elotech Central de Negócios</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note">“Elevadores” só aparece aqui por ser parte da razão social legal.</div>
+          </div>
+        </details>
+
+        <details class="copy-section" data-copy-section>
+          <summary><span>12</span><strong>Página /obrigado</strong><b>Pós-conversão</b></summary>
+          <div class="copy-content">
+            <div class="copy-row"><small>SOBRETÍTULO</small><p>— RECEBEMOS SEU CONTATO</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row impact"><small>H1</small><p>Obrigado, {nome}.<br><strong>A curadoria já está com suas respostas.</strong></p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note">Se o nome não estiver disponível, usar somente “Obrigado!”.</div>
+            <div class="copy-row"><small>TEXTO</small><p>Um consultor da Elotech vai falar com você pelo WhatsApp em até 1 dia útil para entender o que você procura e apresentar o imóvel.</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-grid-3">
+              <div class="copy-mini"><span>01</span><b>Contato da curadoria.</b><p>Salve nosso número para reconhecer a mensagem.</p></div>
+              <div class="copy-mini"><span>02</span><b>Apresentação do imóvel.</b><p>Plantas, imagens, condições e tudo o que você precisa para decidir.</p></div>
+              <div class="copy-mini"><span>03</span><b>Visita ou proposta.</b><p>Quando fizer sentido, você visita a região ou recebe a proposta direto da Elotech.</p></div>
+            </div>
+            <div class="copy-row"><small>ENQUANTO ISSO</small><p>Conheça os outros imóveis da curadoria. →</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="copy-row"><small>LINK SECUNDÁRIO</small><p>Voltar para a página inicial</p><button class="copy-btn" data-copy>Copiar</button></div>
+            <div class="dev-note warning">Prazo “1 dia útil” ainda precisa de confirmação. Só usar “Salve nosso número” se o número da curadoria for definido.</div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-visual" role="tabpanel" data-panel="visual" hidden>
+      <div class="page-intro">
+        <div><p class="eyebrow">REFERÊNCIAS / DIREÇÃO VISUAL</p><h1>Escolher o que copiar — e o que não copiar.</h1></div>
+        <p>As três referências principais têm níveis muito diferentes de complexidade. A recomendação é usar cada uma para um papel específico.</p>
+      </div>
+
+      <div class="reference-stack">
+        <article class="reference-card">
+          <div class="reference-top"><span class="ref-index">01</span><div><p class="eyebrow">BASE ESTRUTURAL</p><h2>Loam House</h2></div><span class="complexity mid">5/10</span></div>
+          <p class="reference-lead">A melhor base para organizar três imóveis como capítulos premium dentro da mesma LP.</p>
+          <div class="ref-columns">
+            <div><h3>Aproveitar</h3><ul><li>Capítulos fullscreen.</li><li>Imagem dominante por empreendimento.</li><li>Parallax controlado.</li><li>Transição de uma narrativa para a próxima.</li><li>Hierarquia editorial simples e sofisticada.</li></ul></div>
+            <div><h3>Ferramentas</h3><ul><li>Figma para layout desktop + mobile.</li><li>Next.js / CSS para estrutura.</li><li>GSAP + ScrollTrigger para pin/scrub.</li><li>Lenis opcional para suavidade.</li></ul></div>
+            <div><h3>Fluxo</h3><ol><li>Desenhar um capítulo mestre no Figma.</li><li>Aplicar Algarve, Lorenzo e Tenet.</li><li>Implementar seções estáticas.</li><li>Adicionar pin e parallax.</li><li>Refinar mobile sem prender o scroll.</li></ol></div>
+          </div>
+          <a class="external-link" href="https://residences.loamhouse.com.au/" target="_blank" rel="noopener noreferrer">Abrir referência ↗</a>
+        </article>
+
+        <article class="reference-card">
+          <div class="reference-top"><span class="ref-index">02</span><div><p class="eyebrow">ACABAMENTO / MOTION</p><h2>ERA Residence</h2></div><span class="complexity high">7/10</span></div>
+          <p class="reference-lead">Ótima referência para tornar a LP mais cinematográfica sem entrar em WebGL.</p>
+          <div class="ref-columns">
+            <div><h3>Aproveitar</h3><ul><li>Pre-loader refinado.</li><li>Image scale durante scroll.</li><li>Parallax de camadas.</li><li>Horizontal scroll pontual.</li><li>SplitText em títulos.</li></ul></div>
+            <div><h3>Ferramentas</h3><ul><li>Figma para composição editorial.</li><li>Next.js / CSS.</li><li>GSAP + ScrollTrigger.</li><li>SplitText.</li><li>Lenis e Observer apenas quando fizer sentido.</li></ul></div>
+            <div><h3>Fluxo</h3><ol><li>Fechar layout estático primeiro.</li><li>Definir 3–4 momentos de motion de alto impacto.</li><li>Criar timelines por seção.</li><li>Validar 60fps no mobile.</li><li>Reduzir motion com prefers-reduced-motion.</li></ol></div>
+          </div>
+          <a class="external-link" href="https://www.era-residence.com/" target="_blank" rel="noopener noreferrer">Abrir referência ↗</a>
+        </article>
+
+        <article class="reference-card">
+          <div class="reference-top"><span class="ref-index">03</span><div><p class="eyebrow">ATMOSFERA / NÃO REPRODUZIR INTEGRAL</p><h2>Sobha Privy Collection</h2></div><span class="complexity extreme">10/10</span></div>
+          <p class="reference-lead">Use a sobriedade e as transições como inspiração. Reproduzir o sistema 3D completo não é adequado para esta LP.</p>
+          <div class="ref-columns">
+            <div><h3>Aproveitar</h3><ul><li>Paleta sóbria.</li><li>Imagem premium em tela cheia.</li><li>Zoom e continuidade entre cenas.</li><li>Seletor de imóveis.</li><li>Sensação de produto de luxo.</li></ul></div>
+            <div><h3>Se fosse copiar 100%</h3><ul><li>Blender / Cinema 4D.</li><li>Three.js ou React Three Fiber.</li><li>WebGL + shaders.</li><li>Otimização de modelos e texturas.</li><li>Fallback mobile específico.</li></ul></div>
+            <div><h3>Por que evitar</h3><ol><li>Tempo e debugging muito maiores.</li><li>Performance mobile mais difícil.</li><li>Desvia do objetivo de conversão.</li><li>Contraria o briefing que pede evitar 3D/WebGL pesado.</li></ol></div>
+          </div>
+          <a class="external-link" href="https://sobha-privy-collection.com/" target="_blank" rel="noopener noreferrer">Abrir referência ↗</a>
+        </article>
+      </div>
+
+      <section class="section-block">
+        <div class="recommendation-box large">
+          <div class="reco-icon">★</div>
+          <div><span>DIREÇÃO INDICADA</span><h3>60% Loam · 30% ERA · 10% Sobha</h3><p><b>Loam</b> define a arquitetura dos três capítulos. <b>ERA</b> entra no hero, transições e microinterações. <b>Sobha</b> entra somente na sensação premium: contraste, escala de imagem e continuidade visual.</p></div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading compact"><div><p class="eyebrow">OUTRAS REFERÊNCIAS DO BRIEFING</p><h2>Apoio, não base.</h2></div></div>
+        <div class="link-cards">
+          <a href="https://360lexingtonave.com/" target="_blank" rel="noopener noreferrer"><b>360 Lexington Ave</b><span>Hero + galeria com parallax + minimalismo ↗</span></a>
+          <a href="https://elyse-residence-dev.webflow.io/" target="_blank" rel="noopener noreferrer"><b>Elyse Residence</b><span>Foto de fundo em grandes seções ↗</span></a>
+          <a href="https://www.awwwards.com/websites/real-estate/" target="_blank" rel="noopener noreferrer"><b>Awwwards / Real Estate</b><span>Pesquisa complementar ↗</span></a>
+        </div>
+      </section>
+    </section>
+
+
+    <section class="tab-panel" id="tab-wireframes" role="tabpanel" data-panel="wireframes" hidden>
+      <div class="page-intro wireframe-page-intro">
+        <div><p class="eyebrow">WIREFRAMES / DECISÃO DE DIREÇÃO</p><h1>Quatro caminhos.<br>Uma mesma copy.</h1></div>
+        <div class="source-rule"><b>COMO USAR</b><span>Compare a estrutura antes de abrir o Figma. Todos os wireframes usam a copy oficial; as caixas entre seções descrevem o motion esperado na implementação final.</span></div>
+      </div>
+
+      <div class="wireframe-choice" role="tablist" aria-label="Escolher wireframe">
+        <button type="button" data-wireframe-select="loam"><span>01</span><b>Loam House</b><small>estrutura / 5·10</small></button>
+        <button type="button" data-wireframe-select="era"><span>02</span><b>ERA Residence</b><small>motion / 7·10</small></button>
+        <button type="button" data-wireframe-select="sobha"><span>03</span><b>Sobha Privy</b><small>imersão / 10·10</small></button>
+        <button type="button" class="is-active recommended" data-wireframe-select="hybrid"><span>04</span><b>Híbrido recomendado</b><small>custo-benefício / 6·10</small></button>
+      </div>
+      <div class="wireframe-research-note"><b>Leitura das referências:</b> Loam organiza o conteúdo em capítulos full-screen; ERA usa Webflow + GSAP com horizontal scroll, parallax e custom interactions; Sobha trabalha uma narrativa contínua com WebGL, galerias circulares e mapa 3D. O híbrido mantém os efeitos que agregam percepção premium sem carregar o risco do WebGL.</div>
+      <article class="wireframe-option wf-theme wf-loam" data-wireframe-panel="loam" hidden>
+      <div class="wf-guide">
+        <div><span>LOAM HOUSE</span><h2>Base estrutural mais segura</h2><p>Capítulos fullscreen, render fixo enquanto o texto passa e próximo capítulo deslizando por cima.</p></div>
+        <div class="wf-guide-meta"><div><small>COMPLEXIDADE</small><b>5/10</b></div><div><small>PIPELINE</small><b>Figma → Next.js → CSS sticky/pin → GSAP ScrollTrigger → Lenis</b></div></div>
+      </div>
+      <div class="wf-legend"><span>▧ área de imagem/render</span><span>— copy real aplicada</span><span>⇣ bloco entre seções = comportamento da transição</span><span>Wireframe propositalmente preto e branco</span></div>
+      <div class="wireframe-canvas"><header class="wf-header"><b>elotech · Central de Negócios</b><nav>Imóveis · Região · Como funciona · Dúvidas</nav><span>Fale com a curadoria</span></header><section class="wf-section wf-hero"><div class="wf-copy"><small>— CURADORIA DE IMÓVEIS · LITORAL DE SANTA CATARINA</small><h2>Imóveis selecionados no litoral catarinense,<br><b>à venda direto por quem conhece.</b></h2><p>Três apartamentos na planta em Itapema e Porto Belo, da carteira da própria Elotech. Negociação direta, sem intermediário, com uma curadoria que acompanha você do primeiro contato à proposta.</p><div class="wf-actions"><b>Fale com a curadoria</b><span>Conheça os imóveis ↓</span></div></div><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER HERO · 3 empreendimentos</strong></div><div class="wf-chips"><span>Algarve Residence · Porto Belo · 3 suítes</span><span>Lorenzo Gabriel Residence · Itapema · 1 km do mar</span><span>Tenet, Torre Opera · Itapema · 40 m² para investir</span></div><div class="wf-legal">Imagens ilustrativas</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Hero perde protagonismo aos poucos; a imagem segura a profundidade enquanto o bloco institucional sobe sobre ela em parallax leve.</p></div><section class="wf-section wf-why"><div class="wf-copy"><small>— POR QUE COMPRAR COM A GENTE</small><h3>Uma marca que o litoral já conhece,<br><b>agora cuidando do seu imóvel.</b></h3><p>A Elotech está há anos no dia a dia das construtoras de Santa Catarina. Os apartamentos desta página fazem parte da nossa carteira, e quem negocia com você é o nosso próprio time.</p></div><div class="wf-cards four"><article><b>Marca conhecida no litoral</b><p>Quem é da região já conhece a Elotech. Você compra de uma empresa com CNPJ, endereço e história em Santa Catarina.</p></article><article><b>Direto do proprietário</b><p>Os imóveis são da própria Elotech. Sem intermediário na negociação, e com mais espaço para ajustar as condições ao seu planejamento.</p></article><article><b>Atendimento consultivo</b><p>Um consultor acompanha você na apresentação, na visita e na proposta. Se preferir, a gente vai até você.</p></article><article><b>Quem conhece a região</b><p>Conhecemos as construtoras, os bairros e o perfil de cada empreendimento. A gente ajuda você a escolher o imóvel certo para o seu objetivo.</p></article></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Após os quatro argumentos, o layout limpa e introduz a lógica editorial de capítulos numerados, preparando o visitante para a sequência dos imóveis.</p></div><section class="wf-section wf-open"><div class="wf-copy"><small>— OS IMÓVEIS</small><h3>Três perfis,<br><b>três endereços.</b></h3><p>Um para cada momento: a segunda casa da família, o apartamento de praia que equilibra tudo e o investimento compacto para gerar renda.</p></div><div class="wf-chapter-index"><span>01 Algarve</span><span>02 Lorenzo Gabriel</span><span>03 Tenet</span></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O primeiro render ocupa a tela e fica “preso”; o texto do Algarve entra sobre a imagem enquanto o scroll continua.</p></div><section class="wf-section wf-property wf-algarve layout-loam">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Algarve Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">01 · PORTO BELO / SC · ALTO PADRÃO</small>
+        <h3>A elegância do Mediterrâneo,<br><b>no litoral catarinense.</b></h3>
+        <p>Arquitetura de inspiração mediterrânea, um apartamento por andar e 91 m² para viver e receber com calma. O Algarve foi pensado para a família que quer uma segunda casa em Porto Belo com privacidade de casa e estrutura de condomínio.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>91,38 m²</b></div><div><small>Planta</small><b>3 suítes · 2 vagas · lavabo</b></div><div><small>Unidade</small><b>Apto 901</b></div><div><small>Entrega</small><b>Junho de 2028</b></div><div><small>Valor</small><b>R$ 1.730.000</b></div><div><small>Incorporadora</small><b>Tramonto</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>Um apartamento por andar. Privacidade de casa, sem vizinho de porta.</li><li>Sacada integrada com churrasqueira a carvão. O living se abre para a varanda para receber a família.</li><li>Rooftop com hidromassagem e vista para os morros.</li><li>Lazer para todas as idades: piscina, academia e brinquedoteca.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Famílias que querem uma segunda moradia de alto padrão no litoral.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Algarve</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O painel do Lorenzo sobe por cima do Algarve como uma nova página de um catálogo; a imagem interna se move mais devagar que o frame.</p></div><section class="wf-section wf-property wf-lorenzo layout-loam">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Lorenzo Gabriel Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">02 · ITAPEMA / SC · BAIRRO MORRETES</small>
+        <h3>Espaço, localização e preço<br><b>em equilíbrio.</b></h3>
+        <p>Dois dormitórios a 1 km do mar, em uma torre residencial sobre térreo comercial. O Lorenzo Gabriel é para quem quer um apartamento de praia em Itapema para morar, passar a temporada ou alugar, sem abrir mão de espaço.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>62,9 m²</b></div><div><small>Planta</small><b>1 suíte + 1 dormitório · 1 vaga</b></div><div><small>Unidades</small><b>Apto 1203 · Apto 1902</b></div><div><small>Entrega</small><b>Novembro de 2029</b></div><div><small>Valor</small><b>a partir de R$ 845.000</b></div><div><small>Incorporadora</small><b>Meia Praia Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>1 km do mar, no bairro Morretes, em Itapema.</li><li>A cidade na porta: torre residencial sobre térreo comercial.</li><li>Sacada com churrasqueira e living integrado à cozinha.</li><li>Duas unidades à escolha, no 12º e no 19º andar.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Térreo comercial · Localização · Planta · Sacada</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Para morar ou investir. O equilíbrio entre preço, espaço e localização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Lorenzo Gabriel</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Térreo comercial · Localização · Planta · Sacada</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O Tenet repete o mesmo sistema para manter leitura consistente e ritmo previsível.</p></div><section class="wf-section wf-property wf-tenet layout-loam">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Tenet · Torre Opera</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">03 · ITAPEMA / SC · TENET ART HOME DISTRICT</small>
+        <h3>40 m² pensados<br><b>para investir.</b></h3>
+        <p>Uma unidade compacta na Torre Opera, dentro de um complexo com 4.700 m² de lazer integrados ao parque. O Tenet é para quem quer renda de locação e valorização de longo prazo em Itapema, a 10 minutos da Praia Central.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>40 m²</b></div><div><small>Planta</small><b>1 dormitório · 1 vaga · varanda</b></div><div><small>Unidade</small><b>Apto 3404</b></div><div><small>Entrega</small><b>2031</b></div><div><small>Valor</small><b>R$ 1.053.800</b></div><div><small>Incorporadora</small><b>ZAH Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>4.700 m² de lazer integrados ao parque.</li><li>Piscinas, academia, skybar, coworking e lounge. Estrutura que valoriza a locação de temporada.</li><li>Planta compacta e funcional: sala e cozinha integradas, com varanda.</li><li>10 minutos da Praia Central de Itapema.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Torre Opera · Lounge · Piscina · Coworking · Vista</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Investidores que buscam renda com locação e valorização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Tenet</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Torre Opera · Lounge · Piscina · Coworking · Vista</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A última imagem deixa de ficar presa e abre espaço para os três cartões de objetivo, quebrando o ritmo fullscreen.</p></div><section class="wf-section wf-match"><div class="wf-copy"><small>— ESCOLHA PELO SEU OBJETIVO</small><h3>Qual imóvel<br><b>combina com você?</b></h3><p>Cada apartamento foi escolhido para um perfil. Comece pelo seu objetivo.</p></div><div class="wf-cards three"><article><small>Investir</small><b>Quero renda e valorização</b><p>Compacto, em um complexo com lazer completo, com perfil para locação de temporada.</p><span>Tenet · 40 m² · Itapema</span><strong>Ver o Tenet →</strong></article><article><small>Morar</small><b>Quero morar perto do mar</b><p>Dois dormitórios a 1 km do mar, com comércio no térreo e a cidade por perto.</p><span>Lorenzo Gabriel · 62,9 m² · Itapema</span><strong>Ver o Lorenzo Gabriel →</strong></article><article><small>Veraneio</small><b>Quero a casa da família no litoral</b><p>Três suítes, um apartamento por andar e rooftop para receber todo mundo.</p><span>Algarve · 91 m² · Porto Belo</span><strong>Ver o Algarve →</strong></article></div><div class="wf-inline-note">Ainda em dúvida? A curadoria ajuda você a escolher.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O bloco de cartões empurra uma imagem/mapa de região para dentro da página; transição simples, sem efeito pesado.</p></div><section class="wf-section wf-region"><div class="wf-copy"><small>— ITAPEMA E PORTO BELO</small><h3>O litoral catarinense que o Brasil escolheu para morar.</h3><p>Entre Balneário Camboriú e Bombinhas, Itapema e Porto Belo reúnem mar calmo, infraestrutura de cidade e um mercado imobiliário aquecido. É para onde vêm famílias do Sul do país em busca de qualidade de vida, e investidores atrás de renda com temporada.</p></div><div class="wf-region-grid"><div class="wf-cards three"><article><b>Itapema</b><p>Meia Praia e Praia Central, orla urbanizada e uma das cidades que mais cresce no litoral. Casa do Tenet e do Lorenzo Gabriel.</p></article><article><b>Porto Belo</b><p>Baía de águas calmas, clima de cidade tranquila e acesso rápido às praias de Bombinhas. Casa do Algarve.</p></article><article><b>Perto de tudo</b><p>Pela BR-101, poucos minutos de Balneário Camboriú e cerca de 1h30 do aeroporto de Florianópolis.</p></article></div><div class="wf-img wf-map"><span>IMAGEM</span><strong>MAPA · Tenet / Lorenzo Gabriel / Algarve</strong></div><div class="wf-map-list"><span>Tenet · Tabuleiro das Oliveiras, Itapema · 10 min da Praia Central</span><span>Lorenzo Gabriel · Morretes, Itapema · 1 km do mar</span><span>Algarve · Porto Belo</span></div></div><div class="wf-note">Usar este H2 alternativo até existir fonte para “o trecho que mais valoriza em Santa Catarina”.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O mapa sai de cena e a página volta ao fundo neutro; os quatro passos aparecem sequencialmente.</p></div><section class="wf-section wf-process"><div class="wf-copy"><small>— COMO FUNCIONA</small><h3>Do primeiro contato à proposta,<br><b>com a gente do seu lado.</b></h3></div><div class="wf-process-grid"><article><span>01</span><b>Conte o que você procura</b><p>Preencha o formulário em menos de 1 minuto. As perguntas ajudam a indicar o imóvel certo.</p></article><article><span>02</span><b>A curadoria entra em contato</b><p>Um consultor da Elotech fala com você pelo WhatsApp ou telefone para entender seu objetivo.</p></article><article><span>03</span><b>Apresentação ou visita</b><p>Você conhece o imóvel por uma apresentação completa, online ou presencial, ou visita a região com a gente.</p></article><article><span>04</span><b>Proposta direta</b><p>Você negocia direto com a Elotech, proprietária do imóvel, e fecha condições que cabem no seu planejamento.</p></article></div><div class="wf-cta">Quero começar</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A etapa “Conte o que você procura” conecta visualmente com o formulário; o CTA leva para o bloco de 3 etapas sem mudança brusca.</p></div><section class="wf-section wf-social is-conditional"><div class="wf-copy"><small>— QUEM JÁ COMPROU</small><h3>Quem comprou com a Elotech <b>recomenda.</b></h3><p>Seção condicionada. Não publicar até receber depoimentos reais.</p></div><div class="wf-cards three"><article>DEPOIMENTO 01</article><article>DEPOIMENTO 02</article><article>DEPOIMENTO 03</article></div></section><section class="wf-section wf-form"><div class="wf-copy"><small>— FALE COM A CURADORIA</small><h3>Conte o que você procura.<br><b>A gente indica o imóvel certo.</b></h3><p>Leva menos de 1 minuto. Um consultor da Elotech retorna em até 1 dia útil.</p></div><div class="wf-form-steps"><article><span>ETAPA 1 DE 3</span><ul><li>Qual imóvel te interessa?</li><li>Algarve · Porto Belo</li><li>Lorenzo Gabriel · Itapema</li><li>Tenet · Itapema</li><li>Ainda não sei</li><li>Qual seu objetivo com o imóvel?</li><li>Investir (aluguel e valorização)</li><li>Morar</li><li>Casa de veraneio</li></ul><div class="wf-button">Continuar</div></article><article><span>ETAPA 2 DE 3</span><ul><li>Quanto você tem disponível para entrada?</li><li>Até R$ 70 mil</li><li>R$ 70 a 100 mil</li><li>Acima de R$ 100 mil</li><li>Qual parcela mensal cabe no seu planejamento?</li><li>Até R$ 5 mil</li><li>R$ 5 a 10 mil</li><li>Acima de R$ 10 mil</li><li>Você conhece a região de Itapema e Porto Belo?</li><li>Visito com frequência</li><li>Conheço pouco</li><li>Não conheço</li></ul><p>Essas respostas ajudam o consultor a montar uma proposta que caiba no seu planejamento.</p><div class="wf-button ghost">Voltar</div><div class="wf-button">Continuar</div></article><article><span>ETAPA 3 DE 3</span><div class="wf-field">Nome completo · Como podemos te chamar?</div><div class="wf-field">WhatsApp · (00) 00000-0000</div><div class="wf-field">E-mail · seu@email.com</div><div class="wf-field">Cidade · Onde você mora hoje?</div><div class="wf-field">Estado · Selecione</div><p>Concordo em receber o contato da Elotech sobre este imóvel e li a Política de Privacidade.</p><div class="wf-button">Quero falar com a curadoria</div><small>Seus dados ficam só com a Elotech. Sem spam.</small></article></div><div class="wf-note">“até 1 dia útil” precisa de confirmação antes de publicar. CTA de cada imóvel deve chegar aqui com o imóvel pré-selecionado.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Depois do formulário, a página retorna ao fluxo linear e enxuto para FAQ.</p></div><section class="wf-section wf-faq"><div class="wf-copy"><small>— DÚVIDAS</small><h3>Perguntas <b>frequentes</b></h3></div><div class="wf-faq-list"><article><b>Por que a Elotech está vendendo esses apartamentos?</b><p>Os imóveis fazem parte da carteira da Elotech, que tem uma relação de longa data com as construtoras do litoral catarinense. Por isso a venda é direta: você negocia com o proprietário, sem intermediário.</p></article><article><b>Como funciona a compra de um imóvel na planta?</b><p>Você garante a unidade agora, com uma entrada e parcelas ao longo da obra, e recebe o apartamento pronto na data de entrega. Comprar na planta costuma sair mais barato do que comprar o imóvel pronto, e o valor tende a subir até a entrega.</p></article><article><b>Quais são as condições de pagamento?</b><p>As condições são combinadas direto com a Elotech, com entrada e parcelas mensais. Como somos os proprietários, conseguimos ajustar a proposta ao seu planejamento. O consultor apresenta os detalhes no primeiro contato.</p></article><article><b>Quando os imóveis ficam prontos?</b><p>Algarve: junho de 2028. Lorenzo Gabriel: novembro de 2029. Tenet: 2031. As datas são das incorporadoras responsáveis por cada obra.</p></article><article><b>Quem constrói os empreendimentos?</b><p>Cada um tem sua incorporadora: Tramonto (Algarve), Meia Praia Empreendimentos (Lorenzo Gabriel) e ZAH Empreendimentos (Tenet). A Elotech é a proprietária das unidades e cuida da venda.</p></article><article><b>Posso visitar antes de decidir?</b><p>Pode. O consultor agenda a visita à região e ao local da obra, e apresenta o projeto completo, com plantas, memorial e imagens. Se você mora longe, a apresentação também pode ser online.</p></article><article><b>Não moro em Santa Catarina. Consigo comprar?</b><p>Consegue. Boa parte de quem compra no litoral catarinense vem de outras cidades do Sul. O atendimento, a apresentação e a negociação podem ser feitos a distância, e a gente acompanha você em cada etapa.</p></article><article><b>Os valores da página são definitivos?</b><p>Os valores e condições podem mudar sem aviso, conforme a disponibilidade. O consultor confirma o valor atualizado no primeiro contato.</p></article></div><div class="wf-note">Condições de pagamento ainda precisam ser validadas quanto a financiamento na entrega e permuta.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>As perguntas terminam e uma faixa fotográfica escura fecha a narrativa antes do rodapé.</p></div><section class="wf-section wf-final"><div class="wf-img "><span>IMAGEM</span><strong>FOTO DE FUNDO · faixa final</strong></div><div class="wf-copy"><h3>Seu imóvel no litoral catarinense<br><b>começa com uma conversa.</b></h3><p>Conte o que você procura e receba a indicação da curadoria da Elotech.</p><div class="wf-cta">Fale com a curadoria</div></div><div class="wf-note">Pode ser removida se ficar redundante logo após o formulário.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Rodapé entra sem animação especial. A prioridade aqui é encerramento e informação legal.</p></div><footer class="wf-footer"><b>elotech · Central de Negócios</b><p>Elotech Central de Negócios é uma marca da Elo Indústria de Elevadores LTDA · CNPJ 35.237.879/0001-74</p><p>Política de Privacidade</p><p>Imagens ilustrativas. Valores e condições sujeitos a alteração sem aviso prévio. Os empreendimentos são de responsabilidade de suas incorporadoras: Tramonto, Meia Praia Empreendimentos e ZAH Empreendimentos.</p><p>© 2026 Elotech Central de Negócios</p></footer><section class="wf-thanks"><span>PÁGINA /obrigado</span><div class="wf-copy"><small>— RECEBEMOS SEU CONTATO</small><h3>Obrigado, {nome}.<br><b>A curadoria já está com suas respostas.</b></h3><p>Um consultor da Elotech vai falar com você pelo WhatsApp em até 1 dia útil para entender o que você procura e apresentar o imóvel.</p></div><div class="wf-cards three"><article><b>Contato da curadoria.</b><p>Salve nosso número para reconhecer a mensagem.</p></article><article><b>Apresentação do imóvel.</b><p>Plantas, imagens, condições e tudo o que você precisa para decidir.</p></article><article><b>Visita ou proposta.</b><p>Quando fizer sentido, você visita a região ou recebe a proposta direto da Elotech.</p></article></div><p><b>Enquanto isso:</b> Conheça os outros imóveis da curadoria. →</p><p>Voltar para a página inicial</p><div class="wf-note">Se o nome não estiver disponível, usar apenas “Obrigado!”. Prazo de retorno e número da curadoria ainda precisam ser confirmados.</div></section></div>
+    </article>
+      <article class="wireframe-option wf-theme wf-era" data-wireframe-panel="era" hidden>
+      <div class="wf-guide">
+        <div><span>ERA RESIDENCE</span><h2>Motion cinematográfico</h2><p>Imagem enquadrada que expande, horizontal scroll, parallax e transições tipográficas.</p></div>
+        <div class="wf-guide-meta"><div><small>COMPLEXIDADE</small><b>7/10</b></div><div><small>PIPELINE</small><b>Figma → Next.js → GSAP + ScrollTrigger + SplitText + Observer → Lenis</b></div></div>
+      </div>
+      <div class="wf-legend"><span>▧ área de imagem/render</span><span>— copy real aplicada</span><span>⇣ bloco entre seções = comportamento da transição</span><span>Wireframe propositalmente preto e branco</span></div>
+      <div class="wireframe-canvas"><header class="wf-header"><b>elotech · Central de Negócios</b><nav>Imóveis · Região · Como funciona · Dúvidas</nav><span>Fale com a curadoria</span></header><section class="wf-section wf-hero wf-hero-era"><div class="wf-frame-window"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER HERO · imagem enquadrada que expande</strong></div></div><div class="wf-copy"><small>— CURADORIA DE IMÓVEIS · LITORAL DE SANTA CATARINA</small><h2>Imóveis selecionados no litoral catarinense,<br><b>à venda direto por quem conhece.</b></h2><p>Três apartamentos na planta em Itapema e Porto Belo, da carteira da própria Elotech. Negociação direta, sem intermediário, com uma curadoria que acompanha você do primeiro contato à proposta.</p><div class="wf-actions"><b>Fale com a curadoria</b><span>Conheça os imóveis ↓</span></div></div><div class="wf-chips"><span>Algarve Residence · Porto Belo · 3 suítes</span><span>Lorenzo Gabriel Residence · Itapema · 1 km do mar</span><span>Tenet, Torre Opera · Itapema · 40 m² para investir</span></div><div class="wf-legal">Imagens ilustrativas</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A imagem enquadrada da hero amplia até ocupar a viewport; headline e linhas se deslocam em velocidades diferentes, como uma abertura de janela.</p></div><section class="wf-section wf-why"><div class="wf-copy"><small>— POR QUE COMPRAR COM A GENTE</small><h3>Uma marca que o litoral já conhece,<br><b>agora cuidando do seu imóvel.</b></h3><p>A Elotech está há anos no dia a dia das construtoras de Santa Catarina. Os apartamentos desta página fazem parte da nossa carteira, e quem negocia com você é o nosso próprio time.</p></div><div class="wf-cards four"><article><b>Marca conhecida no litoral</b><p>Quem é da região já conhece a Elotech. Você compra de uma empresa com CNPJ, endereço e história em Santa Catarina.</p></article><article><b>Direto do proprietário</b><p>Os imóveis são da própria Elotech. Sem intermediário na negociação, e com mais espaço para ajustar as condições ao seu planejamento.</p></article><article><b>Atendimento consultivo</b><p>Um consultor acompanha você na apresentação, na visita e na proposta. Se preferir, a gente vai até você.</p></article><article><b>Quem conhece a região</b><p>Conhecemos as construtoras, os bairros e o perfil de cada empreendimento. A gente ajuda você a escolher o imóvel certo para o seu objetivo.</p></article></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A imagem fullscreen reduz/recorta para virar parte do layout editorial; o texto institucional é revelado por blocos curtos.</p></div><section class="wf-section wf-open"><div class="wf-copy"><small>— OS IMÓVEIS</small><h3>Três perfis,<br><b>três endereços.</b></h3><p>Um para cada momento: a segunda casa da família, o apartamento de praia que equilibra tudo e o investimento compacto para gerar renda.</p></div><div class="wf-chapter-index"><span>01 Algarve</span><span>02 Lorenzo Gabriel</span><span>03 Tenet</span></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Os três imóveis aparecem como uma faixa/galeria horizontal de teaser cards; o usuário “viaja” lateralmente antes de entrar no primeiro.</p></div><section class="wf-section wf-property wf-algarve layout-era">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Algarve Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">01 · PORTO BELO / SC · ALTO PADRÃO</small>
+        <h3>A elegância do Mediterrâneo,<br><b>no litoral catarinense.</b></h3>
+        <p>Arquitetura de inspiração mediterrânea, um apartamento por andar e 91 m² para viver e receber com calma. O Algarve foi pensado para a família que quer uma segunda casa em Porto Belo com privacidade de casa e estrutura de condomínio.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>91,38 m²</b></div><div><small>Planta</small><b>3 suítes · 2 vagas · lavabo</b></div><div><small>Unidade</small><b>Apto 901</b></div><div><small>Entrega</small><b>Junho de 2028</b></div><div><small>Valor</small><b>R$ 1.730.000</b></div><div><small>Incorporadora</small><b>Tramonto</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>Um apartamento por andar. Privacidade de casa, sem vizinho de porta.</li><li>Sacada integrada com churrasqueira a carvão. O living se abre para a varanda para receber a família.</li><li>Rooftop com hidromassagem e vista para os morros.</li><li>Lazer para todas as idades: piscina, academia e brinquedoteca.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Famílias que querem uma segunda moradia de alto padrão no litoral.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Algarve</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O teaser do Algarve expande e vira a imagem principal do capítulo; título entra com SplitText e dados aparecem em sequência.</p></div><section class="wf-section wf-property wf-lorenzo layout-era">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Lorenzo Gabriel Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">02 · ITAPEMA / SC · BAIRRO MORRETES</small>
+        <h3>Espaço, localização e preço<br><b>em equilíbrio.</b></h3>
+        <p>Dois dormitórios a 1 km do mar, em uma torre residencial sobre térreo comercial. O Lorenzo Gabriel é para quem quer um apartamento de praia em Itapema para morar, passar a temporada ou alugar, sem abrir mão de espaço.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>62,9 m²</b></div><div><small>Planta</small><b>1 suíte + 1 dormitório · 1 vaga</b></div><div><small>Unidades</small><b>Apto 1203 · Apto 1902</b></div><div><small>Entrega</small><b>Novembro de 2029</b></div><div><small>Valor</small><b>a partir de R$ 845.000</b></div><div><small>Incorporadora</small><b>Meia Praia Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>1 km do mar, no bairro Morretes, em Itapema.</li><li>A cidade na porta: torre residencial sobre térreo comercial.</li><li>Sacada com churrasqueira e living integrado à cozinha.</li><li>Duas unidades à escolha, no 12º e no 19º andar.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Térreo comercial · Localização · Planta · Sacada</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Para morar ou investir. O equilíbrio entre preço, espaço e localização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Lorenzo Gabriel</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Térreo comercial · Localização · Planta · Sacada</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A galeria do Algarve termina com uma imagem que cresce e faz crossfade para o Lorenzo; evitar corte seco.</p></div><section class="wf-section wf-property wf-tenet layout-era">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Tenet · Torre Opera</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">03 · ITAPEMA / SC · TENET ART HOME DISTRICT</small>
+        <h3>40 m² pensados<br><b>para investir.</b></h3>
+        <p>Uma unidade compacta na Torre Opera, dentro de um complexo com 4.700 m² de lazer integrados ao parque. O Tenet é para quem quer renda de locação e valorização de longo prazo em Itapema, a 10 minutos da Praia Central.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>40 m²</b></div><div><small>Planta</small><b>1 dormitório · 1 vaga · varanda</b></div><div><small>Unidade</small><b>Apto 3404</b></div><div><small>Entrega</small><b>2031</b></div><div><small>Valor</small><b>R$ 1.053.800</b></div><div><small>Incorporadora</small><b>ZAH Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>4.700 m² de lazer integrados ao parque.</li><li>Piscinas, academia, skybar, coworking e lounge. Estrutura que valoriza a locação de temporada.</li><li>Planta compacta e funcional: sala e cozinha integradas, com varanda.</li><li>10 minutos da Praia Central de Itapema.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Torre Opera · Lounge · Piscina · Coworking · Vista</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Investidores que buscam renda com locação e valorização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Tenet</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Torre Opera · Lounge · Piscina · Coworking · Vista</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Mesma lógica de imagem → expansão → próximo capítulo para entrar no Tenet.</p></div><section class="wf-section wf-match"><div class="wf-copy"><small>— ESCOLHA PELO SEU OBJETIVO</small><h3>Qual imóvel<br><b>combina com você?</b></h3><p>Cada apartamento foi escolhido para um perfil. Comece pelo seu objetivo.</p></div><div class="wf-cards three"><article><small>Investir</small><b>Quero renda e valorização</b><p>Compacto, em um complexo com lazer completo, com perfil para locação de temporada.</p><span>Tenet · 40 m² · Itapema</span><strong>Ver o Tenet →</strong></article><article><small>Morar</small><b>Quero morar perto do mar</b><p>Dois dormitórios a 1 km do mar, com comércio no térreo e a cidade por perto.</p><span>Lorenzo Gabriel · 62,9 m² · Itapema</span><strong>Ver o Lorenzo Gabriel →</strong></article><article><small>Veraneio</small><b>Quero a casa da família no litoral</b><p>Três suítes, um apartamento por andar e rooftop para receber todo mundo.</p><span>Algarve · 91 m² · Porto Belo</span><strong>Ver o Algarve →</strong></article></div><div class="wf-inline-note">Ainda em dúvida? A curadoria ajuda você a escolher.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A última galeria horizontal desacelera e devolve a página ao eixo vertical; tipografia grande introduz “Qual imóvel combina com você?”.</p></div><section class="wf-section wf-region"><div class="wf-copy"><small>— ITAPEMA E PORTO BELO</small><h3>O litoral catarinense que o Brasil escolheu para morar.</h3><p>Entre Balneário Camboriú e Bombinhas, Itapema e Porto Belo reúnem mar calmo, infraestrutura de cidade e um mercado imobiliário aquecido. É para onde vêm famílias do Sul do país em busca de qualidade de vida, e investidores atrás de renda com temporada.</p></div><div class="wf-region-grid"><div class="wf-cards three"><article><b>Itapema</b><p>Meia Praia e Praia Central, orla urbanizada e uma das cidades que mais cresce no litoral. Casa do Tenet e do Lorenzo Gabriel.</p></article><article><b>Porto Belo</b><p>Baía de águas calmas, clima de cidade tranquila e acesso rápido às praias de Bombinhas. Casa do Algarve.</p></article><article><b>Perto de tudo</b><p>Pela BR-101, poucos minutos de Balneário Camboriú e cerca de 1h30 do aeroporto de Florianópolis.</p></article></div><div class="wf-img wf-map"><span>IMAGEM</span><strong>MAPA · Tenet / Lorenzo Gabriel / Algarve</strong></div><div class="wf-map-list"><span>Tenet · Tabuleiro das Oliveiras, Itapema · 10 min da Praia Central</span><span>Lorenzo Gabriel · Morretes, Itapema · 1 km do mar</span><span>Algarve · Porto Belo</span></div></div><div class="wf-note">Usar este H2 alternativo até existir fonte para “o trecho que mais valoriza em Santa Catarina”.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Um recorte de imagem revela a região por clip/scale; o mapa aparece com parallax muito leve.</p></div><section class="wf-section wf-process"><div class="wf-copy"><small>— COMO FUNCIONA</small><h3>Do primeiro contato à proposta,<br><b>com a gente do seu lado.</b></h3></div><div class="wf-process-grid"><article><span>01</span><b>Conte o que você procura</b><p>Preencha o formulário em menos de 1 minuto. As perguntas ajudam a indicar o imóvel certo.</p></article><article><span>02</span><b>A curadoria entra em contato</b><p>Um consultor da Elotech fala com você pelo WhatsApp ou telefone para entender seu objetivo.</p></article><article><span>03</span><b>Apresentação ou visita</b><p>Você conhece o imóvel por uma apresentação completa, online ou presencial, ou visita a região com a gente.</p></article><article><span>04</span><b>Proposta direta</b><p>Você negocia direto com a Elotech, proprietária do imóvel, e fecha condições que cabem no seu planejamento.</p></article></div><div class="wf-cta">Quero começar</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O mapa reduz para um painel e a seção “Como funciona” entra como página editorial limpa, com números grandes.</p></div><section class="wf-section wf-social is-conditional"><div class="wf-copy"><small>— QUEM JÁ COMPROU</small><h3>Quem comprou com a Elotech <b>recomenda.</b></h3><p>Seção condicionada. Não publicar até receber depoimentos reais.</p></div><div class="wf-cards three"><article>DEPOIMENTO 01</article><article>DEPOIMENTO 02</article><article>DEPOIMENTO 03</article></div></section><section class="wf-section wf-form"><div class="wf-copy"><small>— FALE COM A CURADORIA</small><h3>Conte o que você procura.<br><b>A gente indica o imóvel certo.</b></h3><p>Leva menos de 1 minuto. Um consultor da Elotech retorna em até 1 dia útil.</p></div><div class="wf-form-steps"><article><span>ETAPA 1 DE 3</span><ul><li>Qual imóvel te interessa?</li><li>Algarve · Porto Belo</li><li>Lorenzo Gabriel · Itapema</li><li>Tenet · Itapema</li><li>Ainda não sei</li><li>Qual seu objetivo com o imóvel?</li><li>Investir (aluguel e valorização)</li><li>Morar</li><li>Casa de veraneio</li></ul><div class="wf-button">Continuar</div></article><article><span>ETAPA 2 DE 3</span><ul><li>Quanto você tem disponível para entrada?</li><li>Até R$ 70 mil</li><li>R$ 70 a 100 mil</li><li>Acima de R$ 100 mil</li><li>Qual parcela mensal cabe no seu planejamento?</li><li>Até R$ 5 mil</li><li>R$ 5 a 10 mil</li><li>Acima de R$ 10 mil</li><li>Você conhece a região de Itapema e Porto Belo?</li><li>Visito com frequência</li><li>Conheço pouco</li><li>Não conheço</li></ul><p>Essas respostas ajudam o consultor a montar uma proposta que caiba no seu planejamento.</p><div class="wf-button ghost">Voltar</div><div class="wf-button">Continuar</div></article><article><span>ETAPA 3 DE 3</span><div class="wf-field">Nome completo · Como podemos te chamar?</div><div class="wf-field">WhatsApp · (00) 00000-0000</div><div class="wf-field">E-mail · seu@email.com</div><div class="wf-field">Cidade · Onde você mora hoje?</div><div class="wf-field">Estado · Selecione</div><p>Concordo em receber o contato da Elotech sobre este imóvel e li a Política de Privacidade.</p><div class="wf-button">Quero falar com a curadoria</div><small>Seus dados ficam só com a Elotech. Sem spam.</small></article></div><div class="wf-note">“até 1 dia útil” precisa de confirmação antes de publicar. CTA de cada imóvel deve chegar aqui com o imóvel pré-selecionado.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O CTA “Quero começar” se transforma visualmente no contêiner do formulário, mantendo continuidade.</p></div><section class="wf-section wf-faq"><div class="wf-copy"><small>— DÚVIDAS</small><h3>Perguntas <b>frequentes</b></h3></div><div class="wf-faq-list"><article><b>Por que a Elotech está vendendo esses apartamentos?</b><p>Os imóveis fazem parte da carteira da Elotech, que tem uma relação de longa data com as construtoras do litoral catarinense. Por isso a venda é direta: você negocia com o proprietário, sem intermediário.</p></article><article><b>Como funciona a compra de um imóvel na planta?</b><p>Você garante a unidade agora, com uma entrada e parcelas ao longo da obra, e recebe o apartamento pronto na data de entrega. Comprar na planta costuma sair mais barato do que comprar o imóvel pronto, e o valor tende a subir até a entrega.</p></article><article><b>Quais são as condições de pagamento?</b><p>As condições são combinadas direto com a Elotech, com entrada e parcelas mensais. Como somos os proprietários, conseguimos ajustar a proposta ao seu planejamento. O consultor apresenta os detalhes no primeiro contato.</p></article><article><b>Quando os imóveis ficam prontos?</b><p>Algarve: junho de 2028. Lorenzo Gabriel: novembro de 2029. Tenet: 2031. As datas são das incorporadoras responsáveis por cada obra.</p></article><article><b>Quem constrói os empreendimentos?</b><p>Cada um tem sua incorporadora: Tramonto (Algarve), Meia Praia Empreendimentos (Lorenzo Gabriel) e ZAH Empreendimentos (Tenet). A Elotech é a proprietária das unidades e cuida da venda.</p></article><article><b>Posso visitar antes de decidir?</b><p>Pode. O consultor agenda a visita à região e ao local da obra, e apresenta o projeto completo, com plantas, memorial e imagens. Se você mora longe, a apresentação também pode ser online.</p></article><article><b>Não moro em Santa Catarina. Consigo comprar?</b><p>Consegue. Boa parte de quem compra no litoral catarinense vem de outras cidades do Sul. O atendimento, a apresentação e a negociação podem ser feitos a distância, e a gente acompanha você em cada etapa.</p></article><article><b>Os valores da página são definitivos?</b><p>Os valores e condições podem mudar sem aviso, conforme a disponibilidade. O consultor confirma o valor atualizado no primeiro contato.</p></article></div><div class="wf-note">Condições de pagamento ainda precisam ser validadas quanto a financiamento na entrega e permuta.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O formulário encerra e o FAQ entra sem motion pesado; o foco volta para utilidade.</p></div><section class="wf-section wf-final"><div class="wf-img "><span>IMAGEM</span><strong>FOTO DE FUNDO · faixa final</strong></div><div class="wf-copy"><h3>Seu imóvel no litoral catarinense<br><b>começa com uma conversa.</b></h3><p>Conte o que você procura e receba a indicação da curadoria da Elotech.</p><div class="wf-cta">Fale com a curadoria</div></div><div class="wf-note">Pode ser removida se ficar redundante logo após o formulário.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Uma imagem final expande por trás da headline do CTA e fecha a experiência antes do footer.</p></div><footer class="wf-footer"><b>elotech · Central de Negócios</b><p>Elotech Central de Negócios é uma marca da Elo Indústria de Elevadores LTDA · CNPJ 35.237.879/0001-74</p><p>Política de Privacidade</p><p>Imagens ilustrativas. Valores e condições sujeitos a alteração sem aviso prévio. Os empreendimentos são de responsabilidade de suas incorporadoras: Tramonto, Meia Praia Empreendimentos e ZAH Empreendimentos.</p><p>© 2026 Elotech Central de Negócios</p></footer><section class="wf-thanks"><span>PÁGINA /obrigado</span><div class="wf-copy"><small>— RECEBEMOS SEU CONTATO</small><h3>Obrigado, {nome}.<br><b>A curadoria já está com suas respostas.</b></h3><p>Um consultor da Elotech vai falar com você pelo WhatsApp em até 1 dia útil para entender o que você procura e apresentar o imóvel.</p></div><div class="wf-cards three"><article><b>Contato da curadoria.</b><p>Salve nosso número para reconhecer a mensagem.</p></article><article><b>Apresentação do imóvel.</b><p>Plantas, imagens, condições e tudo o que você precisa para decidir.</p></article><article><b>Visita ou proposta.</b><p>Quando fizer sentido, você visita a região ou recebe a proposta direto da Elotech.</p></article></div><p><b>Enquanto isso:</b> Conheça os outros imóveis da curadoria. →</p><p>Voltar para a página inicial</p><div class="wf-note">Se o nome não estiver disponível, usar apenas “Obrigado!”. Prazo de retorno e número da curadoria ainda precisam ser confirmados.</div></section></div>
+    </article>
+      <article class="wireframe-option wf-theme wf-sobha" data-wireframe-panel="sobha" hidden>
+      <div class="wf-guide">
+        <div><span>SOBHA PRIVY</span><h2>Experiência imersiva / alto risco</h2><p>Forma 3D como fio condutor, galerias circulares, imagens que viram a próxima seção e mapa 3D.</p></div>
+        <div class="wf-guide-meta"><div><small>COMPLEXIDADE</small><b>10/10</b></div><div><small>PIPELINE</small><b>Figma → Blender/3D → Three.js/WebGL/GLSL → GSAP → otimização GPU/mobile</b></div></div>
+      </div>
+      <div class="wf-legend"><span>▧ área de imagem/render</span><span>— copy real aplicada</span><span>⇣ bloco entre seções = comportamento da transição</span><span>Wireframe propositalmente preto e branco</span></div>
+      <div class="wireframe-canvas"><header class="wf-header"><b>elotech · Central de Negócios</b><nav>Imóveis · Região · Como funciona · Dúvidas</nav><span>Fale com a curadoria</span></header><section class="wf-section wf-hero wf-hero-sobha"><div class="wf-symbol">MOTIVO / FORMA 3D DA MARCA<br><small>placeholder conceitual</small></div><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER DOS 3 EMPREENDIMENTOS · revelado após a abertura</strong></div><div class="wf-copy"><small>— CURADORIA DE IMÓVEIS · LITORAL DE SANTA CATARINA</small><h2>Imóveis selecionados no litoral catarinense,<br><b>à venda direto por quem conhece.</b></h2><p>Três apartamentos na planta em Itapema e Porto Belo, da carteira da própria Elotech. Negociação direta, sem intermediário, com uma curadoria que acompanha você do primeiro contato à proposta.</p><div class="wf-actions"><b>Fale com a curadoria</b><span>Conheça os imóveis ↓</span></div></div><div class="wf-chips"><span>Algarve Residence · Porto Belo · 3 suítes</span><span>Lorenzo Gabriel Residence · Itapema · 1 km do mar</span><span>Tenet, Torre Opera · Itapema · 40 m² para investir</span></div><div class="wf-legal">Imagens ilustrativas</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A forma/motivo 3D da marca abre a experiência e continua como fio visual até revelar a hero imobiliária. Reprodução fiel exige WebGL.</p></div><section class="wf-section wf-why"><div class="wf-copy"><small>— POR QUE COMPRAR COM A GENTE</small><h3>Uma marca que o litoral já conhece,<br><b>agora cuidando do seu imóvel.</b></h3><p>A Elotech está há anos no dia a dia das construtoras de Santa Catarina. Os apartamentos desta página fazem parte da nossa carteira, e quem negocia com você é o nosso próprio time.</p></div><div class="wf-cards four"><article><b>Marca conhecida no litoral</b><p>Quem é da região já conhece a Elotech. Você compra de uma empresa com CNPJ, endereço e história em Santa Catarina.</p></article><article><b>Direto do proprietário</b><p>Os imóveis são da própria Elotech. Sem intermediário na negociação, e com mais espaço para ajustar as condições ao seu planejamento.</p></article><article><b>Atendimento consultivo</b><p>Um consultor acompanha você na apresentação, na visita e na proposta. Se preferir, a gente vai até você.</p></article><article><b>Quem conhece a região</b><p>Conhecemos as construtoras, os bairros e o perfil de cada empreendimento. A gente ajuda você a escolher o imóvel certo para o seu objetivo.</p></article></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A forma passa para segundo plano e o conteúdo institucional nasce da mesma composição, sem “corte” entre telas.</p></div><section class="wf-section wf-open"><div class="wf-copy"><small>— OS IMÓVEIS</small><h3>Três perfis,<br><b>três endereços.</b></h3><p>Um para cada momento: a segunda casa da família, o apartamento de praia que equilibra tudo e o investimento compacto para gerar renda.</p></div><div class="wf-chapter-index"><span>01 Algarve</span><span>02 Lorenzo Gabriel</span><span>03 Tenet</span></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Os três imóveis surgem como seleção editorial/circular; uma miniatura se expande até virar o primeiro capítulo.</p></div><section class="wf-section wf-property wf-algarve layout-sobha">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Algarve Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">01 · PORTO BELO / SC · ALTO PADRÃO</small>
+        <h3>A elegância do Mediterrâneo,<br><b>no litoral catarinense.</b></h3>
+        <p>Arquitetura de inspiração mediterrânea, um apartamento por andar e 91 m² para viver e receber com calma. O Algarve foi pensado para a família que quer uma segunda casa em Porto Belo com privacidade de casa e estrutura de condomínio.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>91,38 m²</b></div><div><small>Planta</small><b>3 suítes · 2 vagas · lavabo</b></div><div><small>Unidade</small><b>Apto 901</b></div><div><small>Entrega</small><b>Junho de 2028</b></div><div><small>Valor</small><b>R$ 1.730.000</b></div><div><small>Incorporadora</small><b>Tramonto</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>Um apartamento por andar. Privacidade de casa, sem vizinho de porta.</li><li>Sacada integrada com churrasqueira a carvão. O living se abre para a varanda para receber a família.</li><li>Rooftop com hidromassagem e vista para os morros.</li><li>Lazer para todas as idades: piscina, academia e brinquedoteca.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Famílias que querem uma segunda moradia de alto padrão no litoral.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Algarve</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A última imagem do Algarve expande e se torna o fundo do Lorenzo. A transição deve parecer uma única cena contínua.</p></div><section class="wf-section wf-property wf-lorenzo layout-sobha">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Lorenzo Gabriel Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">02 · ITAPEMA / SC · BAIRRO MORRETES</small>
+        <h3>Espaço, localização e preço<br><b>em equilíbrio.</b></h3>
+        <p>Dois dormitórios a 1 km do mar, em uma torre residencial sobre térreo comercial. O Lorenzo Gabriel é para quem quer um apartamento de praia em Itapema para morar, passar a temporada ou alugar, sem abrir mão de espaço.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>62,9 m²</b></div><div><small>Planta</small><b>1 suíte + 1 dormitório · 1 vaga</b></div><div><small>Unidades</small><b>Apto 1203 · Apto 1902</b></div><div><small>Entrega</small><b>Novembro de 2029</b></div><div><small>Valor</small><b>a partir de R$ 845.000</b></div><div><small>Incorporadora</small><b>Meia Praia Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>1 km do mar, no bairro Morretes, em Itapema.</li><li>A cidade na porta: torre residencial sobre térreo comercial.</li><li>Sacada com churrasqueira e living integrado à cozinha.</li><li>Duas unidades à escolha, no 12º e no 19º andar.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Térreo comercial · Localização · Planta · Sacada</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Para morar ou investir. O equilíbrio entre preço, espaço e localização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Lorenzo Gabriel</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Térreo comercial · Localização · Planta · Sacada</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O Lorenzo repete a lógica e entrega a imagem final para o Tenet, evitando qualquer hard cut.</p></div><section class="wf-section wf-property wf-tenet layout-sobha">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Tenet · Torre Opera</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">03 · ITAPEMA / SC · TENET ART HOME DISTRICT</small>
+        <h3>40 m² pensados<br><b>para investir.</b></h3>
+        <p>Uma unidade compacta na Torre Opera, dentro de um complexo com 4.700 m² de lazer integrados ao parque. O Tenet é para quem quer renda de locação e valorização de longo prazo em Itapema, a 10 minutos da Praia Central.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>40 m²</b></div><div><small>Planta</small><b>1 dormitório · 1 vaga · varanda</b></div><div><small>Unidade</small><b>Apto 3404</b></div><div><small>Entrega</small><b>2031</b></div><div><small>Valor</small><b>R$ 1.053.800</b></div><div><small>Incorporadora</small><b>ZAH Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>4.700 m² de lazer integrados ao parque.</li><li>Piscinas, academia, skybar, coworking e lounge. Estrutura que valoriza a locação de temporada.</li><li>Planta compacta e funcional: sala e cozinha integradas, com varanda.</li><li>10 minutos da Praia Central de Itapema.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Torre Opera · Lounge · Piscina · Coworking · Vista</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Investidores que buscam renda com locação e valorização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Tenet</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Torre Opera · Lounge · Piscina · Coworking · Vista</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O fio visual/forma reaparece e recolhe os capítulos em três escolhas objetivas de perfil.</p></div><section class="wf-section wf-match"><div class="wf-copy"><small>— ESCOLHA PELO SEU OBJETIVO</small><h3>Qual imóvel<br><b>combina com você?</b></h3><p>Cada apartamento foi escolhido para um perfil. Comece pelo seu objetivo.</p></div><div class="wf-cards three"><article><small>Investir</small><b>Quero renda e valorização</b><p>Compacto, em um complexo com lazer completo, com perfil para locação de temporada.</p><span>Tenet · 40 m² · Itapema</span><strong>Ver o Tenet →</strong></article><article><small>Morar</small><b>Quero morar perto do mar</b><p>Dois dormitórios a 1 km do mar, com comércio no térreo e a cidade por perto.</p><span>Lorenzo Gabriel · 62,9 m² · Itapema</span><strong>Ver o Lorenzo Gabriel →</strong></article><article><small>Veraneio</small><b>Quero a casa da família no litoral</b><p>Três suítes, um apartamento por andar e rooftop para receber todo mundo.</p><span>Algarve · 91 m² · Porto Belo</span><strong>Ver o Algarve →</strong></article></div><div class="wf-inline-note">Ainda em dúvida? A curadoria ajuda você a escolher.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Os cartões desaparecem dentro de um mapa monocromático. Na versão fiel, o mapa seria uma cena 3D guiada pelo scroll.</p></div><section class="wf-section wf-region"><div class="wf-copy"><small>— ITAPEMA E PORTO BELO</small><h3>O litoral catarinense que o Brasil escolheu para morar.</h3><p>Entre Balneário Camboriú e Bombinhas, Itapema e Porto Belo reúnem mar calmo, infraestrutura de cidade e um mercado imobiliário aquecido. É para onde vêm famílias do Sul do país em busca de qualidade de vida, e investidores atrás de renda com temporada.</p></div><div class="wf-region-grid"><div class="wf-cards three"><article><b>Itapema</b><p>Meia Praia e Praia Central, orla urbanizada e uma das cidades que mais cresce no litoral. Casa do Tenet e do Lorenzo Gabriel.</p></article><article><b>Porto Belo</b><p>Baía de águas calmas, clima de cidade tranquila e acesso rápido às praias de Bombinhas. Casa do Algarve.</p></article><article><b>Perto de tudo</b><p>Pela BR-101, poucos minutos de Balneário Camboriú e cerca de 1h30 do aeroporto de Florianópolis.</p></article></div><div class="wf-img wf-map"><span>IMAGEM</span><strong>MAPA · Tenet / Lorenzo Gabriel / Algarve</strong></div><div class="wf-map-list"><span>Tenet · Tabuleiro das Oliveiras, Itapema · 10 min da Praia Central</span><span>Lorenzo Gabriel · Morretes, Itapema · 1 km do mar</span><span>Algarve · Porto Belo</span></div></div><div class="wf-note">Usar este H2 alternativo até existir fonte para “o trecho que mais valoriza em Santa Catarina”.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O mapa termina em um plano neutro e dá origem aos quatro passos de compra, mantendo o ritmo editorial.</p></div><section class="wf-section wf-process"><div class="wf-copy"><small>— COMO FUNCIONA</small><h3>Do primeiro contato à proposta,<br><b>com a gente do seu lado.</b></h3></div><div class="wf-process-grid"><article><span>01</span><b>Conte o que você procura</b><p>Preencha o formulário em menos de 1 minuto. As perguntas ajudam a indicar o imóvel certo.</p></article><article><span>02</span><b>A curadoria entra em contato</b><p>Um consultor da Elotech fala com você pelo WhatsApp ou telefone para entender seu objetivo.</p></article><article><span>03</span><b>Apresentação ou visita</b><p>Você conhece o imóvel por uma apresentação completa, online ou presencial, ou visita a região com a gente.</p></article><article><span>04</span><b>Proposta direta</b><p>Você negocia direto com a Elotech, proprietária do imóvel, e fecha condições que cabem no seu planejamento.</p></article></div><div class="wf-cta">Quero começar</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Um frame de conteúdo cresce para virar o formulário, semelhante ao padrão “vídeo/card que expande para a próxima seção”.</p></div><section class="wf-section wf-social is-conditional"><div class="wf-copy"><small>— QUEM JÁ COMPROU</small><h3>Quem comprou com a Elotech <b>recomenda.</b></h3><p>Seção condicionada. Não publicar até receber depoimentos reais.</p></div><div class="wf-cards three"><article>DEPOIMENTO 01</article><article>DEPOIMENTO 02</article><article>DEPOIMENTO 03</article></div></section><section class="wf-section wf-form"><div class="wf-copy"><small>— FALE COM A CURADORIA</small><h3>Conte o que você procura.<br><b>A gente indica o imóvel certo.</b></h3><p>Leva menos de 1 minuto. Um consultor da Elotech retorna em até 1 dia útil.</p></div><div class="wf-form-steps"><article><span>ETAPA 1 DE 3</span><ul><li>Qual imóvel te interessa?</li><li>Algarve · Porto Belo</li><li>Lorenzo Gabriel · Itapema</li><li>Tenet · Itapema</li><li>Ainda não sei</li><li>Qual seu objetivo com o imóvel?</li><li>Investir (aluguel e valorização)</li><li>Morar</li><li>Casa de veraneio</li></ul><div class="wf-button">Continuar</div></article><article><span>ETAPA 2 DE 3</span><ul><li>Quanto você tem disponível para entrada?</li><li>Até R$ 70 mil</li><li>R$ 70 a 100 mil</li><li>Acima de R$ 100 mil</li><li>Qual parcela mensal cabe no seu planejamento?</li><li>Até R$ 5 mil</li><li>R$ 5 a 10 mil</li><li>Acima de R$ 10 mil</li><li>Você conhece a região de Itapema e Porto Belo?</li><li>Visito com frequência</li><li>Conheço pouco</li><li>Não conheço</li></ul><p>Essas respostas ajudam o consultor a montar uma proposta que caiba no seu planejamento.</p><div class="wf-button ghost">Voltar</div><div class="wf-button">Continuar</div></article><article><span>ETAPA 3 DE 3</span><div class="wf-field">Nome completo · Como podemos te chamar?</div><div class="wf-field">WhatsApp · (00) 00000-0000</div><div class="wf-field">E-mail · seu@email.com</div><div class="wf-field">Cidade · Onde você mora hoje?</div><div class="wf-field">Estado · Selecione</div><p>Concordo em receber o contato da Elotech sobre este imóvel e li a Política de Privacidade.</p><div class="wf-button">Quero falar com a curadoria</div><small>Seus dados ficam só com a Elotech. Sem spam.</small></article></div><div class="wf-note">“até 1 dia útil” precisa de confirmação antes de publicar. CTA de cada imóvel deve chegar aqui com o imóvel pré-selecionado.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>FAQ entra como “capítulo utilitário”, com motion mínimo para preservar clareza.</p></div><section class="wf-section wf-faq"><div class="wf-copy"><small>— DÚVIDAS</small><h3>Perguntas <b>frequentes</b></h3></div><div class="wf-faq-list"><article><b>Por que a Elotech está vendendo esses apartamentos?</b><p>Os imóveis fazem parte da carteira da Elotech, que tem uma relação de longa data com as construtoras do litoral catarinense. Por isso a venda é direta: você negocia com o proprietário, sem intermediário.</p></article><article><b>Como funciona a compra de um imóvel na planta?</b><p>Você garante a unidade agora, com uma entrada e parcelas ao longo da obra, e recebe o apartamento pronto na data de entrega. Comprar na planta costuma sair mais barato do que comprar o imóvel pronto, e o valor tende a subir até a entrega.</p></article><article><b>Quais são as condições de pagamento?</b><p>As condições são combinadas direto com a Elotech, com entrada e parcelas mensais. Como somos os proprietários, conseguimos ajustar a proposta ao seu planejamento. O consultor apresenta os detalhes no primeiro contato.</p></article><article><b>Quando os imóveis ficam prontos?</b><p>Algarve: junho de 2028. Lorenzo Gabriel: novembro de 2029. Tenet: 2031. As datas são das incorporadoras responsáveis por cada obra.</p></article><article><b>Quem constrói os empreendimentos?</b><p>Cada um tem sua incorporadora: Tramonto (Algarve), Meia Praia Empreendimentos (Lorenzo Gabriel) e ZAH Empreendimentos (Tenet). A Elotech é a proprietária das unidades e cuida da venda.</p></article><article><b>Posso visitar antes de decidir?</b><p>Pode. O consultor agenda a visita à região e ao local da obra, e apresenta o projeto completo, com plantas, memorial e imagens. Se você mora longe, a apresentação também pode ser online.</p></article><article><b>Não moro em Santa Catarina. Consigo comprar?</b><p>Consegue. Boa parte de quem compra no litoral catarinense vem de outras cidades do Sul. O atendimento, a apresentação e a negociação podem ser feitos a distância, e a gente acompanha você em cada etapa.</p></article><article><b>Os valores da página são definitivos?</b><p>Os valores e condições podem mudar sem aviso, conforme a disponibilidade. O consultor confirma o valor atualizado no primeiro contato.</p></article></div><div class="wf-note">Condições de pagamento ainda precisam ser validadas quanto a financiamento na entrega e permuta.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O motivo visual retorna discretamente no CTA final, fechando a narrativa no mesmo sistema da abertura.</p></div><section class="wf-section wf-final"><div class="wf-img "><span>IMAGEM</span><strong>FOTO DE FUNDO · faixa final</strong></div><div class="wf-copy"><h3>Seu imóvel no litoral catarinense<br><b>começa com uma conversa.</b></h3><p>Conte o que você procura e receba a indicação da curadoria da Elotech.</p><div class="wf-cta">Fale com a curadoria</div></div><div class="wf-note">Pode ser removida se ficar redundante logo após o formulário.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Footer totalmente sóbrio, sem recurso 3D; foco legal e assinatura.</p></div><footer class="wf-footer"><b>elotech · Central de Negócios</b><p>Elotech Central de Negócios é uma marca da Elo Indústria de Elevadores LTDA · CNPJ 35.237.879/0001-74</p><p>Política de Privacidade</p><p>Imagens ilustrativas. Valores e condições sujeitos a alteração sem aviso prévio. Os empreendimentos são de responsabilidade de suas incorporadoras: Tramonto, Meia Praia Empreendimentos e ZAH Empreendimentos.</p><p>© 2026 Elotech Central de Negócios</p></footer><section class="wf-thanks"><span>PÁGINA /obrigado</span><div class="wf-copy"><small>— RECEBEMOS SEU CONTATO</small><h3>Obrigado, {nome}.<br><b>A curadoria já está com suas respostas.</b></h3><p>Um consultor da Elotech vai falar com você pelo WhatsApp em até 1 dia útil para entender o que você procura e apresentar o imóvel.</p></div><div class="wf-cards three"><article><b>Contato da curadoria.</b><p>Salve nosso número para reconhecer a mensagem.</p></article><article><b>Apresentação do imóvel.</b><p>Plantas, imagens, condições e tudo o que você precisa para decidir.</p></article><article><b>Visita ou proposta.</b><p>Quando fizer sentido, você visita a região ou recebe a proposta direto da Elotech.</p></article></div><p><b>Enquanto isso:</b> Conheça os outros imóveis da curadoria. →</p><p>Voltar para a página inicial</p><div class="wf-note">Se o nome não estiver disponível, usar apenas “Obrigado!”. Prazo de retorno e número da curadoria ainda precisam ser confirmados.</div></section></div>
+    </article>
+      <article class="wireframe-option wf-theme wf-hybrid" data-wireframe-panel="hybrid" >
+      <div class="wf-guide">
+        <div><span>HÍBRIDO 60 / 30 / 10</span><h2>Recomendação custo-benefício</h2><p>Loam na estrutura, ERA no motion e Sobha apenas na atmosfera. Sem WebGL.</p></div>
+        <div class="wf-guide-meta"><div><small>COMPLEXIDADE</small><b>6/10</b></div><div><small>PIPELINE</small><b>Figma → Next.js → GSAP + ScrollTrigger + SplitText → Lenis → SVG/mapa estático</b></div></div>
+      </div>
+      <div class="wf-legend"><span>▧ área de imagem/render</span><span>— copy real aplicada</span><span>⇣ bloco entre seções = comportamento da transição</span><span>Wireframe propositalmente preto e branco</span></div>
+      <div class="wireframe-canvas"><header class="wf-header"><b>elotech · Central de Negócios</b><nav>Imóveis · Região · Como funciona · Dúvidas</nav><span>Fale com a curadoria</span></header><section class="wf-section wf-hero"><div class="wf-copy"><small>— CURADORIA DE IMÓVEIS · LITORAL DE SANTA CATARINA</small><h2>Imóveis selecionados no litoral catarinense,<br><b>à venda direto por quem conhece.</b></h2><p>Três apartamentos na planta em Itapema e Porto Belo, da carteira da própria Elotech. Negociação direta, sem intermediário, com uma curadoria que acompanha você do primeiro contato à proposta.</p><div class="wf-actions"><b>Fale com a curadoria</b><span>Conheça os imóveis ↓</span></div></div><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER HERO · 3 empreendimentos</strong></div><div class="wf-chips"><span>Algarve Residence · Porto Belo · 3 suítes</span><span>Lorenzo Gabriel Residence · Itapema · 1 km do mar</span><span>Tenet, Torre Opera · Itapema · 40 m² para investir</span></div><div class="wf-legal">Imagens ilustrativas</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Abertura inspirada no ERA: render começa enquadrado e cresce. Sem WebGL; apenas scale/clip com GSAP.</p></div><section class="wf-section wf-why"><div class="wf-copy"><small>— POR QUE COMPRAR COM A GENTE</small><h3>Uma marca que o litoral já conhece,<br><b>agora cuidando do seu imóvel.</b></h3><p>A Elotech está há anos no dia a dia das construtoras de Santa Catarina. Os apartamentos desta página fazem parte da nossa carteira, e quem negocia com você é o nosso próprio time.</p></div><div class="wf-cards four"><article><b>Marca conhecida no litoral</b><p>Quem é da região já conhece a Elotech. Você compra de uma empresa com CNPJ, endereço e história em Santa Catarina.</p></article><article><b>Direto do proprietário</b><p>Os imóveis são da própria Elotech. Sem intermediário na negociação, e com mais espaço para ajustar as condições ao seu planejamento.</p></article><article><b>Atendimento consultivo</b><p>Um consultor acompanha você na apresentação, na visita e na proposta. Se preferir, a gente vai até você.</p></article><article><b>Quem conhece a região</b><p>Conhecemos as construtoras, os bairros e o perfil de cada empreendimento. A gente ajuda você a escolher o imóvel certo para o seu objetivo.</p></article></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Depois da hero, o motion reduz. O institucional entra limpo para não cansar e para priorizar leitura.</p></div><section class="wf-section wf-open"><div class="wf-copy"><small>— OS IMÓVEIS</small><h3>Três perfis,<br><b>três endereços.</b></h3><p>Um para cada momento: a segunda casa da família, o apartamento de praia que equilibra tudo e o investimento compacto para gerar renda.</p></div><div class="wf-chapter-index"><span>01 Algarve</span><span>02 Lorenzo Gabriel</span><span>03 Tenet</span></div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Abertura dos imóveis assume linguagem Loam: numeração clara e promessa de três capítulos fullscreen.</p></div><section class="wf-section wf-property wf-algarve layout-hybrid">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Algarve Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">01 · PORTO BELO / SC · ALTO PADRÃO</small>
+        <h3>A elegância do Mediterrâneo,<br><b>no litoral catarinense.</b></h3>
+        <p>Arquitetura de inspiração mediterrânea, um apartamento por andar e 91 m² para viver e receber com calma. O Algarve foi pensado para a família que quer uma segunda casa em Porto Belo com privacidade de casa e estrutura de condomínio.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>91,38 m²</b></div><div><small>Planta</small><b>3 suítes · 2 vagas · lavabo</b></div><div><small>Unidade</small><b>Apto 901</b></div><div><small>Entrega</small><b>Junho de 2028</b></div><div><small>Valor</small><b>R$ 1.730.000</b></div><div><small>Incorporadora</small><b>Tramonto</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>Um apartamento por andar. Privacidade de casa, sem vizinho de porta.</li><li>Sacada integrada com churrasqueira a carvão. O living se abre para a varanda para receber a família.</li><li>Rooftop com hidromassagem e vista para os morros.</li><li>Lazer para todas as idades: piscina, academia e brinquedoteca.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Famílias que querem uma segunda moradia de alto padrão no litoral.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Algarve</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Algarve funciona como capítulo pinned do Loam; no fim, uma pequena galeria horizontal inspirada no ERA prepara o próximo imóvel.</p></div><section class="wf-section wf-property wf-lorenzo layout-hybrid">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Lorenzo Gabriel Residence</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">02 · ITAPEMA / SC · BAIRRO MORRETES</small>
+        <h3>Espaço, localização e preço<br><b>em equilíbrio.</b></h3>
+        <p>Dois dormitórios a 1 km do mar, em uma torre residencial sobre térreo comercial. O Lorenzo Gabriel é para quem quer um apartamento de praia em Itapema para morar, passar a temporada ou alugar, sem abrir mão de espaço.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>62,9 m²</b></div><div><small>Planta</small><b>1 suíte + 1 dormitório · 1 vaga</b></div><div><small>Unidades</small><b>Apto 1203 · Apto 1902</b></div><div><small>Entrega</small><b>Novembro de 2029</b></div><div><small>Valor</small><b>a partir de R$ 845.000</b></div><div><small>Incorporadora</small><b>Meia Praia Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>1 km do mar, no bairro Morretes, em Itapema.</li><li>A cidade na porta: torre residencial sobre térreo comercial.</li><li>Sacada com churrasqueira e living integrado à cozinha.</li><li>Duas unidades à escolha, no 12º e no 19º andar.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Fachada · Térreo comercial · Localização · Planta · Sacada</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Para morar ou investir. O equilíbrio entre preço, espaço e localização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Lorenzo Gabriel</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Fachada · Térreo comercial · Localização · Planta · Sacada</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Lorenzo sobe sobre o capítulo anterior; título e dados entram com reveals sutis. Galeria lateral fecha o capítulo.</p></div><section class="wf-section wf-property wf-tenet layout-hybrid">
+      <div class="wf-property-media"><div class="wf-img wf-hero-img"><span>IMAGEM</span><strong>RENDER PRINCIPAL · Tenet · Torre Opera</strong></div></div>
+      <div class="wf-property-copy">
+        <small class="wf-seal">03 · ITAPEMA / SC · TENET ART HOME DISTRICT</small>
+        <h3>40 m² pensados<br><b>para investir.</b></h3>
+        <p>Uma unidade compacta na Torre Opera, dentro de um complexo com 4.700 m² de lazer integrados ao parque. O Tenet é para quem quer renda de locação e valorização de longo prazo em Itapema, a 10 minutos da Praia Central.</p>
+        <div class="wf-specs"><div><small>Área privativa</small><b>40 m²</b></div><div><small>Planta</small><b>1 dormitório · 1 vaga · varanda</b></div><div><small>Unidade</small><b>Apto 3404</b></div><div><small>Entrega</small><b>2031</b></div><div><small>Valor</small><b>R$ 1.053.800</b></div><div><small>Incorporadora</small><b>ZAH Empreendimentos</b></div></div>
+        <div class="wf-diff"><strong>Diferenciais</strong><ul><li>4.700 m² de lazer integrados ao parque.</li><li>Piscinas, academia, skybar, coworking e lounge. Estrutura que valoriza a locação de temporada.</li><li>Planta compacta e funcional: sala e cozinha integradas, com varanda.</li><li>10 minutos da Praia Central de Itapema.</li></ul></div>
+        <div class="wf-gallery-label"><span>GALERIA</span><p>Torre Opera · Lounge · Piscina · Coworking · Vista</p></div>
+        <div class="wf-for"><small>PARA QUEM É</small><p>Investidores que buscam renda com locação e valorização.</p></div>
+        <div class="wf-cta">Quero saber mais sobre o Tenet</div>
+        <div class="wf-legal">Imagens ilustrativas. Valores e condições sujeitos a alteração.</div>
+      </div>
+      <div class="wf-gallery"><div class="wf-img "><span>IMAGEM</span><strong>GALERIA · Torre Opera · Lounge · Piscina · Coworking · Vista</strong></div></div>
+    </section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Tenet repete o sistema. A consistência dos três capítulos é mais importante que inventar um efeito novo em cada um.</p></div><section class="wf-section wf-match"><div class="wf-copy"><small>— ESCOLHA PELO SEU OBJETIVO</small><h3>Qual imóvel<br><b>combina com você?</b></h3><p>Cada apartamento foi escolhido para um perfil. Comece pelo seu objetivo.</p></div><div class="wf-cards three"><article><small>Investir</small><b>Quero renda e valorização</b><p>Compacto, em um complexo com lazer completo, com perfil para locação de temporada.</p><span>Tenet · 40 m² · Itapema</span><strong>Ver o Tenet →</strong></article><article><small>Morar</small><b>Quero morar perto do mar</b><p>Dois dormitórios a 1 km do mar, com comércio no térreo e a cidade por perto.</p><span>Lorenzo Gabriel · 62,9 m² · Itapema</span><strong>Ver o Lorenzo Gabriel →</strong></article><article><small>Veraneio</small><b>Quero a casa da família no litoral</b><p>Três suítes, um apartamento por andar e rooftop para receber todo mundo.</p><span>Algarve · 91 m² · Porto Belo</span><strong>Ver o Algarve →</strong></article></div><div class="wf-inline-note">Ainda em dúvida? A curadoria ajuda você a escolher.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>A experiência fullscreen “solta” e retorna para cartões de objetivo, reduzindo carga cognitiva.</p></div><section class="wf-section wf-region"><div class="wf-copy"><small>— ITAPEMA E PORTO BELO</small><h3>O litoral catarinense que o Brasil escolheu para morar.</h3><p>Entre Balneário Camboriú e Bombinhas, Itapema e Porto Belo reúnem mar calmo, infraestrutura de cidade e um mercado imobiliário aquecido. É para onde vêm famílias do Sul do país em busca de qualidade de vida, e investidores atrás de renda com temporada.</p></div><div class="wf-region-grid"><div class="wf-cards three"><article><b>Itapema</b><p>Meia Praia e Praia Central, orla urbanizada e uma das cidades que mais cresce no litoral. Casa do Tenet e do Lorenzo Gabriel.</p></article><article><b>Porto Belo</b><p>Baía de águas calmas, clima de cidade tranquila e acesso rápido às praias de Bombinhas. Casa do Algarve.</p></article><article><b>Perto de tudo</b><p>Pela BR-101, poucos minutos de Balneário Camboriú e cerca de 1h30 do aeroporto de Florianópolis.</p></article></div><div class="wf-img wf-map"><span>IMAGEM</span><strong>MAPA · Tenet / Lorenzo Gabriel / Algarve</strong></div><div class="wf-map-list"><span>Tenet · Tabuleiro das Oliveiras, Itapema · 10 min da Praia Central</span><span>Lorenzo Gabriel · Morretes, Itapema · 1 km do mar</span><span>Algarve · Porto Belo</span></div></div><div class="wf-note">Usar este H2 alternativo até existir fonte para “o trecho que mais valoriza em Santa Catarina”.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Região usa atmosfera Sobha apenas na estética: mapa monocromático estático/SVG + parallax leve, sem 3D.</p></div><section class="wf-section wf-process"><div class="wf-copy"><small>— COMO FUNCIONA</small><h3>Do primeiro contato à proposta,<br><b>com a gente do seu lado.</b></h3></div><div class="wf-process-grid"><article><span>01</span><b>Conte o que você procura</b><p>Preencha o formulário em menos de 1 minuto. As perguntas ajudam a indicar o imóvel certo.</p></article><article><span>02</span><b>A curadoria entra em contato</b><p>Um consultor da Elotech fala com você pelo WhatsApp ou telefone para entender seu objetivo.</p></article><article><span>03</span><b>Apresentação ou visita</b><p>Você conhece o imóvel por uma apresentação completa, online ou presencial, ou visita a região com a gente.</p></article><article><span>04</span><b>Proposta direta</b><p>Você negocia direto com a Elotech, proprietária do imóvel, e fecha condições que cabem no seu planejamento.</p></article></div><div class="wf-cta">Quero começar</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>Como funciona entra em layout editorial direto. Números podem aparecer em stagger simples.</p></div><section class="wf-section wf-social is-conditional"><div class="wf-copy"><small>— QUEM JÁ COMPROU</small><h3>Quem comprou com a Elotech <b>recomenda.</b></h3><p>Seção condicionada. Não publicar até receber depoimentos reais.</p></div><div class="wf-cards three"><article>DEPOIMENTO 01</article><article>DEPOIMENTO 02</article><article>DEPOIMENTO 03</article></div></section><section class="wf-section wf-form"><div class="wf-copy"><small>— FALE COM A CURADORIA</small><h3>Conte o que você procura.<br><b>A gente indica o imóvel certo.</b></h3><p>Leva menos de 1 minuto. Um consultor da Elotech retorna em até 1 dia útil.</p></div><div class="wf-form-steps"><article><span>ETAPA 1 DE 3</span><ul><li>Qual imóvel te interessa?</li><li>Algarve · Porto Belo</li><li>Lorenzo Gabriel · Itapema</li><li>Tenet · Itapema</li><li>Ainda não sei</li><li>Qual seu objetivo com o imóvel?</li><li>Investir (aluguel e valorização)</li><li>Morar</li><li>Casa de veraneio</li></ul><div class="wf-button">Continuar</div></article><article><span>ETAPA 2 DE 3</span><ul><li>Quanto você tem disponível para entrada?</li><li>Até R$ 70 mil</li><li>R$ 70 a 100 mil</li><li>Acima de R$ 100 mil</li><li>Qual parcela mensal cabe no seu planejamento?</li><li>Até R$ 5 mil</li><li>R$ 5 a 10 mil</li><li>Acima de R$ 10 mil</li><li>Você conhece a região de Itapema e Porto Belo?</li><li>Visito com frequência</li><li>Conheço pouco</li><li>Não conheço</li></ul><p>Essas respostas ajudam o consultor a montar uma proposta que caiba no seu planejamento.</p><div class="wf-button ghost">Voltar</div><div class="wf-button">Continuar</div></article><article><span>ETAPA 3 DE 3</span><div class="wf-field">Nome completo · Como podemos te chamar?</div><div class="wf-field">WhatsApp · (00) 00000-0000</div><div class="wf-field">E-mail · seu@email.com</div><div class="wf-field">Cidade · Onde você mora hoje?</div><div class="wf-field">Estado · Selecione</div><p>Concordo em receber o contato da Elotech sobre este imóvel e li a Política de Privacidade.</p><div class="wf-button">Quero falar com a curadoria</div><small>Seus dados ficam só com a Elotech. Sem spam.</small></article></div><div class="wf-note">“até 1 dia útil” precisa de confirmação antes de publicar. CTA de cada imóvel deve chegar aqui com o imóvel pré-selecionado.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>O CTA “Quero começar” ancora a chegada no formulário. Formulário não deve receber efeitos que prejudiquem conversão.</p></div><section class="wf-section wf-faq"><div class="wf-copy"><small>— DÚVIDAS</small><h3>Perguntas <b>frequentes</b></h3></div><div class="wf-faq-list"><article><b>Por que a Elotech está vendendo esses apartamentos?</b><p>Os imóveis fazem parte da carteira da Elotech, que tem uma relação de longa data com as construtoras do litoral catarinense. Por isso a venda é direta: você negocia com o proprietário, sem intermediário.</p></article><article><b>Como funciona a compra de um imóvel na planta?</b><p>Você garante a unidade agora, com uma entrada e parcelas ao longo da obra, e recebe o apartamento pronto na data de entrega. Comprar na planta costuma sair mais barato do que comprar o imóvel pronto, e o valor tende a subir até a entrega.</p></article><article><b>Quais são as condições de pagamento?</b><p>As condições são combinadas direto com a Elotech, com entrada e parcelas mensais. Como somos os proprietários, conseguimos ajustar a proposta ao seu planejamento. O consultor apresenta os detalhes no primeiro contato.</p></article><article><b>Quando os imóveis ficam prontos?</b><p>Algarve: junho de 2028. Lorenzo Gabriel: novembro de 2029. Tenet: 2031. As datas são das incorporadoras responsáveis por cada obra.</p></article><article><b>Quem constrói os empreendimentos?</b><p>Cada um tem sua incorporadora: Tramonto (Algarve), Meia Praia Empreendimentos (Lorenzo Gabriel) e ZAH Empreendimentos (Tenet). A Elotech é a proprietária das unidades e cuida da venda.</p></article><article><b>Posso visitar antes de decidir?</b><p>Pode. O consultor agenda a visita à região e ao local da obra, e apresenta o projeto completo, com plantas, memorial e imagens. Se você mora longe, a apresentação também pode ser online.</p></article><article><b>Não moro em Santa Catarina. Consigo comprar?</b><p>Consegue. Boa parte de quem compra no litoral catarinense vem de outras cidades do Sul. O atendimento, a apresentação e a negociação podem ser feitos a distância, e a gente acompanha você em cada etapa.</p></article><article><b>Os valores da página são definitivos?</b><p>Os valores e condições podem mudar sem aviso, conforme a disponibilidade. O consultor confirma o valor atualizado no primeiro contato.</p></article></div><div class="wf-note">Condições de pagamento ainda precisam ser validadas quanto a financiamento na entrega e permuta.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>FAQ entra totalmente utilitário; accordion pode existir no build final, mas o wireframe mostra todo o conteúdo.</p></div><section class="wf-section wf-final"><div class="wf-img "><span>IMAGEM</span><strong>FOTO DE FUNDO · faixa final</strong></div><div class="wf-copy"><h3>Seu imóvel no litoral catarinense<br><b>começa com uma conversa.</b></h3><p>Conte o que você procura e receba a indicação da curadoria da Elotech.</p><div class="wf-cta">Fale com a curadoria</div></div><div class="wf-note">Pode ser removida se ficar redundante logo após o formulário.</div></section><div class="wf-transition"><span>TRANSIÇÃO</span><p>CTA final usa foto grande e tipografia ERA/Sobha, mas com implementação 2D simples.</p></div><footer class="wf-footer"><b>elotech · Central de Negócios</b><p>Elotech Central de Negócios é uma marca da Elo Indústria de Elevadores LTDA · CNPJ 35.237.879/0001-74</p><p>Política de Privacidade</p><p>Imagens ilustrativas. Valores e condições sujeitos a alteração sem aviso prévio. Os empreendimentos são de responsabilidade de suas incorporadoras: Tramonto, Meia Praia Empreendimentos e ZAH Empreendimentos.</p><p>© 2026 Elotech Central de Negócios</p></footer><section class="wf-thanks"><span>PÁGINA /obrigado</span><div class="wf-copy"><small>— RECEBEMOS SEU CONTATO</small><h3>Obrigado, {nome}.<br><b>A curadoria já está com suas respostas.</b></h3><p>Um consultor da Elotech vai falar com você pelo WhatsApp em até 1 dia útil para entender o que você procura e apresentar o imóvel.</p></div><div class="wf-cards three"><article><b>Contato da curadoria.</b><p>Salve nosso número para reconhecer a mensagem.</p></article><article><b>Apresentação do imóvel.</b><p>Plantas, imagens, condições e tudo o que você precisa para decidir.</p></article><article><b>Visita ou proposta.</b><p>Quando fizer sentido, você visita a região ou recebe a proposta direto da Elotech.</p></article></div><p><b>Enquanto isso:</b> Conheça os outros imóveis da curadoria. →</p><p>Voltar para a página inicial</p><div class="wf-note">Se o nome não estiver disponível, usar apenas “Obrigado!”. Prazo de retorno e número da curadoria ainda precisam ser confirmados.</div></section></div>
+    </article>
+    </section>
+
+    <section class="tab-panel" id="tab-tech" role="tabpanel" data-panel="tech" hidden>
+      <div class="page-intro">
+        <div><p class="eyebrow">REQUISITOS TÉCNICOS</p><h1>Stack, integrações e performance.</h1></div>
+        <p>A implementação deve partir do template de tracking existente. Layout e motion entram por cima sem reescrever a lógica de mensuração.</p>
+      </div>
+
+      <section class="section-block no-top">
+        <div class="stack-grid">
+          <article class="tech-card featured"><span>FRONT</span><h2>Next.js 16</h2><p>Base do template já definido para o projeto.</p></article>
+          <article class="tech-card"><span>MOTION</span><h2>GSAP</h2><p>ScrollTrigger + SplitText. Observer apenas quando necessário.</p></article>
+          <article class="tech-card"><span>SCROLL</span><h2>Lenis</h2><p>Rolagem suave sem substituir a navegação natural.</p></article>
+          <article class="tech-card"><span>IMAGENS</span><h2>next/image</h2><p>AVIF/WebP e versões específicas para celular.</p></article>
+          <article class="tech-card"><span>CRM</span><h2>Kommo</h2><p>Contato + negócio + respostas + origem de mídia.</p></article>
+          <article class="tech-card"><span>DEPLOY</span><h2>Vercel</h2><p>Preview para homologação e domínio final.</p></article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading compact"><div><p class="eyebrow">FORMULÁRIO</p><h2>Conversão em 3 etapas.</h2></div><p>O visitante vê perguntas de perfil antes dos dados de contato.</p></div>
+        <div class="flow-line">
+          <div><span>01</span><b>Interesse</b><small>Imóvel + objetivo</small></div><i>→</i><div><span>02</span><b>Planejamento</b><small>Entrada + parcela + região</small></div><i>→</i><div><span>03</span><b>Contato</b><small>Nome + WhatsApp + e-mail + cidade + estado + LGPD</small></div><i>→</i><div><span>04</span><b>Kommo</b><small>Lead confirmado</small></div>
+        </div>
+        <div class="rule-card"><strong>REGRA MQL</strong><p>Entrada = “R$ 70 a 100 mil” ou “Acima de R$ 100 mil” <b>E</b> parcela = “R$ 5 a 10 mil” ou “Acima de R$ 10 mil”. Resultado: <code>fields.qualificacao = "MQL"</code>.</p></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading compact"><div><p class="eyebrow">TRACKING</p><h2>Eventos obrigatórios.</h2></div></div>
+        <div class="events-table">
+          <div class="event-row head"><span>Evento</span><span>Disparo</span><span>Observação</span></div>
+          <div class="event-row"><b>PageView</b><span>Automático</span><span>Carregamento da página.</span></div>
+          <div class="event-row"><b>ViewContent</b><span>Entrada no capítulo</span><span>Enviar o nome do imóvel: Algarve / Lorenzo / Tenet.</span></div>
+          <div class="event-row"><b>Lead</b><span>Após CRM confirmar</span><span>Só contar conversão se o Kommo aceitar o lead; depois redirecionar para /obrigado.</span></div>
+        </div>
+        <div class="rule-card"><strong>MODO</strong><p><code>NEXT_PUBLIC_TRACKING_MODE=direct</code>. <b>Não usar Google Tag Manager.</b> O template carrega Meta Pixel, CAPI, GA4 e Google Ads.</p></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading compact"><div><p class="eyebrow">ENVIRONMENT VARIABLES</p><h2>O que precisa existir no Vercel.</h2></div><p>Valores secretos ficam com o responsável técnico e não entram no código.</p></div>
+        <div class="env-grid">
+          <div class="env-item ok"><code>NEXT_PUBLIC_TRACKING_MODE</code><span>direct</span></div>
+          <div class="env-item ok"><code>NEXT_PUBLIC_GTM_ID</code><span>vazio</span></div>
+          <div class="env-item ok"><code>NEXT_PUBLIC_META_PIXEL_ID</code><span>1038171695943989</span></div>
+          <div class="env-item pending"><code>META_CAPI_ACCESS_TOKEN</code><span>pendente / secreto</span></div>
+          <div class="env-item ok"><code>META_API_VERSION</code><span>v26.0</span></div>
+          <div class="env-item pending"><code>NEXT_PUBLIC_GA4_MEASUREMENT_ID</code><span>pendente</span></div>
+          <div class="env-item pending"><code>GA4_API_SECRET</code><span>pendente / secreto</span></div>
+          <div class="env-item ok"><code>NEXT_PUBLIC_GOOGLE_ADS_ID</code><span>AW-18453596025</span></div>
+          <div class="env-item ok"><code>NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL</code><span>8zkZCM-mioodEPmOrt9E</span></div>
+          <div class="env-item ok"><code>CRM_PROVIDER</code><span>kommo</span></div>
+          <div class="env-item pending"><code>KOMMO_SUBDOMAIN</code><span>a confirmar</span></div>
+          <div class="env-item pending"><code>KOMMO_ACCESS_TOKEN</code><span>pendente / secreto</span></div>
+          <div class="env-item pending"><code>KOMMO_PIPELINE_ID / STATUS_ID</code><span>a criar</span></div>
+          <div class="env-item pending"><code>KOMMO_RESPONSIBLE_USER_ID</code><span>a definir</span></div>
+          <div class="env-item ok"><code>KOMMO_TAGS</code><span>site,lp-central-de-negocios</span></div>
+          <div class="env-item pending"><code>KOMMO_FIELD_MAP</code><span>IDs dos campos</span></div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading compact"><div><p class="eyebrow">PERFORMANCE / ACESSIBILIDADE</p><h2>Critérios de aceite.</h2></div></div>
+        <div class="criteria-grid">
+          <div><span>≤ 2,5 s</span><p>Meta de carregamento mobile no PageSpeed.</p></div>
+          <div><span>AVIF / WebP</span><p>Imagens responsivas, sem usar os JPGs comprimidos como hero se houver render melhor.</p></div>
+          <div><span>reduced motion</span><p>Respeitar <code>prefers-reduced-motion</code>.</p></div>
+          <div><span>sem WebGL pesado</span><p>Evitar 3D como dependência principal da experiência.</p></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="tab-panel" id="tab-execution" role="tabpanel" data-panel="execution" hidden>
+      <div class="page-intro">
+        <div><p class="eyebrow">GUIA DE EXECUÇÃO</p><h1>Da decisão visual ao deploy.</h1></div>
+        <p>Siga na ordem. Cada fase tem uma saída clara. Não avance motion antes de validar o layout estático.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="phase-card">
+          <div class="phase-number">00</div><div class="phase-body"><span>DECISÃO</span><h2>Fechar direção visual</h2><p>Escolha Híbrido, Loam, ERA ou Sobha. Para este projeto, use Híbrido como padrão.</p><div class="phase-output"><b>Saída:</b> direção escrita em uma frase + lista do que será reaproveitado de cada referência.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">01</div><div class="phase-body"><span>ASSETS</span><h2>Organizar materiais antes do Figma</h2><ol><li>Baixar manual de marca Elotech.</li><li>Baixar PDFs dos 3 imóveis.</li><li>Extrair renders em alta dos PDFs.</li><li>Comparar com as fotos de WhatsApp.</li><li>Marcar quais imagens ainda precisam de original.</li><li>Baixar os 9 criativos aprovados para preservar a linha visual.</li></ol><div class="phase-output"><b>Saída:</b> pasta limpa por imóvel + logo + identidade + criativos.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">02</div><div class="phase-body"><span>FIGMA</span><h2>Desenhar o sistema da LP</h2><ol><li>Definir grid e container.</li><li>Desenhar hero desktop.</li><li>Desenhar o capítulo mestre de imóvel.</li><li>Aplicar Algarve / Lorenzo / Tenet.</li><li>Desenhar institucional, região, formulário e FAQ.</li><li>Desenhar /obrigado.</li><li>Adaptar mobile 390px antes de começar motion.</li></ol><div class="phase-output"><b>Saída:</b> desktop + mobile aprovados, sem depender de animação para funcionar.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">03</div><div class="phase-body"><span>BOOTSTRAP</span><h2>Subir o template técnico</h2><ol><li>Clonar o template Next.js de tracking.</li><li>Rodar localmente sem alterar tracking.</li><li>Instalar/validar GSAP e Lenis.</li><li>Criar rotas da home e <code>/obrigado</code>.</li><li>Organizar componentes por seção.</li><li>Criar tokens CSS para cores, espaçamentos e tipografia.</li></ol><div class="phase-output"><b>Saída:</b> estrutura funcional, sem motion, com deploy de preview.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">04</div><div class="phase-body"><span>STATIC BUILD</span><h2>Implementar a página sem animação</h2><ol><li>Header + hero.</li><li>Institucional.</li><li>3 capítulos.</li><li>Perfil “Qual combina com você?”.</li><li>Região.</li><li>Como funciona.</li><li>Formulário.</li><li>FAQ + footer.</li><li>/obrigado.</li></ol><div class="phase-output"><b>Saída:</b> LP completa, responsiva, navegável e legível com JavaScript de motion desligado.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">05</div><div class="phase-body"><span>MOTION</span><h2>Adicionar animação em camadas</h2><ol><li>Hero: scale/reveal de imagem + headline.</li><li>Capítulos: pin/scrub baseado em Loam.</li><li>Transições: scale/parallax baseado em ERA.</li><li>Galerias: apenas onde agregam.</li><li>SplitText em headlines principais.</li><li>Desligar efeitos desnecessários no mobile.</li><li>Implementar prefers-reduced-motion.</li></ol><div class="phase-output"><b>Saída:</b> motion premium sem travar a navegação ou mascarar a informação.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">06</div><div class="phase-body"><span>FORM + CRM</span><h2>Fechar conversão</h2><ol><li>Implementar 3 etapas.</li><li>Usar nomes <code>fields.*</code>.</li><li>Pré-selecionar imóvel por CTA.</li><li>Calcular MQL silenciosamente.</li><li>Enviar para Kommo via template.</li><li>Exibir erro se CRM falhar.</li><li>Redirecionar para /obrigado só após sucesso.</li></ol><div class="phase-output"><b>Saída:</b> lead de teste chegando corretamente ao CRM.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">07</div><div class="phase-body"><span>TRACKING</span><h2>Instrumentar eventos</h2><ol><li>Manter PageView automático.</li><li>Disparar ViewContent na entrada de cada capítulo.</li><li>Disparar Lead apenas após sucesso do Kommo.</li><li>Testar UTMs, gclid e fbclid.</li><li>Rodar check de tracking do template.</li><li>Validar Meta, GA4 e Google Ads.</li></ol><div class="phase-output"><b>Saída:</b> origem e conversão validadas do clique ao CRM.</div></div>
+        </article>
+        <article class="phase-card">
+          <div class="phase-number">08</div><div class="phase-body"><span>QA</span><h2>Performance, responsividade e publicação</h2><ol><li>Testar 1440, 1200, 1024, 768, 430, 390, 360 e 320px.</li><li>Validar imagens e cortes.</li><li>Checar rolagem horizontal.</li><li>Rodar PageSpeed mobile.</li><li>Verificar console.</li><li>Testar formulário real.</li><li>Homologar na Vercel.</li><li>Apontar domínio depois da aprovação.</li></ol><div class="phase-output"><b>Saída:</b> publicação aprovada, responsiva, mensurada e pronta para mídia.</div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-checklist" role="tabpanel" data-panel="checklist" hidden>
+      <div class="page-intro">
+        <div><p class="eyebrow">CHECKLIST GAMIFICADO</p><h1>Fez? Marca. Avançou? Sobe de nível.</h1></div>
+        <div class="xp-card"><span>PROGRESSO</span><strong id="checklistProgress">0%</strong><small id="checklistCount">0 de 0 tarefas</small></div>
+      </div>
+
+      <div class="checklist-groups" id="checklistRoot">
+        <section class="check-group" data-group="direction">
+          <header><span>FASE 00</span><h2>Direção visual</h2><b>100 XP</b></header>
+          <label><input type="checkbox" data-task="direction-1"><span>Escolher direção visual definitiva (recomendado: Híbrido 60/30/10).</span></label>
+          <label><input type="checkbox" data-task="direction-2"><span>Registrar o que será copiado de Loam, ERA e Sobha.</span></label>
+          <label><input type="checkbox" data-task="direction-3"><span>Confirmar que não haverá WebGL/3D pesado na versão base.</span></label>
+        </section>
+
+        <section class="check-group" data-group="assets">
+          <header><span>FASE 01</span><h2>Assets</h2><b>200 XP</b></header>
+          <label><input type="checkbox" data-task="assets-1"><span>Baixar manual da Elotech.</span></label>
+          <label><input type="checkbox" data-task="assets-2"><span>Baixar PDF e imagens do Algarve.</span></label>
+          <label><input type="checkbox" data-task="assets-3"><span>Baixar PDF e imagens do Lorenzo.</span></label>
+          <label><input type="checkbox" data-task="assets-4"><span>Baixar PDF e imagens do Tenet.</span></label>
+          <label><input type="checkbox" data-task="assets-5"><span>Baixar criativos aprovados.</span></label>
+          <label><input type="checkbox" data-task="assets-6"><span>Extrair renders de melhor qualidade dos PDFs.</span></label>
+          <label><input type="checkbox" data-task="assets-7"><span>Listar imagens que ainda precisam de original em alta.</span></label>
+          <label><input type="checkbox" data-task="assets-8"><span>Criar/aprovar assinatura “Elotech Central de Negócios”.</span></label>
+        </section>
+
+        <section class="check-group" data-group="figma">
+          <header><span>FASE 02</span><h2>Figma</h2><b>250 XP</b></header>
+          <label><input type="checkbox" data-task="figma-1"><span>Definir tokens visuais do projeto.</span></label>
+          <label><input type="checkbox" data-task="figma-2"><span>Desenhar hero desktop.</span></label>
+          <label><input type="checkbox" data-task="figma-3"><span>Desenhar capítulo mestre de imóvel.</span></label>
+          <label><input type="checkbox" data-task="figma-4"><span>Aplicar os 3 imóveis.</span></label>
+          <label><input type="checkbox" data-task="figma-5"><span>Desenhar formulário de 3 etapas.</span></label>
+          <label><input type="checkbox" data-task="figma-6"><span>Desenhar FAQ / footer / obrigado.</span></label>
+          <label><input type="checkbox" data-task="figma-7"><span>Fechar versão mobile.</span></label>
+          <label><input type="checkbox" data-task="figma-8"><span>Validar layout antes de adicionar motion.</span></label>
+        </section>
+
+        <section class="check-group" data-group="build">
+          <header><span>FASE 03–05</span><h2>Build + Motion</h2><b>300 XP</b></header>
+          <label><input type="checkbox" data-task="build-1"><span>Clonar e rodar o template Next.js.</span></label>
+          <label><input type="checkbox" data-task="build-2"><span>Estruturar home e /obrigado.</span></label>
+          <label><input type="checkbox" data-task="build-3"><span>Implementar layout estático responsivo completo.</span></label>
+          <label><input type="checkbox" data-task="build-4"><span>Otimizar imagens com next/image.</span></label>
+          <label><input type="checkbox" data-task="build-5"><span>Adicionar hero motion.</span></label>
+          <label><input type="checkbox" data-task="build-6"><span>Adicionar pin/parallax nos capítulos.</span></label>
+          <label><input type="checkbox" data-task="build-7"><span>Adicionar SplitText apenas nos títulos principais.</span></label>
+          <label><input type="checkbox" data-task="build-8"><span>Aplicar prefers-reduced-motion.</span></label>
+        </section>
+
+        <section class="check-group" data-group="conversion">
+          <header><span>FASE 06–07</span><h2>Conversão + Tracking</h2><b>300 XP</b></header>
+          <label><input type="checkbox" data-task="conv-1"><span>Implementar formulário em 3 etapas.</span></label>
+          <label><input type="checkbox" data-task="conv-2"><span>Pré-selecionar imóvel pelos CTAs.</span></label>
+          <label><input type="checkbox" data-task="conv-3"><span>Implementar regra MQL.</span></label>
+          <label><input type="checkbox" data-task="conv-4"><span>Enviar campos extras com names fields.*.</span></label>
+          <label><input type="checkbox" data-task="conv-5"><span>Testar lead no Kommo.</span></label>
+          <label><input type="checkbox" data-task="conv-6"><span>ViewContent nos 3 capítulos.</span></label>
+          <label><input type="checkbox" data-task="conv-7"><span>Lead somente após confirmação do CRM.</span></label>
+          <label><input type="checkbox" data-task="conv-8"><span>Validar UTMs / gclid / fbclid.</span></label>
+        </section>
+
+        <section class="check-group" data-group="qa">
+          <header><span>FASE 08</span><h2>QA + Publicação</h2><b>250 XP</b></header>
+          <label><input type="checkbox" data-task="qa-1"><span>Confirmar pendências de copy antes de publicar.</span></label>
+          <label><input type="checkbox" data-task="qa-2"><span>Testar todos os breakpoints.</span></label>
+          <label><input type="checkbox" data-task="qa-3"><span>Sem rolagem horizontal.</span></label>
+          <label><input type="checkbox" data-task="qa-4"><span>Sem erro no console.</span></label>
+          <label><input type="checkbox" data-task="qa-5"><span>PageSpeed mobile validado.</span></label>
+          <label><input type="checkbox" data-task="qa-6"><span>Tracking validado.</span></label>
+          <label><input type="checkbox" data-task="qa-7"><span>Homologação Vercel aprovada.</span></label>
+          <label><input type="checkbox" data-task="qa-8"><span>Domínio apontado e publicação final conferida.</span></label>
+        </section>
+      </div>
+
+      <div class="achievement" id="achievementBox" aria-live="polite">
+        <span>PRÓXIMA CONQUISTA</span>
+        <strong id="achievementTitle">Primeira decisão</strong>
+        <p id="achievementCopy">Marque as primeiras tarefas para começar a subir de nível.</p>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-links" role="tabpanel" data-panel="links" hidden>
+      <div class="page-intro">
+        <div><p class="eyebrow">LINKS / RECURSOS</p><h1>Tudo em um lugar.</h1></div>
+        <p>Aqui ficam apenas os links que afetam design, implementação, tracking, materiais ou publicação.</p>
+      </div>
+
+      <div class="resource-groups">
+        <section class="resource-group"><div><span>01</span><h2>Referências visuais</h2></div><div class="resource-list">
+          <a href="https://www.era-residence.com/" target="_blank" rel="noopener noreferrer"><b>ERA Residence</b><small>Motion, horizontal scroll, galeria</small><i>↗</i></a>
+          <a href="https://residences.loamhouse.com.au/" target="_blank" rel="noopener noreferrer"><b>Loam House</b><small>Capítulos, parallax, narrativa</small><i>↗</i></a>
+          <a href="https://sobha-privy-collection.com/" target="_blank" rel="noopener noreferrer"><b>Sobha Privy</b><small>Atmosfera, zoom, seletor</small><i>↗</i></a>
+          <a href="https://360lexingtonave.com/" target="_blank" rel="noopener noreferrer"><b>360 Lexington Ave</b><small>Minimalismo + parallax</small><i>↗</i></a>
+          <a href="https://elyse-residence-dev.webflow.io/" target="_blank" rel="noopener noreferrer"><b>Elyse Residence</b><small>Grandes fotos de fundo</small><i>↗</i></a>
+          <a href="https://www.awwwards.com/websites/real-estate/" target="_blank" rel="noopener noreferrer"><b>Awwwards · Real Estate</b><small>Pesquisa complementar</small><i>↗</i></a>
+        </div></section>
+
+        <section class="resource-group"><div><span>02</span><h2>Materiais</h2></div><div class="resource-list">
+          <a href="https://drive.google.com/drive/folders/12dSy1cnJ1o640VksjuE7RGgp2g0q8K2M" target="_blank" rel="noopener noreferrer"><b>Drive geral</b><small>Materiais do projeto</small><i>↗</i></a>
+          <a href="https://drive.google.com/drive/folders/1u-cXlP3qs33GF8EEPGxkoJQ33WgQ8fz7" target="_blank" rel="noopener noreferrer"><b>Algarve · fotos</b><small>Pasta do imóvel</small><i>↗</i></a>
+          <a href="https://drive.google.com/file/d/16CoJ46yE4XE1CQhFYg_e6w8yXMKQpj7c/view" target="_blank" rel="noopener noreferrer"><b>Algarve · catálogo</b><small>Preferir renders do PDF</small><i>↗</i></a>
+          <a href="https://drive.google.com/drive/folders/1ZOT7qwLQbNuPBcry0OU8YvPZfCZU28fk" target="_blank" rel="noopener noreferrer"><b>Lorenzo · fotos</b><small>Pasta do imóvel</small><i>↗</i></a>
+          <a href="https://drive.google.com/file/d/1OCsJfXhPcCWeM0Woj4-fvOS--xraE5Wa/view" target="_blank" rel="noopener noreferrer"><b>Lorenzo · apresentação</b><small>Preferir renders do PDF</small><i>↗</i></a>
+          <a href="https://drive.google.com/drive/folders/1LHV8BegNbhTdDUAkElQXBoKz_N0_gAMB" target="_blank" rel="noopener noreferrer"><b>Tenet · fotos</b><small>Pasta do imóvel</small><i>↗</i></a>
+          <a href="https://drive.google.com/file/d/1POro9HpkmI31NrVbc0exTFOZbpAkOGNH/view" target="_blank" rel="noopener noreferrer"><b>Tenet · apresentação</b><small>Preferir renders do PDF</small><i>↗</i></a>
+          <a href="https://drive.google.com/file/d/1WIsRtoDUW6m4pi-tHKjBBH-Jmm1pHEiD/view" target="_blank" rel="noopener noreferrer"><b>Manual Elotech</b><small>Logo, cores, tipografia</small><i>↗</i></a>
+          <a href="https://drive.google.com/drive/folders/1PHtrfLpExzqylVwWPlay4N3oyesEPx2S" target="_blank" rel="noopener noreferrer"><b>Criativos aprovados</b><small>Linha visual que deve continuar na LP</small><i>↗</i></a>
+        </div></section>
+
+        <section class="resource-group"><div><span>03</span><h2>Técnico</h2></div><div class="resource-list">
+          <a href="https://github.com/TiagoCBurger/nextjs-tracking-template" target="_blank" rel="noopener noreferrer"><b>Template Next.js + tracking</b><small>Base técnica do projeto</small><i>↗</i></a>
+          <a href="https://gsap.com/" target="_blank" rel="noopener noreferrer"><b>GSAP</b><small>ScrollTrigger / SplitText</small><i>↗</i></a>
+          <a href="https://lenis.darkroom.engineering/" target="_blank" rel="noopener noreferrer"><b>Lenis</b><small>Smooth scrolling</small><i>↗</i></a>
+          <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer"><b>PageSpeed Insights</b><small>Performance mobile</small><i>↗</i></a>
+          <a href="https://docs.google.com/document/d/1DzEyccKkkwKSxmn855amRM7vLXqrlYpSTE0XwVoRL_4/view" target="_blank" rel="noopener noreferrer"><b>Política de Privacidade</b><small>Formulário + footer</small><i>↗</i></a>
+        </div></section>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
