@@ -62,8 +62,10 @@
   .wireframe-choice-card>button{border:0!important;border-radius:0!important;flex:1;width:100%}
   .wireframe-choice-card:has(>button.is-active){border-color:var(--brown);box-shadow:0 0 0 1px var(--brown) inset}
   .wireframe-choice-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 11px;border-top:1px solid var(--line);background:#f8f6f5;min-height:38px}
-  .wireframe-choice-actions a,.wireframe-choice-actions span{font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);text-decoration:none;white-space:nowrap}
-  .wireframe-choice-actions a:hover{text-decoration:underline;color:var(--red)}
+  .wireframe-choice-actions a,.wireframe-choice-actions button,.wireframe-choice-actions span{font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);text-decoration:none;white-space:nowrap}
+  .wireframe-choice-actions button{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;font-family:inherit}
+  .wireframe-choice-actions a:hover,.wireframe-choice-actions button:hover{text-decoration:underline;color:var(--red)}
+  .wireframe-choice-actions .wf-download-link{color:var(--red)}
   .wireframe-choice-actions-hybrid{gap:7px;justify-content:flex-start;flex-wrap:wrap}
   .wireframe-choice-actions-hybrid span{opacity:.45}
   .wireframe-choice-actions-hybrid .wf-full-link{margin-left:auto;color:var(--red)}
@@ -520,19 +522,19 @@
 <div aria-label="Escolher wireframe" class="wireframe-choice" role="tablist">
 <div class="wireframe-choice-card">
 <button data-wireframe-select="loam" type="button"><span>01</span><b>Loam House</b><small>capítulos reais / 5·10</small></button>
-<div class="wireframe-choice-actions"><a href="https://residences.loamhouse.com.au/" rel="noopener noreferrer" target="_blank">Referência ↗</a><a href="?wireframe=loam#wireframes" target="_blank">Tela cheia ↗</a></div>
+<div class="wireframe-choice-actions"><a href="https://residences.loamhouse.com.au/" rel="noopener noreferrer" target="_blank">Referência ↗</a><button class="wf-download-link" data-download-wireframe="loam" type="button">Baixar .html ↓</button><a href="?wireframe=loam#wireframes" target="_blank">Tela cheia ↗</a></div>
 </div>
 <div class="wireframe-choice-card">
 <button data-wireframe-select="era" type="button"><span>02</span><b>ERA Residence</b><small>motion real / 7·10</small></button>
-<div class="wireframe-choice-actions"><a href="https://www.era-residence.com/" rel="noopener noreferrer" target="_blank">Referência ↗</a><a href="?wireframe=era#wireframes" target="_blank">Tela cheia ↗</a></div>
+<div class="wireframe-choice-actions"><a href="https://www.era-residence.com/" rel="noopener noreferrer" target="_blank">Referência ↗</a><button class="wf-download-link" data-download-wireframe="era" type="button">Baixar .html ↓</button><a href="?wireframe=era#wireframes" target="_blank">Tela cheia ↗</a></div>
 </div>
 <div class="wireframe-choice-card">
 <button data-wireframe-select="sobha" type="button"><span>03</span><b>Sobha Privy</b><small>WebGL real / 10·10</small></button>
-<div class="wireframe-choice-actions"><a href="https://sobha-privy-collection.com/" rel="noopener noreferrer" target="_blank">Referência ↗</a><a href="?wireframe=sobha#wireframes" target="_blank">Tela cheia ↗</a></div>
+<div class="wireframe-choice-actions"><a href="https://sobha-privy-collection.com/" rel="noopener noreferrer" target="_blank">Referência ↗</a><button class="wf-download-link" data-download-wireframe="sobha" type="button">Baixar .html ↓</button><a href="?wireframe=sobha#wireframes" target="_blank">Tela cheia ↗</a></div>
 </div>
 <div class="wireframe-choice-card is-recommended">
 <button class="is-active recommended" data-wireframe-select="hybrid" type="button"><span>04</span><b>Híbrido recomendado</b><small>síntese validada / 6·10</small></button>
-<div class="wireframe-choice-actions wireframe-choice-actions-hybrid"><span>Refs:</span><a href="https://residences.loamhouse.com.au/" rel="noopener noreferrer" target="_blank">Loam ↗</a><a href="https://www.era-residence.com/" rel="noopener noreferrer" target="_blank">ERA ↗</a><a href="https://sobha-privy-collection.com/" rel="noopener noreferrer" target="_blank">Sobha ↗</a><a class="wf-full-link" href="?wireframe=hybrid#wireframes" target="_blank">Tela cheia ↗</a></div>
+<div class="wireframe-choice-actions wireframe-choice-actions-hybrid"><span>Refs:</span><a href="https://residences.loamhouse.com.au/" rel="noopener noreferrer" target="_blank">Loam ↗</a><a href="https://www.era-residence.com/" rel="noopener noreferrer" target="_blank">ERA ↗</a><a href="https://sobha-privy-collection.com/" rel="noopener noreferrer" target="_blank">Sobha ↗</a><button class="wf-download-link" data-download-wireframe="hybrid" type="button">Baixar .html ↓</button><a class="wf-full-link" href="?wireframe=hybrid#wireframes" target="_blank">Tela cheia ↗</a></div>
 </div>
 </div>
 <div class="wireframe-research-note"><b>O que mudou nesta versão:</b> Loam agora usa painéis fullscreen empilhados; ERA ganhou composição editorial + galeria horizontal e transições por escala/clip; Sobha foi organizado como narrativa contínua com motivo 3D, galerias circulares e mapa 3D; o Híbrido foi redesenhado como combinação executável dessas três gramáticas, sem WebGL.</div>
@@ -1115,6 +1117,110 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script id="wireframe-download-script">
+window.addEventListener('DOMContentLoaded', () => {
+  const labels = {loam:'Loam House',era:'ERA Residence',sobha:'Sobha Privy',hybrid:'Híbrido recomendado'};
+  const filenames = {
+    loam:'WIREFRAME-ELOTECH-LOAM-HOUSE.html',
+    era:'WIREFRAME-ELOTECH-ERA-RESIDENCE.html',
+    sobha:'WIREFRAME-ELOTECH-SOBHA-PRIVY.html',
+    hybrid:'WIREFRAME-ELOTECH-HIBRIDO-RECOMENDADO.html'
+  };
+  const references = {
+    loam:[['Loam House','https://residences.loamhouse.com.au/']],
+    era:[['ERA Residence','https://www.era-residence.com/']],
+    sobha:[['Sobha Privy','https://sobha-privy-collection.com/']],
+    hybrid:[['Loam House','https://residences.loamhouse.com.au/'],['ERA Residence','https://www.era-residence.com/'],['Sobha Privy','https://sobha-privy-collection.com/']]
+  };
+
+  const readSameOriginStylesheets = () => {
+    const chunks = [];
+    for (const sheet of Array.from(document.styleSheets)) {
+      try {
+        const rules = Array.from(sheet.cssRules || []);
+        if (rules.length) chunks.push(rules.map(rule => rule.cssText).join('\n'));
+      } catch (_) {
+        // Fontes/folhas externas cross-origin são ignoradas; os estilos locais continuam exportados.
+      }
+    }
+    return chunks.join('\n');
+  };
+
+  const downloadWireframe = (key) => {
+    const source = document.querySelector(`[data-wireframe-panel="${key}"]`);
+    if (!source || !labels[key]) return;
+
+    const clone = source.cloneNode(true);
+    clone.hidden = false;
+    clone.removeAttribute('hidden');
+
+    const css = readSameOriginStylesheets();
+    const inlineStyles = Array.from(document.querySelectorAll('style')).map(style => style.textContent || '').join('\n');
+    const refs = references[key].map(([name,url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${name} ↗</a>`).join('');
+
+    const exportOverrides = `
+      :root{--red:#E50914;--brown:#280001;--paper:#f1eeec;--ink:#111;--line:#d8d1cd}
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth;background:#ece8e5}
+      body{margin:0;background:#ece8e5;color:#111;font-family:'IBM Plex Sans',sans-serif}
+      .wireframe-export-bar{position:sticky;top:0;z-index:999;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;background:#111;color:#fff;border-bottom:1px solid #333}
+      .wireframe-export-bar strong{font-family:'Anton',sans-serif;font-size:18px;font-weight:400;letter-spacing:.02em;text-transform:uppercase}
+      .wireframe-export-bar nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+      .wireframe-export-bar a{display:inline-flex;align-items:center;min-height:32px;padding:0 10px;border:1px solid #555;border-radius:8px;color:#fff;text-decoration:none;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+      .wireframe-export-wrap{width:min(1600px,100%);margin:0 auto;padding:18px}
+      .wireframe-option{display:block!important;margin:0!important;padding:0!important}
+      .wireframe-option[hidden]{display:block!important}
+      .wf-guide{margin-top:0!important}
+      @media(max-width:720px){.wireframe-export-bar{align-items:flex-start;flex-direction:column}.wireframe-export-bar nav{justify-content:flex-start}.wireframe-export-wrap{padding:8px}}
+    `;
+
+    const html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wireframe · ${labels[key]} · Elotech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>${css}\n${inlineStyles}\n${exportOverrides}</style>
+</head>
+<body>
+<header class="wireframe-export-bar"><strong>Wireframe · ${labels[key]}</strong><nav>${refs}</nav></header>
+<main class="wireframe-export-wrap">${clone.outerHTML}</main>
+</body>
+</html>`;
+
+    const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filenames[key];
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+
+    const toast = document.getElementById('toast');
+    if (toast) {
+      toast.textContent = `Wireframe ${labels[key]} exportado em HTML`;
+      toast.classList.add('is-visible');
+      setTimeout(() => toast.classList.remove('is-visible'), 2200);
+    }
+  };
+
+  document.querySelectorAll('[data-download-wireframe]').forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      downloadWireframe(button.dataset.downloadWireframe);
+    });
+  });
+
+  window.downloadElotechWireframe = downloadWireframe;
+});
+</script>
+
 <script id="wireframe-fullscreen-script">
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
@@ -1139,7 +1245,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const bar = document.createElement('div');
   bar.className = 'wireframe-fullscreen-bar';
   const refLinks = references[requested].map(([label,url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`).join('');
-  bar.innerHTML = `<strong>Wireframe · ${labels[requested]}</strong><nav>${refLinks}<a class="primary" href="${location.pathname}#wireframes">Voltar ao playbook</a></nav>`;
+  bar.innerHTML = `<strong>Wireframe · ${labels[requested]}</strong><nav>${refLinks}<a href="#" data-fullscreen-download="${requested}">Baixar .html ↓</a><a class="primary" href="${location.pathname}#wireframes">Voltar ao playbook</a></nav>`;
+  const fullscreenDownload = bar.querySelector('[data-fullscreen-download]');
+  if (fullscreenDownload) fullscreenDownload.addEventListener('click', event => { event.preventDefault(); if (window.downloadElotechWireframe) window.downloadElotechWireframe(requested); });
   panel.parentNode.insertBefore(bar, panel);
   document.title = `Wireframe · ${labels[requested]} · Elotech`;
   window.scrollTo(0,0);
