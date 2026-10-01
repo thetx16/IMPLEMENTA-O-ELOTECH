@@ -22,7 +22,37 @@
 <style>
 /* Wireframes v3 — validados contra as referências reais */
 .wf-evidence{display:grid;grid-template-columns:1.4fr 1.2fr .7fr;gap:1px;background:#111;border:1px solid #111;margin:0 0 12px}.wf-evidence>div{background:#fff;padding:14px}.wf-evidence small{display:block;font-size:8px;letter-spacing:.12em;color:#777;margin-bottom:5px}.wf-evidence b{font-size:13px}.wf-evidence p{font-size:10px;line-height:1.5;color:#555;margin:6px 0 0}.wf-evidence a{display:block;color:#111;font-size:9px;margin-top:7px;text-decoration:underline}.wf-img-guide{display:block!important;max-width:420px;margin:7px auto 0!important;font-size:8px!important;line-height:1.45;letter-spacing:0!important;text-transform:none!important;color:#666!important}.wf-transition-v2>div small{display:block;margin-top:6px;font-size:7px;color:#8f8f8f;letter-spacing:.06em;text-transform:uppercase}.wf-state-lines{display:grid;gap:4px;margin-top:8px}.wf-state-lines span{font-size:7px;border-top:1px solid #bbb;padding-top:4px}.wf-field small{display:block;margin-top:4px;color:#777}.wf-fullbleed{position:relative}.wf-fullbleed>.wf-img{min-height:650px}.wf-overlay-card{position:absolute;max-width:520px;background:#fff;border:1px solid #111;padding:24px;z-index:2}.wf-hero-overlay{left:4%;bottom:5%;width:46%}.wf-property-loam{padding:0}.wf-property-loam .wf-overlay-card{right:4%;top:9%;width:44%;max-height:82%;overflow:auto}.wf-property-loam .wf-gallery-v2{border-top:1px solid #111;padding:12px}.wf-property-loam .wf-gallery-strip{min-height:150px}.wf-property-loam .wf-property-hero{min-height:780px}.wf-hero-loam-v2{padding:0}.wf-hero-loam-v2 .wf-hero-img{min-height:720px}.wf-hero-loam-v2 .wf-copy h2{font-size:clamp(34px,4vw,64px)}.wf-era-hero-v2{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;align-items:end;min-height:720px}.wf-era-hero-copy{align-self:center}.wf-era-hero-media{display:grid;grid-template-columns:1fr .45fr;gap:10px;align-items:end}.wf-era-hero-main{min-height:520px}.wf-era-hero-small{min-height:260px}.wf-era-hero-v2 .wf-chips{grid-column:1/-1}.wf-why-era{display:grid;grid-template-columns:1fr .7fr;gap:18px}.wf-why-era .wf-why-cards{grid-column:1/-1}.wf-why-image{min-height:260px}.wf-era-horizontal-teasers{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,36%);gap:10px;overflow:hidden;margin-top:24px}.wf-era-horizontal-teasers .wf-img{min-height:260px}.wf-property-era{padding:0}.wf-era-property-head{display:grid;grid-template-columns:.9fr 1.1fr}.wf-era-property-head>div:first-child{padding:34px}.wf-era-property-head .wf-property-hero{height:100%;min-height:620px;border:0;border-left:1px solid #111}.wf-property-era:nth-of-type(even) .wf-era-property-head{grid-template-columns:1.1fr .9fr}.wf-property-era:nth-of-type(even) .wf-era-property-head>div:first-child{order:2}.wf-property-era:nth-of-type(even) .wf-era-property-head .wf-property-hero{border-left:0;border-right:1px solid #111}.wf-property-era .wf-gallery-v2{background:#111;border-top:1px solid #111}.wf-property-era .wf-gallery-strip{background:repeating-linear-gradient(90deg,#eee,#eee 22%,#d0d0d0 22%,#d0d0d0 24%);min-height:180px}.wf-sobha-v2 .wireframe-canvas{background:#111}.wf-hero-sobha-v2{text-align:center;min-height:850px;padding-top:70px}.wf-sobha-signature{width:min(430px,70vw);aspect-ratio:1;border:1px solid #aaa;border-radius:50%;margin:0 auto 40px;display:grid;place-items:center;padding:40px}.wf-sobha-signature span,.wf-sobha-signature strong,.wf-sobha-signature small{display:block}.wf-sobha-signature span{font-size:8px;letter-spacing:.15em}.wf-sobha-signature strong{font-size:18px;margin:8px 0}.wf-sobha-signature small{font-size:8px;color:#aaa;line-height:1.5}.wf-hero-sobha-v2 .wf-copy{margin:0 auto 28px}.wf-hero-sobha-v2 .wf-copy p{margin-left:auto;margin-right:auto}.wf-hero-sobha-v2 .wf-hero-img{min-height:420px}.wf-hero-sobha-v2 .wf-chips{justify-content:center}.wf-thread-note{border:1px dashed #777;padding:18px;text-align:center;font-size:9px;letter-spacing:.08em;margin:20px 0}.wf-sobha-toc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#777;margin-top:24px}.wf-sobha-toc span{padding:18px;background:#111;font-size:10px}.wf-property-sobha{display:block;text-align:center;padding:70px 30px}.wf-sobha-orbit{width:min(600px,75%);margin:0 auto 32px}.wf-sobha-orbit .wf-img{aspect-ratio:1;border-radius:50%;min-height:0}.wf-property-sobha .wf-property-copy{max-width:760px;margin:0 auto;text-align:left}.wf-property-sobha .wf-gallery-v2{margin:28px auto 0;max-width:980px}.wf-property-sobha .wf-gallery-strip{min-height:220px;border-radius:110px}.wf-hybrid-hero-v2{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;min-height:720px;align-items:center}.wf-hybrid-hero-copy{align-self:center}.wf-hybrid-hero-stage{display:grid;grid-template-columns:1fr .38fr;gap:10px}.wf-hybrid-main{min-height:520px}.wf-hybrid-side{display:grid;gap:10px}.wf-hybrid-side .wf-img{min-height:250px}.wf-hybrid-hero-v2 .wf-chips{grid-column:1/-1}.wf-why-hybrid{display:grid;grid-template-columns:1fr .55fr;gap:18px}.wf-why-hybrid .wf-why-cards{grid-column:1/-1}.wf-property-hybrid{padding:0}.wf-hybrid-stage{position:relative}.wf-hybrid-stage>.wf-property-hero{min-height:760px;border:0}.wf-hybrid-copycard{position:absolute;left:4%;bottom:5%;width:48%;max-width:620px;background:#fff;border:1px solid #111;padding:0}.wf-hybrid-copycard>.wf-property-copy{padding:26px}.wf-property-hybrid:nth-of-type(even) .wf-hybrid-copycard{left:auto;right:4%}.wf-property-hybrid .wf-gallery-v2{padding:12px;border-top:1px solid #111}.wf-region-hybrid .wf-map{background:#222;color:#fff}.wf-objective-cards article{min-height:170px}.wf-objective-cards article span{margin-top:12px}.wf-objective-cards article strong{font-size:9px}.wf-open-era{overflow:hidden}.wf-guide-v2{margin-bottom:12px}.wireframe-page-intro em{color:var(--red);font-style:normal}@media(max-width:1100px){.wf-evidence{grid-template-columns:1fr}.wf-era-hero-v2,.wf-hybrid-hero-v2,.wf-why-era,.wf-why-hybrid,.wf-era-property-head{grid-template-columns:1fr}.wf-era-hero-media{grid-template-columns:1fr 1fr}.wf-era-property-head>div:first-child{order:0!important}.wf-era-property-head .wf-property-hero{border-left:0;border-top:1px solid #111;min-height:420px}.wf-hybrid-copycard,.wf-property-loam .wf-overlay-card{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto;max-width:none;margin:0}.wf-property-loam .wf-property-hero,.wf-hybrid-stage>.wf-property-hero{min-height:520px}.wf-hero-overlay{position:relative;left:auto;bottom:auto;width:auto;max-width:none}.wf-hero-loam-v2 .wf-fullbleed>.wf-img{min-height:520px}}@media(max-width:720px){.wf-era-hero-media,.wf-hybrid-hero-stage,.wf-sobha-toc{grid-template-columns:1fr}.wf-hybrid-side{grid-template-columns:1fr 1fr}.wf-era-horizontal-teasers{grid-auto-columns:82%}.wf-sobha-orbit{width:92%}.wf-property-sobha{padding:36px 18px}.wf-sobha-signature{width:210px}.wf-fullbleed>.wf-img,.wf-hero-loam-v2 .wf-hero-img{min-height:420px}.wf-hybrid-side .wf-img{min-height:170px}}
-</style></head>
+</style>
+<style id="wireframe-links-fullscreen-styles">
+  .wireframe-choice{align-items:stretch}
+  .wireframe-choice-card{min-width:0;border:1px solid var(--line);background:#fff;border-radius:13px;overflow:hidden;display:flex;flex-direction:column}
+  .wireframe-choice-card>button{border:0!important;border-radius:0!important;flex:1;width:100%}
+  .wireframe-choice-card:has(>button.is-active){border-color:var(--brown);box-shadow:0 0 0 1px var(--brown) inset}
+  .wireframe-choice-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 11px;border-top:1px solid var(--line);background:#f8f6f5;min-height:38px}
+  .wireframe-choice-actions a,.wireframe-choice-actions span{font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);text-decoration:none;white-space:nowrap}
+  .wireframe-choice-actions a:hover{text-decoration:underline;color:var(--red)}
+  .wireframe-choice-actions-hybrid{gap:7px;justify-content:flex-start;flex-wrap:wrap}
+  .wireframe-choice-actions-hybrid span{opacity:.45}
+  .wireframe-choice-actions-hybrid .wf-full-link{margin-left:auto;color:var(--red)}
+  .wireframe-fullscreen-bar{display:none}
+  body.wireframe-fullscreen{background:#ece8e5}
+  body.wireframe-fullscreen .ambient,body.wireframe-fullscreen .topbar,body.wireframe-fullscreen .sidebar{display:none!important}
+  body.wireframe-fullscreen .shell{margin:0!important;padding:0!important;max-width:none!important;width:100%!important}
+  body.wireframe-fullscreen .tab-panel{display:none!important}
+  body.wireframe-fullscreen #tab-wireframes{display:block!important;padding:0!important;margin:0!important}
+  body.wireframe-fullscreen #tab-wireframes>.page-intro,body.wireframe-fullscreen #tab-wireframes>.wireframe-choice,body.wireframe-fullscreen #tab-wireframes>.wireframe-research-note{display:none!important}
+  body.wireframe-fullscreen .wireframe-option{margin:0!important;padding:0 18px 28px!important}
+  body.wireframe-fullscreen .wf-guide{margin-top:12px}
+  body.wireframe-fullscreen .wireframe-fullscreen-bar{display:flex;position:sticky;top:0;z-index:100;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;background:rgba(17,17,17,.96);color:#fff;border-bottom:1px solid #333;backdrop-filter:blur(10px)}
+  .wireframe-fullscreen-bar strong{font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+  .wireframe-fullscreen-bar nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .wireframe-fullscreen-bar a{display:inline-flex;align-items:center;min-height:34px;padding:0 11px;border:1px solid #555;border-radius:9px;color:#fff;text-decoration:none;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .wireframe-fullscreen-bar a:hover{border-color:#fff}
+  .wireframe-fullscreen-bar a.primary{background:#fff;color:#111;border-color:#fff}
+  @media(max-width:1100px){.wireframe-choice-card{min-height:0}}
+  @media(max-width:720px){.wireframe-choice-actions-hybrid .wf-full-link{margin-left:0}.wireframe-fullscreen-bar{align-items:flex-start;flex-direction:column}.wireframe-fullscreen-bar nav{justify-content:flex-start}}
+</style>
+</head>
 <body>
 <div aria-hidden="true" class="ambient">
 <div class="orb orb-a"></div>
@@ -454,10 +484,22 @@
 <div class="source-rule"><b>REGRA</b><span>A copy aplicada é a copy oficial da task. Caixas cinzas são instruções de design/dev e não entram no site publicado. As transições são apenas descritas — este playbook continua 100% estático.</span></div>
 </div>
 <div aria-label="Escolher wireframe" class="wireframe-choice" role="tablist">
+<div class="wireframe-choice-card">
 <button data-wireframe-select="loam" type="button"><span>01</span><b>Loam House</b><small>capítulos reais / 5·10</small></button>
+<div class="wireframe-choice-actions"><a href="https://residences.loamhouse.com.au/" rel="noopener noreferrer" target="_blank">Referência ↗</a><a href="?wireframe=loam#wireframes" target="_blank">Tela cheia ↗</a></div>
+</div>
+<div class="wireframe-choice-card">
 <button data-wireframe-select="era" type="button"><span>02</span><b>ERA Residence</b><small>motion real / 7·10</small></button>
+<div class="wireframe-choice-actions"><a href="https://www.era-residence.com/" rel="noopener noreferrer" target="_blank">Referência ↗</a><a href="?wireframe=era#wireframes" target="_blank">Tela cheia ↗</a></div>
+</div>
+<div class="wireframe-choice-card">
 <button data-wireframe-select="sobha" type="button"><span>03</span><b>Sobha Privy</b><small>WebGL real / 10·10</small></button>
+<div class="wireframe-choice-actions"><a href="https://sobha-privy-collection.com/" rel="noopener noreferrer" target="_blank">Referência ↗</a><a href="?wireframe=sobha#wireframes" target="_blank">Tela cheia ↗</a></div>
+</div>
+<div class="wireframe-choice-card is-recommended">
 <button class="is-active recommended" data-wireframe-select="hybrid" type="button"><span>04</span><b>Híbrido recomendado</b><small>síntese validada / 6·10</small></button>
+<div class="wireframe-choice-actions wireframe-choice-actions-hybrid"><span>Refs:</span><a href="https://residences.loamhouse.com.au/" rel="noopener noreferrer" target="_blank">Loam ↗</a><a href="https://www.era-residence.com/" rel="noopener noreferrer" target="_blank">ERA ↗</a><a href="https://sobha-privy-collection.com/" rel="noopener noreferrer" target="_blank">Sobha ↗</a><a class="wf-full-link" href="?wireframe=hybrid#wireframes" target="_blank">Tela cheia ↗</a></div>
+</div>
 </div>
 <div class="wireframe-research-note"><b>O que mudou nesta versão:</b> Loam agora usa painéis fullscreen empilhados; ERA ganhou composição editorial + galeria horizontal e transições por escala/clip; Sobha foi organizado como narrativa contínua com motivo 3D, galerias circulares e mapa 3D; o Híbrido foi redesenhado como combinação executável dessas três gramáticas, sem WebGL.</div>
 <article class="wireframe-option wf-theme wf-loam wf-loam-v2" data-wireframe-panel="loam" hidden=""><div class="wf-guide wf-guide-v2"><div><span>01</span><h2>LOAM HOUSE</h2><p>Referência principal para estrutura</p></div><div class="wf-guide-meta"><div><small>COMPLEXIDADE</small><b>5/10</b></div><div><small>TEMPO</small><b>Médio</b></div><div><small>STACK</small><b>GSAP / ScrollTrigger / Lenis</b></div><div><small>GRAMÁTICA VISUAL</small><b>Capítulos fullscreen empilhados</b></div></div></div><div class="wf-evidence"><div><small>BASE REAL ANALISADA</small><b>Loam House</b><p>Estrutura verificada no site ao vivo: hero com artist’s impression; capítulos numerados 01–06; cada capítulo usa imagem fullscreen + headline + métricas; formulário em etapas no fim. Relato técnico externo descreve cada painel segurando a imagem enquanto o próximo sobe por cima.</p></div><div><small>TECNOLOGIA / REPRODUÇÃO</small><p>Stack exata não foi publicada oficialmente nas fontes consultadas. O comportamento é reportado como GSAP; reprodução indicada: Next.js + GSAP + ScrollTrigger + Lenis.</p></div><div><small>FONTES</small><a href="https://residences.loamhouse.com.au/" rel="noopener" target="_blank">Site ↗</a><a href="https://colorlib.com/wp/parallax-scrolling-websites/" rel="noopener" target="_blank">Case / análise ↗</a></div></div><div class="wf-legend"><span>□ bloco de conteúdo</span><span>▧ imagem/render</span><span>→ transição descrita</span><span>⚠ pendência</span></div><div class="wireframe-canvas"><header class="wf-header"><b>elotech · Central de Negócios</b><nav>Imóveis · Região · Como funciona · Dúvidas</nav><span>Fale com a curadoria</span></header><section class="wf-section wf-hero wf-hero-loam-v2"><div class="wf-fullbleed"><div class="wf-img wf-hero-img"><span>IMAGEM / ASSET</span><strong>SEQUÊNCIA HERO · 3 renders fullscreen</strong><small class="wf-img-guide">Slide 01 Algarve fachada · Slide 02 Lorenzo fachada · Slide 03 Tenet Torre Opera. Em cada estado, o chip correspondente fica ativo.</small></div><div class="wf-overlay-card wf-hero-overlay"><div class="wf-copy"><small>— CURADORIA DE IMÓVEIS · LITORAL DE SANTA CATARINA</small><h2>Imóveis selecionados no litoral catarinense,<br/><b>à venda direto por quem conhece.</b></h2><p>Três apartamentos na planta em Itapema e Porto Belo, da carteira da própria Elotech. Negociação direta, sem intermediário, com uma curadoria que acompanha você do primeiro contato à proposta.</p><div class="wf-actions"><b>Fale com a curadoria</b><span>Conheça os imóveis ↓</span></div></div><div class="wf-chips"><span>Algarve Residence · Porto Belo · 3 suítes</span><span>Lorenzo Gabriel Residence · Itapema · 1 km do mar</span><span>Tenet, Torre Opera · Itapema · 40 m² para investir</span></div><div class="wf-legal">Imagens ilustrativas</div></div></div></section><div class="wf-transition wf-transition-v2"><span>TRANSIÇÃO</span><div><p>A hero funciona como um painel fullscreen. No scroll, o próximo painel sobe do rodapé e cobre o anterior; a imagem interna se move um pouco mais devagar que o frame, criando profundidade. Esse é o comportamento central observado nos capítulos do Loam.</p><small>Referência: comportamento observado / documentado</small></div></div><section class="wf-section wf-why wf-why-loam">
@@ -902,5 +944,36 @@
 </main>
 <div aria-live="polite" class="toast" id="toast" role="status"></div>
 <script defer="" src="assets/js/app.js"></script>
+
+<script id="wireframe-fullscreen-script">
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get('wireframe');
+  const valid = ['loam','era','sobha','hybrid'];
+  if (!requested || !valid.includes(requested)) return;
+
+  const labels = {loam:'Loam House',era:'ERA Residence',sobha:'Sobha Privy',hybrid:'Híbrido recomendado'};
+  const references = {
+    loam:[['Abrir referência','https://residences.loamhouse.com.au/']],
+    era:[['Abrir referência','https://www.era-residence.com/']],
+    sobha:[['Abrir referência','https://sobha-privy-collection.com/']],
+    hybrid:[['Loam','https://residences.loamhouse.com.au/'],['ERA','https://www.era-residence.com/'],['Sobha','https://sobha-privy-collection.com/']]
+  };
+
+  document.body.classList.add('wireframe-fullscreen');
+  document.querySelectorAll('[data-wireframe-panel]').forEach(panel => panel.hidden = panel.dataset.wireframePanel !== requested);
+  document.querySelectorAll('[data-wireframe-select]').forEach(btn => btn.classList.toggle('is-active', btn.dataset.wireframeSelect === requested));
+  const panel = document.querySelector(`[data-wireframe-panel="${requested}"]`);
+  if (!panel) return;
+
+  const bar = document.createElement('div');
+  bar.className = 'wireframe-fullscreen-bar';
+  const refLinks = references[requested].map(([label,url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`).join('');
+  bar.innerHTML = `<strong>Wireframe · ${labels[requested]}</strong><nav>${refLinks}<a class="primary" href="${location.pathname}#wireframes">Voltar ao playbook</a></nav>`;
+  panel.parentNode.insertBefore(bar, panel);
+  document.title = `Wireframe · ${labels[requested]} · Elotech`;
+  window.scrollTo(0,0);
+});
+</script>
 </body>
 </html>
