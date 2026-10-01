@@ -27,6 +27,34 @@
 .wireframe-canvas .wf-overlay-card,.wireframe-canvas .wf-property-copy,.wireframe-canvas .wf-form,.wireframe-canvas .wf-faq{overflow:visible!important;max-height:none!important}
 .wireframe-canvas .wf-section{overflow:visible}
 
+/* Wireframes v3 layout correction — neutraliza regras legadas do primeiro protótipo.
+   Sem isso, o Loam herdava uma grade 2-colunas e o hero/property ficavam espremidos. */
+.wf-loam-v2 .wf-hero-loam-v2{display:block!important;grid-template-columns:none!important;min-height:0!important}
+.wf-loam-v2 .wf-hero-loam-v2>.wf-fullbleed{display:block!important;width:100%!important;min-width:0!important}
+.wf-loam-v2 .wf-hero-loam-v2 .wf-hero-img{width:100%!important;min-height:720px!important}
+.wf-loam-v2 .wf-property-loam{display:block!important;grid-template-columns:none!important;width:100%!important;min-height:0!important}
+.wf-loam-v2 .wf-property-loam>.wf-fullbleed{display:block!important;width:100%!important;min-width:0!important}
+.wf-loam-v2 .wf-property-loam .wf-property-hero{width:100%!important;min-height:960px!important;border-right:1px dashed #555!important}
+.wf-loam-v2 .wf-property-loam .wf-overlay-card{box-sizing:border-box!important;width:min(44%,560px)!important;max-width:560px!important}
+.wf-loam-v2 .wf-property-loam .wf-gallery-v2{width:100%!important;box-sizing:border-box!important}
+
+/* Mantém as composições v3 das demais referências acima das regras antigas do CSS base. */
+.wf-era-v2 .wf-era-hero-v2{display:grid!important;grid-template-columns:.85fr 1.15fr!important}
+.wf-era-v2 .wf-property-era{display:block!important;grid-template-columns:none!important}
+.wf-hybrid-v2 .wf-hybrid-hero-v2{display:grid!important;grid-template-columns:.8fr 1.2fr!important}
+.wf-hybrid-v2 .wf-property-hybrid{display:block!important;grid-template-columns:none!important}
+.wf-sobha-v2 .wf-property-sobha{display:block!important;grid-template-columns:none!important}
+
+@media(max-width:1100px){
+  .wf-loam-v2 .wf-hero-loam-v2 .wf-hero-img{min-height:520px!important}
+  .wf-loam-v2 .wf-property-loam .wf-property-hero{min-height:520px!important}
+  .wf-loam-v2 .wf-property-loam .wf-overlay-card{position:relative!important;right:auto!important;top:auto!important;width:100%!important;max-width:none!important}
+  .wf-era-v2 .wf-era-hero-v2,.wf-hybrid-v2 .wf-hybrid-hero-v2{grid-template-columns:1fr!important}
+}
+@media(max-width:720px){
+  .wf-loam-v2 .wf-hero-loam-v2 .wf-hero-img,.wf-loam-v2 .wf-property-loam .wf-property-hero{min-height:420px!important}
+}
+
 </style>
 <style id="wireframe-links-fullscreen-styles">
   .wireframe-choice{align-items:stretch}
