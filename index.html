@@ -173,6 +173,43 @@
     .copy-toolbar .ghost-action.small,.links-toolbar .ghost-action.small{min-height:44px}
   }
 </style>
+
+<style id="master-briefing-styles">
+  .master-intro h1 em{font-style:normal;color:var(--red)}
+  .master-intro>div:first-child>p:last-child{max-width:760px;color:var(--muted,#776d69);line-height:1.6}
+  .master-rule{max-width:520px}
+  .master-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 24px;padding:10px;border:1px solid rgba(40,0,1,.10);border-radius:22px;background:rgba(255,255,255,.64)}
+  .master-toolbar .primary-action,.master-toolbar .ghost-action{min-height:48px}
+  .master-usage{margin:0 0 28px;border-radius:26px;background:var(--brown,#280001);color:#fff;overflow:hidden}
+  .master-usage-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.2);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+  .master-usage-head strong{color:#ff7278}
+  .master-usage-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .master-usage-grid article{padding:22px;border-right:1px solid rgba(255,255,255,.15);min-width:0}.master-usage-grid article:last-child{border-right:0}
+  .master-usage-grid b{font-family:'Anton',sans-serif;font-size:28px;font-weight:400;color:#ff2c34}.master-usage-grid h3{font-size:15px;margin:16px 0 7px}.master-usage-grid p{margin:0;color:rgba(255,255,255,.72);font-size:11px;line-height:1.55}
+  .master-section{margin:26px 0 0;padding:28px;border:1px solid rgba(40,0,1,.12);border-radius:28px;background:rgba(255,255,255,.68)}
+  .master-section>.section-heading{margin-bottom:20px}
+  .truth-stack{display:grid;border-top:1px solid var(--line,#d8d1cd)}
+  .truth-stack article{display:grid;grid-template-columns:54px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line,#d8d1cd)}
+  .truth-stack article>span{font-family:'Anton',sans-serif;font-size:24px;color:var(--red)}
+  .truth-stack strong{font-size:14px}.truth-stack p{margin:4px 0 0;color:#746966;font-size:11px;line-height:1.55}
+  .master-facts,.tech-contract-grid,.asset-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .master-facts article,.tech-contract-grid article,.asset-rules article{min-width:0;padding:18px;border:1px solid var(--line,#d8d1cd);border-radius:18px;background:#fff}
+  .master-facts small,.tech-contract-grid small{display:block;color:#9b8e88;font-size:8px;letter-spacing:.11em;margin-bottom:8px}.master-facts strong,.tech-contract-grid strong,.asset-rules strong{display:block;font-size:15px}.master-facts p,.tech-contract-grid p,.asset-rules p{margin:8px 0 0;color:#6f6561;font-size:11px;line-height:1.55}
+  .master-route{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:18px;border-radius:18px;background:#111;color:#fff}
+  .master-route span{display:inline-flex;align-items:center;min-height:34px;padding:0 11px;border:1px solid #454545;border-radius:999px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}.master-route i{font-style:normal;color:#777}
+  .master-notes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.master-note{padding:15px;border:1px solid var(--line,#d8d1cd);border-radius:16px}.master-note b{font-size:11px}.master-note p{margin:6px 0 0;font-size:10px;line-height:1.5;color:#746966}
+  .visual-contract-grid{display:grid;grid-template-columns:1.2fr 1fr .8fr;gap:10px}.visual-contract-grid article{padding:22px;border-radius:20px;background:#111;color:#fff;min-height:190px}.visual-contract-grid article:nth-child(2){background:#2b2b2b}.visual-contract-grid article:nth-child(3){background:#4a4a4a}.visual-contract-grid span{font-family:'Anton',sans-serif;font-size:42px;color:#ff2c34}.visual-contract-grid h3{margin:12px 0 8px;font-size:18px}.visual-contract-grid p{margin:0;color:#ccc;font-size:11px;line-height:1.55}.master-callout{display:flex;gap:16px;align-items:flex-start;margin-top:10px;padding:16px 18px;border:1px solid rgba(229,9,20,.25);border-radius:16px;background:#fff1f1}.master-callout b{white-space:nowrap;color:var(--red)}.master-callout p{margin:0;font-size:11px;line-height:1.5}
+  .conversion-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px}.conversion-flow,.mql-card{padding:20px;border-radius:20px;border:1px solid var(--line,#d8d1cd);background:#fff}.conversion-flow{display:grid;grid-template-columns:70px 1fr;align-items:center;gap:5px 12px}.conversion-flow span{font-size:8px;color:var(--red);font-weight:700;letter-spacing:.08em}.conversion-flow strong{font-size:14px}.conversion-flow p{grid-column:2;margin:0 0 6px;color:#766c68;font-size:10px}.conversion-flow i{grid-column:1/-1;text-align:center;font-style:normal;color:#aaa}.mql-card small{font-size:8px;color:#8b7f7a;letter-spacing:.1em}.mql-card h3{font-family:'Anton',sans-serif;font-size:30px;font-weight:400;line-height:1.05;margin:10px 0}.mql-card h3 em{font-style:normal;color:var(--red)}.mql-card p{font-size:11px;line-height:1.55;color:#635a57}.mql-card code{display:block;padding:12px;border-radius:10px;background:#111;color:#fff;font-size:11px}.mql-card .muted{font-size:9px;color:#8a7f7a}
+  .master-code-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.master-code-grid pre{margin:0;padding:18px;border-radius:18px;background:#111;color:#f3f3f3;overflow:auto;font-size:10px;line-height:1.65}.master-security{padding:12px 14px;margin:10px 0 0;border-radius:14px;background:#fff4d6;font-size:10px;line-height:1.5}
+  .master-guardrails{grid-template-columns:repeat(2,1fr)}
+  .pending-table{border-top:1px solid var(--line,#d8d1cd)}.pending-table>div{display:grid;grid-template-columns:1.25fr 1fr .9fr;gap:18px;padding:13px 0;border-bottom:1px solid var(--line,#d8d1cd);align-items:start}.pending-table b{font-size:11px}.pending-table span,.pending-table em{font-size:10px;line-height:1.45;color:#756a66}.pending-table em{font-style:normal;color:#b10b12;font-weight:600}
+  .validation-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.validation-columns article{position:relative;padding:20px 18px 18px;border:1px solid var(--line,#d8d1cd);border-radius:18px;background:#fff}.validation-columns article>span{font-family:'Anton',sans-serif;font-size:28px;color:var(--red)}.validation-columns h3{margin:8px 0;font-size:15px}.validation-columns ul{margin:0;padding-left:17px;color:#6f6561;font-size:10px;line-height:1.7}.validation-output{display:grid;grid-template-columns:1fr 1.1fr;gap:12px;margin-top:12px;padding:18px;border-radius:18px;background:#111;color:#fff}.validation-output small{font-size:8px;color:#aaa;letter-spacing:.1em}.validation-output h3{font-family:'Anton',sans-serif;font-weight:400;font-size:28px;margin:8px 0}.validation-output p{margin:0;color:#cfcfcf;font-size:10px;line-height:1.55}.validation-output pre{margin:0;padding:14px;border:1px solid #333;border-radius:12px;background:#080808;overflow:auto;font-size:9px;line-height:1.6}
+  .release-commands{display:grid;grid-template-columns:minmax(240px,.7fr) 1fr;border-top:1px solid var(--line,#d8d1cd)}.release-commands code,.release-commands span{padding:13px 8px;border-bottom:1px solid var(--line,#d8d1cd);font-size:10px}.release-commands code{font-weight:700;color:#111}.release-commands span{color:#746966}
+  .master-link-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.master-link-grid a{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px;border:1px solid var(--line,#d8d1cd);border-radius:16px;background:#fff;color:#111;text-decoration:none}.master-link-grid a:hover{border-color:var(--red)}.master-link-grid b{font-size:10px}.master-link-grid span{font-size:8px;color:var(--red);white-space:nowrap}.master-link-hint{margin:12px 0 0;color:#766b67;font-size:10px}
+  @media(max-width:1100px){.master-usage-grid,.master-facts,.tech-contract-grid,.asset-rules,.visual-contract-grid,.validation-columns,.master-link-grid{grid-template-columns:repeat(2,1fr)}.master-notes-grid{grid-template-columns:repeat(2,1fr)}.master-usage-grid article:nth-child(2){border-right:0}.master-code-grid,.conversion-grid,.validation-output{grid-template-columns:1fr}.pending-table>div{grid-template-columns:1fr 1fr}.pending-table em{grid-column:1/-1}.master-guardrails{grid-template-columns:1fr}}
+  @media(max-width:720px){.master-section{padding:18px;border-radius:20px}.master-toolbar{border-radius:18px}.master-toolbar>*{width:100%}.master-usage-grid,.master-facts,.tech-contract-grid,.asset-rules,.visual-contract-grid,.validation-columns,.master-link-grid,.master-notes-grid{grid-template-columns:1fr}.master-usage-grid article{border-right:0;border-bottom:1px solid rgba(255,255,255,.15)}.master-usage-grid article:last-child{border-bottom:0}.pending-table>div{grid-template-columns:1fr;gap:4px}.pending-table em{grid-column:auto}.release-commands{grid-template-columns:1fr}.release-commands code{padding-bottom:4px;border-bottom:0}.release-commands span{padding-top:0}.master-callout{display:block}.master-callout b{display:block;margin-bottom:5px}.conversion-flow{grid-template-columns:62px 1fr}.mql-card h3{font-size:24px}}
+</style>
+
 </head>
 <body>
 <div aria-hidden="true" class="ambient">
@@ -196,13 +233,14 @@
 <div class="sidebar-label">PLAYBOOK / 01</div>
 <nav aria-label="Categorias" class="tab-nav" role="tablist">
 <button aria-controls="tab-overview" aria-selected="true" class="tab-btn is-active" data-tab="overview" role="tab" type="button"><span>01</span> Overview</button>
-<button aria-controls="tab-copy" aria-selected="false" class="tab-btn" data-tab="copy" role="tab" type="button"><span>02</span> Copy</button>
-<button aria-controls="tab-visual" aria-selected="false" class="tab-btn" data-tab="visual" role="tab" type="button"><span>03</span> Referências</button>
-<button aria-controls="tab-wireframes" aria-selected="false" class="tab-btn" data-tab="wireframes" role="tab" type="button"><span>04</span> Wireframes</button>
-<button aria-controls="tab-tech" aria-selected="false" class="tab-btn" data-tab="tech" role="tab" type="button"><span>05</span> Técnico</button>
-<button aria-controls="tab-execution" aria-selected="false" class="tab-btn" data-tab="execution" role="tab" type="button"><span>06</span> Execução</button>
-<button aria-controls="tab-checklist" aria-selected="false" class="tab-btn" data-tab="checklist" role="tab" type="button"><span>07</span> Checklist</button>
-<button aria-controls="tab-links" aria-selected="false" class="tab-btn" data-tab="links" role="tab" type="button"><span>08</span> Links</button>
+<button aria-controls="tab-master" aria-selected="false" class="tab-btn" data-tab="master" role="tab" type="button"><span>02</span> Briefing mestre</button>
+<button aria-controls="tab-copy" aria-selected="false" class="tab-btn" data-tab="copy" role="tab" type="button"><span>03</span> Copy</button>
+<button aria-controls="tab-visual" aria-selected="false" class="tab-btn" data-tab="visual" role="tab" type="button"><span>04</span> Referências</button>
+<button aria-controls="tab-wireframes" aria-selected="false" class="tab-btn" data-tab="wireframes" role="tab" type="button"><span>05</span> Wireframes</button>
+<button aria-controls="tab-tech" aria-selected="false" class="tab-btn" data-tab="tech" role="tab" type="button"><span>06</span> Técnico</button>
+<button aria-controls="tab-execution" aria-selected="false" class="tab-btn" data-tab="execution" role="tab" type="button"><span>07</span> Execução</button>
+<button aria-controls="tab-checklist" aria-selected="false" class="tab-btn" data-tab="checklist" role="tab" type="button"><span>08</span> Checklist</button>
+<button aria-controls="tab-links" aria-selected="false" class="tab-btn" data-tab="links" role="tab" type="button"><span>09</span> Links</button>
 </nav>
 <div class="sidebar-footer">
 <div class="level-pill"><span>Nível</span><strong id="levelNumber">1</strong></div>
@@ -218,6 +256,7 @@
 <p class="hero-lead">Um painel único para decidir a direção visual, consultar a copy, montar a stack, executar o front e validar a publicação sem voltar para um briefing gigante.</p>
 <div class="hero-actions">
 <button class="primary-action" data-tab-link="execution" type="button">Começar implementação <span>→</span></button>
+<button class="ghost-action" data-tab-link="master" type="button">Briefing mestre</button>
 <button class="ghost-action" data-tab-link="copy" type="button">Abrir copy</button>
 </div>
 </div>
@@ -307,6 +346,221 @@
 </div>
 </section>
 </section>
+
+<section class="tab-panel" data-panel="master" hidden="" id="tab-master" role="tabpanel">
+<div class="page-intro master-intro">
+<div><p class="eyebrow">BRIEFING MESTRE / CONTRATO DO PROJETO</p><h1>Uma fonte única para <em>construir e validar.</em></h1><p>Use esta aba quando precisar contextualizar outra IA, revisar o site final ou conferir se alguma exigência da task ficou para trás.</p></div>
+<div class="source-rule master-rule"><b>FONTE ÚNICA</b><span>Em caso de conflito: copy aprovada → briefing técnico → manual Elotech → criativos aprovados → referências de motion. O protótipo antigo não vale.</span></div>
+</div>
+<div class="master-toolbar">
+<button class="primary-action" id="exportMasterMarkdown" type="button">Exportar briefing mestre .md <span>↓</span></button>
+<button class="ghost-action" id="copyValidationPrompt" type="button">Copiar prompt de validação IA</button>
+<button class="ghost-action" data-tab-link="copy" type="button">Abrir copy completa</button>
+</div>
+<section class="master-usage">
+<div class="master-usage-head"><span>COMO USAR COM OUTRA IA</span><strong>4 passos</strong></div>
+<div class="master-usage-grid">
+<article><b>01</b><h3>Exporte o .md</h3><p>O arquivo reúne contexto, regras, stack, tracking, pendências, links e anexa automaticamente a copy atual do playbook.</p></article>
+<article><b>02</b><h3>Envie junto do projeto</h3><p>Anexe o .md + repositório/ZIP/site atual. A IA deve tratar o documento como contrato, não como inspiração.</p></article>
+<article><b>03</b><h3>Peça validação antes de editar</h3><p>Primeiro relatório PASS / WARN / FAIL por requisito, com evidência concreta. Nada de reescrever copy no impulso.</p></article>
+<article><b>04</b><h3>Corrija só o que falhou</h3><p>Depois do diagnóstico, implementar apenas os gaps e repetir a validação até não existirem falhas bloqueantes.</p></article>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">01 / HIERARQUIA DE VERDADE</p><h2>O que manda no projeto.</h2></div></div>
+<div class="truth-stack">
+<article><span>01</span><div><strong>Copy oficial</strong><p>Texto literal da LP. Não reescrever, completar, resumir nem trocar palavras sem aprovação.</p></div></article>
+<article><span>02</span><div><strong>Briefing técnico da task</strong><p>Define estrutura, conversão, tracking, stack, publicação, performance e requisitos funcionais.</p></div></article>
+<article><span>03</span><div><strong>Manual de Identidade Visual — Elotech</strong><p>Logo, cores, tipografia e regras da marca final. A identidade V4 é apenas do playbook, não da LP do cliente.</p></div></article>
+<article><span>04</span><div><strong>Criativos aprovados</strong><p>A LP deve parecer continuação dos anúncios: fundo escuro, fotografia do empreendimento, vermelho da marca, tipografia geométrica, selo “à venda por elotech” e CTA “Fale com a curadoria”.</p></div></article>
+<article><span>05</span><div><strong>Renders/PDFs dos imóveis</strong><p>Fonte visual dos empreendimentos. Preferir renders de alta dos PDFs às imagens comprimidas recebidas por WhatsApp.</p></div></article>
+<article><span>06</span><div><strong>Referências Loam / ERA / Sobha</strong><p>Orientam composição e motion. Não substituem copy, marca, dados dos imóveis nem requisitos técnicos.</p></div></article>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">02 / CONTEXTO DO PROJETO</p><h2>O que está sendo construído.</h2></div></div>
+<div class="master-facts">
+<article><small>MARCA</small><strong>Elotech Central de Negócios</strong><p>Primeira LP da frente de venda direta de imóveis da carteira da Elotech.</p></article>
+<article><small>OFERTA</small><strong>3 apartamentos na planta</strong><p>Algarve Residence · Lorenzo Gabriel Residence · Tenet, Torre Opera.</p></article>
+<article><small>OBJETIVO</small><strong>Gerar lead qualificado</strong><p>Visitante escolhe o imóvel e conclui o formulário. Lead segue para o Kommo.</p></article>
+<article><small>PÚBLICO</small><strong>SC · PR · RS</strong><p>Empresários, executivos, produtores rurais e profissionais liberais buscando investimento, moradia ou segunda residência.</p></article>
+<article><small>FAIXA DA OFERTA</small><strong>R$ 845 mil → R$ 1,73 mi</strong><p>Entrada esperada a partir de R$ 70 mil e parcela a partir de R$ 5 mil no perfil qualificado.</p></article>
+<article><small>PUBLICAÇÃO</small><strong>Vercel</strong><p>Domínio planejado: elotechnegocios.com.br. Página adicional obrigatória: /obrigado.</p></article>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">03 / ESCOPO OBRIGATÓRIO</p><h2>Arquitetura que precisa existir no final.</h2></div></div>
+<div class="master-route">
+<span>Header fixo</span><i>→</i><span>Hero</span><i>→</i><span>Por que Elotech</span><i>→</i><span>Algarve</span><i>→</i><span>Lorenzo</span><i>→</i><span>Tenet</span><i>→</i><span>Qual combina?</span><i>→</i><span>Região</span><i>→</i><span>Como funciona</span><i>→</i><span>Prova social*</span><i>→</i><span>Formulário</span><i>→</i><span>FAQ</span><i>→</i><span>CTA final</span><i>→</i><span>Footer</span><i>→</i><span>/obrigado</span>
+</div>
+<div class="master-notes-grid">
+<div class="master-note"><b>* Prova social</b><p>Só entra quando existirem depoimentos reais aprovados. Não criar depoimento genérico ou fictício.</p></div>
+<div class="master-note"><b>Ordem dos imóveis</b><p>Algarve → Lorenzo Gabriel → Tenet. Cada capítulo dispara ViewContent e o CTA pré-seleciona o imóvel no formulário.</p></div>
+<div class="master-note"><b>Mapa</b><p>Itapema + Porto Belo com os três empreendimentos. Preferir mapa estático ou embed leve; não carregar Google Maps interativo antes do toque.</p></div>
+<div class="master-note"><b>Mobile header</b><p>Somente logo + botão. CTA principal leva ao formulário.</p></div>
+</div>
+</section>
+
+<section class="master-section master-visual-contract">
+<div class="section-heading compact"><div><p class="eyebrow">04 / DIREÇÃO VISUAL RECOMENDADA</p><h2>Loam 60% + ERA 30% + Sobha 10%.</h2></div><p>A melhor relação entre acabamento premium, tempo de desenvolvimento e performance mobile.</p></div>
+<div class="visual-contract-grid">
+<article><span>60%</span><h3>Loam House</h3><p>Arquitetura narrativa: capítulos fullscreen por imóvel, painéis empilhados, imagem dominante e leitura clara de cada empreendimento.</p></article>
+<article><span>30%</span><h3>ERA Residence</h3><p>Acabamento de motion: scale de imagem, parallax, SplitText, galerias horizontais pontuais e transições GSAP ligadas ao scroll.</p></article>
+<article><span>10%</span><h3>Sobha Privy</h3><p>Atmosfera: sobriedade, continuidade visual, sensação cinematográfica e composição premium — sem reproduzir o WebGL pesado.</p></article>
+</div>
+<div class="master-callout"><b>Não confundir identidade.</b><p>O playbook usa linguagem V4. O site final deve seguir o manual da Elotech + criativos aprovados. Não transportar vermelho/grafismos V4 para a LP sem respaldo na identidade Elotech.</p></div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">05 / ASSETS E PRODUÇÃO VISUAL</p><h2>De onde cada imagem deve vir.</h2></div></div>
+<div class="asset-rules">
+<article><strong>Hero</strong><p>Composição dos três empreendimentos. Usar renders de alta resolução extraídos dos PDFs ou originais das incorporadoras.</p></article>
+<article><strong>Algarve</strong><p>Fachada + rooftop + piscina + academia + brinquedoteca + living integrado.</p></article>
+<article><strong>Lorenzo</strong><p>Fachada + térreo comercial + localização + planta + sacada.</p></article>
+<article><strong>Tenet</strong><p>Torre Opera + lounge + piscina + coworking + vista.</p></article>
+<article><strong>Logo</strong><p>Criar “Elotech Central de Negócios” em versões para fundo claro e escuro, seguindo o manual e aprovando antes da publicação.</p></article>
+<article><strong>Qualidade</strong><p>Não usar JPEG comprimido de WhatsApp em tela cheia se houver render melhor no PDF. Otimizar produção final em AVIF/WebP via next/image.</p></article>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">06 / CONVERSÃO</p><h2>Formulário, MQL e comportamento.</h2></div></div>
+<div class="conversion-grid">
+<div class="conversion-flow">
+<span>ETAPA 1</span><strong>Interesse</strong><p>Imóvel + objetivo</p><i>↓</i>
+<span>ETAPA 2</span><strong>Planejamento</strong><p>Entrada + parcela + conhece a região</p><i>↓</i>
+<span>ETAPA 3</span><strong>Contato</strong><p>Nome + WhatsApp + e-mail + cidade + estado + LGPD</p>
+</div>
+<div class="mql-card"><small>REGRA MQL</small><h3>Entrada ≥ R$ 70 mil <em>E</em> parcela ≥ R$ 5 mil.</h3><p>Qualificado quando entrada = “R$ 70 a 100 mil” ou “Acima de R$ 100 mil” <b>e</b> parcela = “R$ 5 a 10 mil” ou “Acima de R$ 10 mil”.</p><code>fields.qualificacao = "MQL"</code><p class="muted">Se não atingir os dois critérios, enviar vazio. A regra roda por trás e não aparece para o visitante.</p></div>
+</div>
+<div class="master-notes-grid">
+<div class="master-note"><b>Pré-seleção</b><p>CTA de cada imóvel abre o formulário com o respectivo empreendimento já marcado.</p></div>
+<div class="master-note"><b>Destino</b><p>Kommo. WhatsApp não é caminho principal da conversão.</p></div>
+<div class="master-note"><b>Lead válido</b><p>Evento Lead só dispara depois que o CRM confirma o recebimento. Em falha do Kommo, mostrar erro e não contabilizar conversão.</p></div>
+<div class="master-note"><b>Pós-envio</b><p>Redirecionar para /obrigado. A página pode usar {nome}; fallback obrigatório: “Obrigado!”.</p></div>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">07 / CONTRATO TÉCNICO</p><h2>Stack, tracking e performance.</h2></div></div>
+<div class="tech-contract-grid">
+<article><small>FRONT</small><strong>Next.js 16</strong><p>Construir sobre o template técnico existente. Layout fica livre; tracking do template deve ser preservado.</p></article>
+<article><small>MOTION</small><strong>GSAP + ScrollTrigger + SplitText + Lenis</strong><p>Motion sofisticado sem depender de WebGL. Respeitar prefers-reduced-motion.</p></article>
+<article><small>IMAGENS</small><strong>next/image</strong><p>AVIF/WebP, tamanhos adequados e versões específicas para celular.</p></article>
+<article><small>TRACKING</small><strong>Modo direct</strong><p>Sem Google Tag Manager. Não chamar fbq, gtag ou dataLayer direto; usar trackEvent() do template.</p></article>
+<article><small>CRM</small><strong>Kommo</strong><p>Contato + negócio + nota com respostas, UTMs e ids de clique.</p></article>
+<article><small>PERFORMANCE</small><strong>&lt; 2,5 s mobile</strong><p>Medir no PageSpeed. Evitar 3D/WebGL pesado, vídeos enormes e assets desnecessários.</p></article>
+</div>
+<div class="master-code-grid">
+<pre><code>NEXT_PUBLIC_TRACKING_MODE=direct
+NEXT_PUBLIC_GTM_ID=
+NEXT_PUBLIC_META_PIXEL_ID=1038171695943989
+META_API_VERSION=v26.0
+NEXT_PUBLIC_GA4_LEAD_SOURCE=server
+NEXT_PUBLIC_GOOGLE_ADS_ID=AW-18453596025
+NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL=8zkZCM-mioodEPmOrt9E
+NEXT_PUBLIC_CONSENT_MODE=off
+NEXT_PUBLIC_SERVER_PAGEVIEW=true
+CRM_PROVIDER=kommo
+KOMMO_TAGS=site,lp-central-de-negocios</code></pre>
+<pre><code>EVENTOS
+PageView → automático
+ViewContent → entrada em cada capítulo de imóvel
+Lead → somente após confirmação do Kommo → /obrigado
+
+FORM FIELDS
+fields.imovel
+fields.entrada
+fields.parcela
+fields.objetivo
+fields.regiao
+fields.cidade
+fields.estado
+fields.qualificacao</code></pre>
+</div>
+<p class="master-security">🔒 Tokens, secrets, credenciais do Kommo, CAPI, GA4 e TRACKING_HEALTH_TOKEN ficam apenas nas variáveis da Vercel. Nunca embutir no front, no repositório ou neste playbook.</p>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">08 / REGRAS INEGOCIÁVEIS</p><h2>Falhou aqui, o site não está pronto.</h2></div></div>
+<div class="guardrails master-guardrails">
+<div class="guardrail danger"><span>×</span><div><strong>Não citar elevadores</strong><p>Na comunicação da LP. A palavra pode aparecer apenas na razão social legal do rodapé.</p></div></div>
+<div class="guardrail danger"><span>×</span><div><strong>Não alterar copy</strong><p>Não “melhorar”, resumir, inventar headline, benefício, CTA ou informação ausente.</p></div></div>
+<div class="guardrail danger"><span>×</span><div><strong>Não usar protótipo descartado</strong><p>O protótipo anterior não é referência visual nem textual.</p></div></div>
+<div class="guardrail danger"><span>×</span><div><strong>Não inventar prova social/dados</strong><p>Depoimentos, números, condições de pagamento, andar e afirmações de valorização só entram quando confirmados.</p></div></div>
+<div class="guardrail"><span>!</span><div><strong>Disclaimers obrigatórios</strong><p>“Imagens ilustrativas” e “Valores e condições sujeitos a alteração” onde previsto e no rodapé.</p></div></div>
+<div class="guardrail"><span>!</span><div><strong>LGPD</strong><p>Checkbox obrigatório com link da Política de Privacidade.</p></div></div>
+<div class="guardrail"><span>!</span><div><strong>Mobile first de verdade</strong><p>Sem scroll horizontal, conteúdo cortado, motion travando ou imagem gigante desnecessária.</p></div></div>
+<div class="guardrail"><span>!</span><div><strong>Lead depende do CRM</strong><p>Não disparar conversão de sucesso se o Kommo falhar.</p></div></div>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">09 / PENDÊNCIAS EXTERNAS</p><h2>Não inventar. Marcar como aguardando.</h2></div></div>
+<div class="pending-table">
+<div><b>Prazo de retorno “até 1 dia útil”</b><span>Formulário + /obrigado</span><em>Confirmar com Diogo</em></div>
+<div><b>Condições de pagamento</b><span>FAQ · financiamento/permuta</span><em>Confirmar com Diogo</em></div>
+<div><b>Tenet “34º andar”</b><span>Foi deduzido do apto 3404</span><em>Confirmar ou retirar</em></div>
+<div><b>Tempos de deslocamento</b><span>Região · BC / aeroportos</span><em>Validar antes de publicar</em></div>
+<div><b>“O trecho que mais valoriza”</b><span>Headline da região</span><em>Fonte FipeZap ou usar fallback aprovado</em></div>
+<div><b>Depoimentos</b><span>Prova social</span><em>Se não vierem, seção fica fora</em></div>
+<div><b>Número WhatsApp da curadoria</b><span>/obrigado</span><em>Só mostrar após definição</em></div>
+<div><b>Domínio / DNS</b><span>Publicação</span><em>Compra/acesso antes de produção</em></div>
+<div><b>GA4 + CAPI + dados Kommo</b><span>Tracking / homologação</span><em>Tiago cadastra secrets e ids</em></div>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">10 / PROTOCOLO DE VALIDAÇÃO IA</p><h2>Como auditar o site final.</h2></div><p>A IA deve provar cada conclusão com evidência do código, da interface ou do comportamento observado.</p></div>
+<div class="validation-columns">
+<article><span>A</span><h3>Copy</h3><ul><li>Comparar seção por seção com a copy exata.</li><li>Detectar texto faltando, extra, reescrito ou CTA incorreto.</li><li>Conferir disclaimers, FAQ, footer e /obrigado.</li></ul></article>
+<article><span>B</span><h3>Visual / UX</h3><ul><li>Estrutura e ordem obrigatórias.</li><li>Direção híbrida e continuidade dos anúncios.</li><li>Desktop + tablet + mobile sem cortes ou scroll horizontal.</li><li>Motion coerente e reduced-motion.</li></ul></article>
+<article><span>C</span><h3>Conversão</h3><ul><li>Formulário em 3 etapas.</li><li>Pré-seleção por CTA.</li><li>Regra MQL exata.</li><li>LGPD e estados de erro/loading.</li></ul></article>
+<article><span>D</span><h3>Tracking / CRM</h3><ul><li>PageView, ViewContent e Lead.</li><li>Lead só após Kommo OK.</li><li>UTMs/fbclid/gclid preservados.</li><li>Sem GTM e sem scripts duplicados.</li></ul></article>
+<article><span>E</span><h3>Performance</h3><ul><li>next/image + AVIF/WebP.</li><li>Prioridade na hero, lazy abaixo da dobra.</li><li>Sem WebGL/vídeo pesado.</li><li>Meta de carregamento mobile &lt; 2,5 s.</li></ul></article>
+<article><span>F</span><h3>Release</h3><ul><li>/obrigado funcional.</li><li>SEO/OG presentes.</li><li>Links e Política de Privacidade.</li><li>Testes de tracking e build passando.</li></ul></article>
+</div>
+<div class="validation-output">
+<div><small>SAÍDA OBRIGATÓRIA DA IA</small><h3>PASS · WARN · FAIL · BLOCKED</h3><p>Para cada requisito: <b>status → evidência → impacto → correção necessária</b>. Não considerar “parece certo” como evidência.</p></div>
+<pre><code>SEÇÃO / REQUISITO | STATUS | EVIDÊNCIA | AÇÃO
+Hero / H1 exato    | PASS   | ...       | —
+Tenet / 34º andar  | BLOCKED| ...       | confirmar/remover
+Kommo / Lead       | FAIL   | ...       | corrigir antes de publicar</code></pre>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">11 / VALIDAÇÃO TÉCNICA ANTES DO GO-LIVE</p><h2>Comandos e conferências.</h2></div></div>
+<div class="release-commands">
+<code>npm run check:tracking</code><span>deve passar antes do build</span>
+<code>npm test</code><span>testes unitários</span>
+<code>npm run test:e2e</code><span>fluxo ponta a ponta</span>
+<code>npm run check:tracking:live -- --crm</code><span>credenciais reais + lead de teste no Kommo</span>
+<code>Meta · Testar Eventos</code><span>PageView / ViewContent / Lead + CAPI</span>
+<code>GA4 · DebugView</code><span>visitas + generate_lead</span>
+<code>PageSpeed Insights</code><span>validar mobile e gargalos reais</span>
+</div>
+</section>
+
+<section class="master-section">
+<div class="section-heading compact"><div><p class="eyebrow">12 / LINKS ESSENCIAIS</p><h2>Atalhos da fonte.</h2></div></div>
+<div class="master-link-grid">
+<a href="https://drive.google.com/drive/folders/12dSy1cnJ1o640VksjuE7RGgp2g0q8K2M" target="_blank" rel="noopener noreferrer"><b>Materiais gerais</b><span>Drive ↗</span></a>
+<a href="https://drive.google.com/file/d/1WIsRtoDUW6m4pi-tHKjBBH-Jmm1pHEiD/view" target="_blank" rel="noopener noreferrer"><b>Manual de Identidade Visual — Elotech</b><span>PDF ↗</span></a>
+<a href="https://drive.google.com/drive/folders/1PHtrfLpExzqylVwWPlay4N3oyesEPx2S" target="_blank" rel="noopener noreferrer"><b>Criativos aprovados</b><span>Drive ↗</span></a>
+<a href="https://github.com/TiagoCBurger/nextjs-tracking-template" target="_blank" rel="noopener noreferrer"><b>Template de tracking</b><span>GitHub ↗</span></a>
+<a href="https://residences.loamhouse.com.au/" target="_blank" rel="noopener noreferrer"><b>Loam House</b><span>Referência ↗</span></a>
+<a href="https://www.era-residence.com/" target="_blank" rel="noopener noreferrer"><b>ERA Residence</b><span>Referência ↗</span></a>
+<a href="https://sobha-privy-collection.com/" target="_blank" rel="noopener noreferrer"><b>Sobha Privy</b><span>Referência ↗</span></a>
+<a href="https://docs.google.com/document/d/1DzEyccKkkwKSxmn855amRM7vLXqrlYpSTE0XwVoRL_4/view" target="_blank" rel="noopener noreferrer"><b>Política de Privacidade</b><span>Doc ↗</span></a>
+</div>
+<p class="master-link-hint">A aba <b>Links</b> mantém a lista completa com busca, PDFs específicos de cada imóvel, ferramentas e referências secundárias.</p>
+</section>
+</section>
+
 <section class="tab-panel" data-panel="copy" hidden="" id="tab-copy" role="tabpanel">
 <div class="page-intro">
 <div><p class="eyebrow">COPY / FONTE DA VERDADE</p><h1>Texto final, por seção.</h1></div>
@@ -1187,6 +1441,8 @@ window.addEventListener('DOMContentLoaded', () => {
     return clean(out.join('\n')) + '\n';
   };
 
+  window.buildElotechCopyMarkdown = buildMarkdown;
+
   exportBtn.addEventListener('click', () => {
     const markdown = buildMarkdown();
     const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
@@ -1281,6 +1537,9 @@ window.addEventListener('DOMContentLoaded', () => {
 <body>
 <header class="wireframe-export-bar"><strong>Wireframe · ${labels[key]}</strong><nav>${refs}</nav></header>
 <main class="wireframe-export-wrap">${clone.outerHTML}</main>
+
+
+
 
 </body>
 </html>`;
@@ -1395,6 +1654,66 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   applySearch();
+});
+</script>
+<script id="master-briefing-export-script">
+window.addEventListener('DOMContentLoaded', () => {
+  const exportBtn = document.getElementById('exportMasterMarkdown');
+  const promptBtn = document.getElementById('copyValidationPrompt');
+  const toast = document.getElementById('toast');
+  if (!exportBtn && !promptBtn) return;
+
+  const projectMarkdown = () => "# ELOTECH CENTRAL DE NEGÓCIOS — BRIEFING MESTRE / CONTRATO DE IMPLEMENTAÇÃO\n\n> Documento consolidado para implementação e validação da landing page. Use este arquivo como contexto principal ao trabalhar com outra IA. Em caso de conflito, siga a hierarquia de fontes abaixo. Não invente dados ausentes e não reescreva a copy.\n\n## 0. Como usar este arquivo\n\n1. Envie este .md junto do repositório/ZIP/site atual.\n2. Antes de alterar código, peça uma auditoria do site contra este contrato.\n3. A auditoria deve retornar PASS / WARN / FAIL / BLOCKED por requisito, sempre com evidência.\n4. Só depois corrija os itens FAIL/WARN relevantes e repita a validação.\n5. BLOCKED significa dependência externa ainda não confirmada — não inventar solução factual.\n\n## 1. Hierarquia de fonte da verdade\n\n1. **Copy oficial** — texto literal que deve entrar na LP. Não reescrever, resumir, completar ou substituir sem aprovação.\n2. **Briefing técnico da task** — estrutura, conversão, tracking, stack, publicação e requisitos funcionais.\n3. **Manual de Identidade Visual — Elotech** — identidade da LP final.\n4. **Criativos aprovados** — continuidade visual dos anúncios que levam tráfego para a página.\n5. **Renders/PDFs dos imóveis** — fonte visual e técnica dos empreendimentos.\n6. **Referências Loam / ERA / Sobha / 360 Lexington / Elyse** — referência de composição e motion, nunca de copy ou dados.\n7. **Protótipo anterior** — DESCARTADO. Não usar como fonte visual nem textual.\n\n> Importante: a interface deste playbook usa identidade V4. Isso NÃO significa que a landing page do cliente deve usar a identidade V4. A LP deve seguir Elotech + criativos aprovados.\n\n## 2. Contexto do projeto\n\n- **Projeto:** Elotech Central de Negócios.\n- **Natureza:** primeira landing page da nova frente de venda direta de imóveis da carteira da Elotech.\n- **Produto:** 3 apartamentos na planta.\n- **Empreendimentos:** Algarve Residence (Porto Belo), Lorenzo Gabriel Residence (Itapema/Morretes) e Tenet — Torre Opera (Itapema/Tabuleiro das Oliveiras).\n- **Objetivo primário:** visitante escolhe o imóvel e preenche o formulário.\n- **Destino do lead:** CRM Kommo.\n- **Tráfego:** Meta/Instagram/Facebook + Google.\n- **Meta de negócio informada no briefing:** sair de aproximadamente 10 para 20 oportunidades qualificadas/mês e apoiar meta de 4 vendas/mês. Isso é contexto interno, não copy.\n- **Público:** empresários, executivos, produtores rurais e profissionais liberais de SC, PR e RS; buscam valorização, renda, moradia ou segunda residência no litoral catarinense.\n- **Faixa dos imóveis:** de R$ 845 mil a R$ 1,73 milhão.\n- **Perfil de MQL:** entrada a partir de R$ 70 mil E parcela mensal a partir de R$ 5 mil.\n- **Aprovação de copy/layout:** Tiago Burger (V4).\n- **Prazo informado na task:** 12/10/2026.\n\n## 3. Oferta — dados dos 3 imóveis\n\n### Algarve Residence\n- Cidade: Porto Belo/SC.\n- Incorporadora: Tramonto.\n- Unidade: Apto 901.\n- Área privativa: 91,38 m².\n- Planta: 3 suítes, 2 vagas, lavabo, sacada integrada com churrasqueira, 1 apartamento por andar.\n- Entrega: junho/2028.\n- Valor: R$ 1.730.000.\n- Perfil: famílias de alto padrão / segunda moradia.\n\n### Lorenzo Gabriel Residence\n- Cidade: Itapema/SC, bairro Morretes.\n- Incorporadora: Meia Praia Empreendimentos.\n- Unidades: Aptos 1203 e 1902.\n- Área privativa: 62,9 m².\n- Planta: 1 suíte + 1 dormitório, 1 vaga, sacada com churrasqueira.\n- Entrega: novembro/2029.\n- Valores: R$ 845.000 (1203) e R$ 901.000 (1902).\n- Perfil: equilíbrio entre preço, espaço e localização; morar ou investir.\n\n### Tenet — Torre Opera\n- Cidade: Itapema/SC, Tabuleiro das Oliveiras.\n- Incorporadora: ZAH Empreendimentos.\n- Unidade: Apto 3404.\n- Área privativa: 40 m².\n- Planta: 1 dormitório, 1 vaga, sala e cozinha integradas, varanda.\n- Entrega: 2031.\n- Valor: R$ 1.053.800.\n- Perfil: investidor; locação e valorização.\n- **Atenção:** “34º andar” foi deduzido do número do apto e precisa ser confirmado ou removido.\n\n## 4. Escopo obrigatório da página\n\nOrdem esperada:\n\n1. Header fixo.\n2. Hero em tela cheia com imagens dos 3 empreendimentos em sequência.\n3. Por que a Elotech Central de Negócios.\n4. Abertura “Os imóveis”.\n5. Capítulo Algarve.\n6. Capítulo Lorenzo Gabriel.\n7. Capítulo Tenet.\n8. “Qual combina com você?”.\n9. Região — Itapema e Porto Belo.\n10. Como funciona a compra.\n11. Prova social — apenas se houver depoimentos reais aprovados.\n12. Formulário em 3 etapas.\n13. FAQ.\n14. CTA final — pode ser cortado se ficar redundante imediatamente após o formulário, conforme nota da copy.\n15. Footer legal.\n16. Página \"/obrigado\".\n\n### Comportamentos estruturais\n- Ordem dos imóveis: Algarve → Lorenzo Gabriel → Tenet.\n- Cada capítulo dispara ViewContent com o nome do imóvel.\n- CTA de cada capítulo leva ao formulário com o imóvel pré-selecionado.\n- “Qual combina com você?” leva primeiro ao capítulo do imóvel; “Ainda em dúvida?” leva ao formulário com “Ainda não sei”.\n- Header mobile: somente logo + CTA.\n- Mapa: pinos nos três empreendimentos; preferir mapa estático ou embed leve; não carregar Google Maps interativo antes do toque.\n- Prova social fica fora até existir material real.\n\n## 5. Direção visual recomendada\n\n**Híbrido 60 / 30 / 10**\n\n- **60% Loam House:** arquitetura narrativa em capítulos fullscreen, um capítulo por imóvel, painéis empilhados e imagem dominante.\n- **30% ERA Residence:** acabamento de motion com image scale, parallax, SplitText, galerias horizontais pontuais e transições GSAP ligadas ao scroll.\n- **10% Sobha Privy:** atmosfera premium, sobriedade e continuidade visual. NÃO reproduzir o WebGL/3D pesado como base do projeto.\n\n### Linha visual da Elotech\n- Fundo escuro com fotografia do empreendimento.\n- Vermelho da marca.\n- Tipografia geométrica.\n- Selo “à venda por elotech”.\n- CTA recorrente “Fale com a curadoria”.\n- A LP deve parecer continuação dos 9 anúncios aprovados.\n\n### Restrições visuais\n- Não usar o site institucional atual de elevadores como referência visual.\n- Não aplicar identidade V4 do playbook na LP final.\n- Evitar 3D/WebGL pesado e vídeos enormes no carregamento.\n\n## 6. Assets e regras de imagem\n\n- Prioridade de qualidade: **renders dos PDFs / originais das incorporadoras > JPEGs comprimidos de WhatsApp**.\n- Se um render não sustentar fullscreen, solicitar original em alta; não mascarar baixa qualidade com blur agressivo.\n- Hero: composição dos três empreendimentos.\n- Algarve: Fachada · Rooftop · Piscina · Academia · Brinquedoteca · Living integrado.\n- Lorenzo: Fachada · Térreo comercial · Localização · Planta · Sacada.\n- Tenet: Torre Opera · Lounge · Piscina · Coworking · Vista.\n- Criar logo “Elotech Central de Negócios” seguindo o manual, com versão para fundo claro e escuro; aprovar antes de publicar.\n- Produção final: next/image, AVIF/WebP, dimensões reais de uso e versões específicas para mobile.\n\n## 7. Regras de copy\n\n- A copy oficial é fonte da verdade textual absoluta.\n- Não reescrever, resumir, melhorar, completar ou trocar palavras por sinônimos sem aprovação.\n- Não criar novas headlines, subtítulos, benefícios, CTAs, números ou promessas.\n- Não citar elevadores na comunicação. Exceção: razão social legal no rodapé.\n- Exibir “Imagens ilustrativas” e “Valores e condições sujeitos a alteração” conforme previsto.\n- Política de Privacidade deve estar no formulário e no rodapé.\n- Qualquer texto marcado como pendente/⚠️ deve ser confirmado ou usar o fallback já aprovado.\n\n## 8. Formulário e conversão\n\nFormato em 3 etapas.\n\n### Etapa 1 — Seu interesse\n- Qual imóvel te interessa? Algarve · Lorenzo Gabriel · Tenet · Ainda não sei.\n- Qual seu objetivo? Investir (aluguel/valorização) · Morar · Casa de veraneio.\n\n### Etapa 2 — Seu planejamento\n- Entrada: Até R$ 70 mil · R$ 70 a 100 mil · Acima de R$ 100 mil.\n- Parcela: Até R$ 5 mil · R$ 5 a 10 mil · Acima de R$ 10 mil.\n- Conhece a região? Visito com frequência · Conheço pouco · Não conheço.\n\n### Etapa 3 — Seu contato\n- Nome.\n- WhatsApp.\n- E-mail.\n- Cidade.\n- Estado.\n- Aceite LGPD com link da Política de Privacidade.\n\n### Regra MQL\nMQL quando:\n- entrada = “R$ 70 a 100 mil” OU “Acima de R$ 100 mil”\n**E**\n- parcela = “R$ 5 a 10 mil” OU “Acima de R$ 10 mil”.\n\nEnviar `fields.qualificacao = \"MQL\"` quando qualificado; caso contrário, vazio.\n\n### Estados obrigatórios\n- Continuar / Voltar.\n- Enviando…\n- Erro de envio.\n- Validações de nome, WhatsApp, e-mail, cidade, estado e LGPD.\n- Em falha do Kommo: mostrar erro e NÃO disparar Lead.\n- Em sucesso: disparar Lead e redirecionar para `/obrigado`.\n\n## 9. Stack técnica\n\n- Next.js 16 usando o template técnico fornecido.\n- GSAP.\n- ScrollTrigger.\n- SplitText.\n- Lenis para smooth scrolling.\n- next/image para imagens.\n- Vercel para hospedagem.\n- Respeitar `prefers-reduced-motion`.\n- Carregamento mobile alvo abaixo de 2,5 s no PageSpeed.\n\n## 10. Tracking e CRM\n\n### Regra central\nO template de tracking já resolve a infraestrutura. O layout deve ser construído sobre ele sem recriar o tracking do zero.\n\n- Modo: `NEXT_PUBLIC_TRACKING_MODE=direct`.\n- Não usa Google Tag Manager.\n- Usar `trackEvent()` do template; não chamar `fbq`, `gtag` ou `dataLayer` diretamente.\n- Armazenar UTMs, fbclid e gclid conforme template.\n- Meta browser + CAPI usam mesmo event_id para deduplicação.\n- GA4 navegador + servidor.\n- Google Ads tag + conversão.\n- Lead só após confirmação do CRM.\n\n### Eventos\n- PageView — automático.\n- ViewContent — entrada no capítulo de cada imóvel, com nome do imóvel.\n- Lead — envio aprovado do formulário; depois redirecionar para `/obrigado`.\n\n### IDs e variáveis públicas conhecidas\n```env\nNEXT_PUBLIC_TRACKING_MODE=direct\nNEXT_PUBLIC_GTM_ID=\nNEXT_PUBLIC_META_PIXEL_ID=1038171695943989\nMETA_API_VERSION=v26.0\nNEXT_PUBLIC_GA4_LEAD_SOURCE=server\nNEXT_PUBLIC_GOOGLE_ADS_ID=AW-18453596025\nNEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL=8zkZCM-mioodEPmOrt9E\nNEXT_PUBLIC_CONSENT_MODE=off\nNEXT_PUBLIC_SERVER_PAGEVIEW=true\nCRM_PROVIDER=kommo\nKOMMO_TAGS=site,lp-central-de-negocios\n```\n\n### Variáveis/segredos pendentes ou privados\n- NEXT_PUBLIC_SITE_URL — depende do domínio.\n- META_CAPI_ACCESS_TOKEN — secreto; Tiago gera/cadastra.\n- META_TEST_EVENT_CODE — apenas Preview, nunca Production.\n- NEXT_PUBLIC_GA4_MEASUREMENT_ID — GA4 a criar.\n- GA4_API_SECRET — secreto.\n- GOOGLE_ADS_* upload API — fase 2 / vazias por enquanto.\n- KOMMO_SUBDOMAIN — confirmar.\n- KOMMO_ACCESS_TOKEN — secreto.\n- KOMMO_PIPELINE_ID / KOMMO_STATUS_ID — criar/confirmar.\n- KOMMO_RESPONSIBLE_USER_ID — definir.\n- KOMMO_FIELD_MAP — substituir IDs pelos campos reais do Kommo.\n- TRACKING_HEALTH_TOKEN — secreto.\n\n### Campos extras enviados ao Kommo\n- fields.imovel\n- fields.entrada\n- fields.parcela\n- fields.objetivo\n- fields.regiao\n- fields.cidade\n- fields.estado\n- fields.qualificacao\n\n### UTM padrão\n**Meta**\n```text\nutm_source=meta&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.name}}\n```\n\n**Google Ads**\n```text\nutm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={creative}&utm_term={keyword}\n```\ncom marcação automática gclid ligada.\n\n## 11. SEO, publicação e infraestrutura\n\n- Título da página e metadados estão definidos na copy anexa.\n- Hospedagem: Vercel.\n- Domínio planejado: https://www.elotechnegocios.com.br\n- Domínio precisava ser comprado/apontado segundo o briefing; validar estado atual antes do go-live.\n- Página de obrigado: `/obrigado`.\n- Credenciais e secrets nunca devem ser colocados em chat, código público ou HTML.\n\n## 12. Regras inegociáveis\n\n- NÃO citar elevadores na comunicação; só razão social legal no footer.\n- NÃO alterar a copy.\n- NÃO usar o protótipo antigo.\n- NÃO inventar depoimentos, números, condições, prazos, andar ou fontes.\n- NÃO usar GTM neste projeto.\n- NÃO disparar Lead se o Kommo falhar.\n- NÃO usar WebGL/3D pesado ou vídeos enormes como base do site.\n- NÃO usar imagens comprimidas de WhatsApp em fullscreen quando existir fonte melhor.\n- NÃO expor tokens/secrets no front.\n- NÃO publicar texto pendente como se estivesse confirmado.\n\n## 13. Pendências que devem ser tratadas como BLOCKED/AGUARDANDO\n\n- Prazo de retorno “até 1 dia útil” — confirmar com Diogo.\n- Condições de pagamento / financiamento / permuta — confirmar com Diogo.\n- “34º andar” do Tenet — confirmar ou retirar.\n- Tempos de deslocamento da seção Região — validar.\n- Afirmação “o trecho que mais valoriza em Santa Catarina” — precisa de fonte; sem fonte usar fallback aprovado: “O litoral catarinense que o Brasil escolheu para morar.”\n- Depoimentos — se não existirem, seção fora.\n- Número de WhatsApp da curadoria — só mostrar quando definido.\n- Domínio/DNS — validar compra e apontamento.\n- GA4, CAPI e dados/ids reais do Kommo — necessários antes da homologação final.\n\n## 14. Protocolo de validação do site final\n\nA IA auditora deve inspecionar o código/site e devolver uma matriz com:\n\n`SEÇÃO / REQUISITO | STATUS | EVIDÊNCIA | IMPACTO | AÇÃO`\n\nStatus permitidos:\n- **PASS** — requisito atendido e comprovado.\n- **WARN** — funciona, mas diverge parcialmente ou cria risco.\n- **FAIL** — requisito não atendido.\n- **BLOCKED** — depende de confirmação externa; não inventar.\n\n### A. Copy\n- Comparar palavra por palavra, seção por seção.\n- Detectar copy ausente, extra, reescrita ou CTA incorreto.\n- Conferir SEO/OG, disclaimers, FAQ, footer e /obrigado.\n\n### B. Arquitetura/UX\n- Ordem das seções.\n- Ordem dos imóveis.\n- Header desktop/mobile.\n- CTAs e âncoras.\n- Pré-seleção do imóvel.\n- Mapa leve.\n- Prova social condicional.\n- Responsividade sem cortes, overflow ou scroll horizontal.\n\n### C. Visual/motion\n- Continuidade com criativos aprovados e manual Elotech.\n- Direção híbrida recomendada.\n- Motion funcional e leve.\n- prefers-reduced-motion.\n- Nada de 3D/WebGL pesado sem justificativa.\n\n### D. Formulário/conversão\n- 3 etapas completas.\n- Campos e opções exatas.\n- Máscaras/validações.\n- Regra MQL exata.\n- LGPD.\n- Loading/erro.\n- Redirecionamento /obrigado.\n\n### E. Tracking/CRM\n- PageView.\n- ViewContent por imóvel.\n- Lead após Kommo OK.\n- UTMs/fbclid/gclid.\n- Sem GTM.\n- Sem scripts duplicados.\n- fields.* e mapeamento Kommo.\n\n### F. Performance/acessibilidade\n- next/image e formatos modernos.\n- Hero prioritária; conteúdo abaixo lazy.\n- Sem assets gigantes desnecessários.\n- Sem scroll horizontal.\n- prefers-reduced-motion.\n- Meta mobile < 2,5 s quando medido.\n\n### G. Release\n- `/obrigado` funcional.\n- Política de Privacidade.\n- SEO/OG.\n- domínio/Vercel.\n- testes e tracking validados.\n\n## 15. Validação técnica antes do go-live\n\n```bash\nnpm run check:tracking\nnpm test\nnpm run test:e2e\nnpm run check:tracking:live -- --crm\n```\n\nAlém disso:\n- Meta: Testar Eventos.\n- GA4: DebugView.\n- PageSpeed Insights: mobile.\n\n## 16. Links essenciais\n\n### Materiais\n- Pasta geral: https://drive.google.com/drive/folders/12dSy1cnJ1o640VksjuE7RGgp2g0q8K2M\n- Algarve fotos: https://drive.google.com/drive/folders/1u-cXlP3qs33GF8EEPGxkoJQ33WgQ8fz7\n- Algarve PDF: https://drive.google.com/file/d/16CoJ46yE4XE1CQhFYg_e6w8yXMKQpj7c/view\n- Lorenzo fotos: https://drive.google.com/drive/folders/1ZOT7qwLQbNuPBcry0OU8YvPZfCZU28fk\n- Lorenzo PDF: https://drive.google.com/file/d/1OCsJfXhPcCWeM0Woj4-fvOS--xraE5Wa/view\n- Tenet fotos: https://drive.google.com/drive/folders/1LHV8BegNbhTdDUAkElQXBoKz_N0_gAMB\n- Tenet PDF: https://drive.google.com/file/d/1POro9HpkmI31NrVbc0exTFOZbpAkOGNH/view\n- Manual de Identidade Visual — Elotech: https://drive.google.com/file/d/1WIsRtoDUW6m4pi-tHKjBBH-Jmm1pHEiD/view\n- Criativos aprovados: https://drive.google.com/drive/folders/1PHtrfLpExzqylVwWPlay4N3oyesEPx2S\n- Política de Privacidade: https://docs.google.com/document/d/1DzEyccKkkwKSxmn855amRM7vLXqrlYpSTE0XwVoRL_4/view\n\n### Referências\n- Loam House: https://residences.loamhouse.com.au/\n- ERA Residence: https://www.era-residence.com/\n- Sobha Privy: https://sobha-privy-collection.com/\n- 360 Lexington: https://360lexingtonave.com/\n- Elyse Residence: https://elyse-residence-dev.webflow.io/\n- Awwwards Real Estate: https://www.awwwards.com/websites/real-estate/\n\n### Técnico\n- Template tracking: https://github.com/TiagoCBurger/nextjs-tracking-template\n- GSAP: https://gsap.com/\n- Lenis: https://lenis.darkroom.engineering/\n- PageSpeed: https://pagespeed.web.dev/\n\n## 17. Copy oficial completa\n\nA copy abaixo é anexada automaticamente a partir da aba Copy atual do playbook. Ela é a fonte textual de verdade.\n";
+
+  const buildMasterMarkdown = () => {
+    const base = projectMarkdown();
+    const copy = typeof window.buildElotechCopyMarkdown === 'function'
+      ? window.buildElotechCopyMarkdown().replace(/^# Elotech Central de Negócios — Copy completa\s*/,'').trim()
+      : '> ERRO: copy não pôde ser anexada automaticamente. Abra a aba Copy e exporte a copy separadamente.';
+    return `${base}\n\n${copy}\n`;
+  };
+
+  const showToast = (message) => {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    setTimeout(() => toast.classList.remove('is-visible'), 2400);
+  };
+
+  exportBtn?.addEventListener('click', () => {
+    const markdown = buildMasterMarkdown();
+    const blob = new Blob([markdown], {type:'text/markdown;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'BRIEFING-MESTRE-ELOTECH-CENTRAL-DE-NEGOCIOS.md';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    showToast('Briefing mestre exportado em .md');
+  });
+
+  const validationPrompt = `Você vai auditar uma landing page já desenvolvida da Elotech Central de Negócios.\n\nUse o arquivo BRIEFING-MESTRE-ELOTECH-CENTRAL-DE-NEGOCIOS.md como fonte principal da verdade. Antes de alterar qualquer código, inspecione o projeto/site inteiro e compare com o contrato.\n\nREGRAS:\n1. Não reescreva nem melhore a copy. Compare literalmente com a copy oficial do briefing.\n2. Não invente dados que estejam pendentes. Marque-os como BLOCKED.\n3. Verifique estrutura, identidade Elotech, assets, responsividade, motion, formulário, regra MQL, Kommo, tracking, SEO, /obrigado, performance e publicação.\n4. Para cada item retorne: REQUISITO | STATUS (PASS/WARN/FAIL/BLOCKED) | EVIDÊNCIA | IMPACTO | AÇÃO.\n5. Não marque PASS sem evidência concreta do código, interface ou comportamento observado.\n6. Ao final, entregue: (a) resumo executivo, (b) falhas bloqueantes para publicação, (c) melhorias não bloqueantes, (d) passos exatos restantes em ordem de execução.\n7. Só depois do relatório proponha alterações, limitadas aos itens que falharam.\n\nComece pela auditoria. Não edite nada ainda.`;
+
+  promptBtn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(validationPrompt);
+      showToast('Prompt de validação copiado');
+    } catch (_) {
+      const area = document.createElement('textarea');
+      area.value = validationPrompt;
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand('copy');
+      area.remove();
+      showToast('Prompt de validação copiado');
+    }
+  });
+
+  window.buildElotechMasterMarkdown = buildMasterMarkdown;
 });
 </script>
 </body>
